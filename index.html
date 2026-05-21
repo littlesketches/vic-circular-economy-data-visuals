@@ -14,7 +14,7 @@
         <div class = 'content__wrapper'>
             <h1><br>Data Visualisation<br><span class = 'small'>Proof of Concept</span></h1>
             <section>
-                <p>This page provides links to all materials provided in the Data Visualisation Proof of Concept (DataVis PoC) project delivered to Recycling Victoria (RV) when part of the Victorian Department of Energy, Environment and Climate Action (DEECA) in May 2026. It includes links to all completed data visualisation concepts, associated documentation (to guide RV usage), and summary material provided and presented as part of the project engagement. In short, this page (and code repository) serves as a comprehensive compilation of all project materials. 
+                <p>This page provides links to all materials provided in the Data Visualisation Proof of Concept (DataVis PoC) project delivered to Recycling Victoria (RV) when part of the Victorian Department of Energy, Environment and Climate Action (DEECA) in May 2026. It includes links to: all completed data visualisation concepts and associated documentation (to guide RV usage); and summary material provided and presented as part of the project engagement. <strong>In short, this page (and code repository) serves as a comprehensive compilation of all project materials.</strong> 
                 </p>
             </section>
 
@@ -25,7 +25,9 @@
                 <p>A handful of links to materials used in the development and delivery of this project</p>
 
                 <ul>
-                    <li><a href = '' target = "_blank">Project code repository</a>: Github code repository (TBA upon confirmation with RV)</li>
+                    <li><a href = 'https://github.com/littlesketches/vic-circular-economy-data-visuals' target = "_blank">Project code repository</a>: Github code repository: Currently set to private. Will be set to public to enable downloading upon RV approval </li>
+
+                    <li><a href = 'https://docs.google.com/spreadsheets/d/1tmQH937Mj4WQlUk1FRjkeOogjHevJPC5mBC5y0muvqc/edit?gid=230899616#gid=230899616' target = "_blank">Data tables used</a>: Spreadheet with copies of the publicly available datasets. The data visualisations used the latest tables from the <a class = 'minor' href = 'https://www.vic.gov.au/victorias-waste-projection-model-dashboard' target='_blank'>Waste Performance and projection model </a> and  <a class = 'minor' href = 'https://www.vic.gov.au/victorian-local-government-waste-data-dashboard target='_blank'>Victorian Local Government Waste Data</a> release notes. An additional table is used to record data on Circular Economy metrics extracted manually from the <a class = 'minor' href = 'https://www.vic.gov.au/circular-economy-market-report' target="_blank">Circular Economy Market Report</a>. All table are exported to text files (in .tsv format) and included with the source code. Updates to those files will update all visualisations.</li>
 
                     <li><a href = '' target = "_blank">Project summary [DELIVERABLE - TBA]</a>: Summary of findings, insights and recommendations. </li>
 
@@ -41,9 +43,9 @@
             <h2>Data Visualisation</h2>
 
             <section class = 'visualisation-menu'>
-                <p>Three visualisation concepts were developed to working proof of concept stage. Each is delivered as a 'digital first' graphic that is web-native to supports screen-size responsiveness and (better) accessibility. Static versions &mdash; that are publication quality vector graphics  &mdash;  can be extracted via the browsers native 'print to PDF' functionality.</p>
+                <p>Three visualisation concepts were developed to a fully working, proof of concept stage. Each is delivered as a 'digital first' graphic that is web-native to supports screen-size responsiveness and (better) accessibility. Static image versions &mdash; that are publication quality vector graphics  &mdash; can be extracted via the browsers native 'print to PDF' functionality.</p>
 
-                <p>A <a href = ''> general usage guide</a> has been prepared that details the approach taken to making these graphics more flexible and adaptive to different use cases (e.g. embedding on Vic Gov websites, as exportable static images for presentation, on mobile devices etc.).</p>
+                <p>A basic <a href = './guide/'> user guide</a> has been prepared that details the approach taken to making these graphics more flexible and adaptive to different use cases (e.g. embedding on Vic Gov websites, as exportable static images for presentation, on mobile devices etc.).</p>
 
                 <div class = 'visualisation-concept-container system'>
                     <div class = 'header__container'>
@@ -53,18 +55,17 @@
                             <div></div>
                         </div>
                     </div>
-                    <p>"Shape of the Circular Economy" and description of the data being represented and the design rationale for the main concept. Description of alternate options.</p>
+                    <p>A representation of the "Shape of the Circular Economy" that focuses on the waste management flows (where data exists).</p>
                     <ul>
                         <li>
                             <p>
-                                <a href = './system/'>The System:</a> Data graphic summarising the shape of teh Victorian Circular Economy as in a <i>system</i> view..
+                                <a href = './system/'>The System:</a> Data graphic summarising the shape of the Victorian Circular Economy as in a <i>system</i> view.
                             </p>
                             <ul>
-                                <li><a href = './system/'>Material flows</a>: Callout graphic of the source sector and material stream breakdown of Victoria's managed waste.</li>
-                                <li><a href = './_alt/mondrian-treemap/'>Mondrian Waste Breakdown</a>: Callout graphic of the source sector and material stream breakdown of Victoria's managed waste.</li>
-                            </ul>
+                            <li><a href = './system/?minimalist'>Model d</a>: The proposed minamalist  graphic that focuses on the shape of the waste flows. Available in variants that include an <a class = 'minor' href = './system/?illustration'>illustration</a> and additional <a class = 'minor' href = './system/'> waste recovery breakdown labelling</li>    
+                            <li><a href = './system/?mode=t'>Model T</a>: Initial version with that plans to accommodate the circular economy metrics and explanation.</li>    
+                            <li><a href = './system/?mode=6'>Model 6</a>:A mirrored version of Model d, with linear flows flowing "down and back".</li>                                
                         </li>
-
                     </ul>
                 </div>
 
@@ -76,15 +77,12 @@
                             <div></div>
                         </div>
                     </div>
-                    <p>"" and description of the data being represented and the design rationale for the main concept. Description of alternate options.</p>
+                    <p>A representation of where Victoria has come from and where we are now, in regards to the Circular Economy. This graphic uses data from 2016-2024 (latest) and focuses heavily on trends, events and changes over time.</p>
                     <ul>
                         <li>
                             <p>
-                                <a href = './journey/'>The Journey:</a> Data graphic summarising the shape of teh Victorian Circular Economy as in a <i>system</i> view..
+                                <a href = './journey/'>The Journey:</a> In progress data graphic: currently far too crowded and requires curation as to 'what' or 'where' is best ot focus the data story.
                             </p>
-                            <ul>
-                                <li><a href = './journey/'>Material flows</a>: Callout graphic of the source sector and material stream breakdown of Victoria's managed waste.</li>
-                            </ul>
                         </li>
 
                     </ul>
@@ -98,20 +96,29 @@
                             <div></div>
                         </div>
                     </div>
-                    <p>"" and description of the data being represented and the design rationale for the main concept. Description of alternate options.</p>
+                    <p>A data graphic that captures Victoria's progress (since 2020) in achieving the four waste targets.</p>
                     <ul>
                         <li>
-                            <p>
-                                <a href = './targets/'>The Targets:</a> Data graphic summarising the shape of teh Victorian Circular Economy as in a <i>system</i> view..
-                            </p>
-                            <ul>
-                                <li><a href = './targets/'>Material flows</a>: Callout graphic of the source sector and material stream breakdown of Victoria's managed waste.</li>
-                            </ul>
+                            <a href = './targets/'>The Targets:</a> Proposed data graphic featuring a variant on a sunburst chart to represent progress towards the 2030 targets. In this version, the progress tracks outward from the center.
                         </li>
 
                     </ul>
                 </div>
 
+
+                <div class = 'visualisation-concept-container other'>
+                    <div class = 'header__container'>
+                        <h3>X. Other stuff</h3>
+                        <div class = 'header__outline'>
+                            <div class = 'underline'></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <p>Anything else worth sharing is put here:</p>
+                    <ul>
+                        <li><a href = './_alt/verspil-de-stijl/'>Verspil De Stijl</a>: A bonus 'for fun' graphic of waste breakdown by stream and source, in the style of Piet Mondrian.</li>
+                    </ul>
+                </div>
             </section>
         </div>
     </main>
