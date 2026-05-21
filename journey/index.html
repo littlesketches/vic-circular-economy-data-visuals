@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Economy Journey</title>
+	<link rel="icon" href = "../_shared/assets/img/vic-favicon.png" />
+    <link rel="stylesheet" href="../_shared/css/brand/vic-gov.css">
+    <link rel="stylesheet" href="../_shared/css/brand/epa-brand.css">
+    <link rel="stylesheet" href="../_shared/css/data-vis/vis-page-layout.css">
+    <link rel="stylesheet" href="../_shared/css/data-vis/data-vis.css">
+    <link rel="stylesheet" href="../_shared/css/data-vis/waste-treemap.css">
+    <link rel="stylesheet" href="./css/vis.css">
+</head>
+
+
+<body class="data-vis">
+    <main class="content__wrapper hide-sidebar_">
+ 
+        <header class="sidebar__upper">
+
+            <div class = 'title-block'>
+                <div class = 'subtitle'>A data journey of the</div>
+                <h2 id = 'vis-title'>Victorian Circular Economy</h2>
+
+                <select id = 'year-select'></select>
+            </div>
+
+            <div class = 'lead-block'>
+                <p>A graphic comparing our historic data with today and how far Victoria has come in achieving a Circular Economy.</p>
+            </div>
+        </header>
+    
+        <section class = "vis__container">
+            <div id = "vis__wrapper" class = "vis__wrapper">
+                <svg id="data-vis" width = "100%">
+                </svg>
+            </div>
+
+            <div id="tooltip"></div>
+        </section>
+    
+
+        <footer class="sidebar__lower">
+            <div class = 'footnote-block'>
+                <!-- <p>Footnote details for:</p>
+                <ul>
+                    <li>key data assumptions and sources</li> 
+                    <li>links to the data used</li>
+                </ul> -->
+            </div>
+        </footer>
+    
+    </main>
+
+    <script type="module" src = './js/main.js'></script>
+</body>
+
+
+</html>

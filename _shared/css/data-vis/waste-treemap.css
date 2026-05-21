@@ -1,0 +1,65 @@
+svg.mondrian{
+        rect{
+            &.recovered{
+    /* Mondrian branded  sector palette */
+    --msw:              var(--epa-aqua-splash);  
+    --ci:               var(--epa-citrus-noise);  
+    --cd:               var(--epa-loud-cherry);  
+        }
+    }
+}
+
+svg{
+    g.waste-breakdown-treemap{
+
+
+        text{
+            &.stream-label{
+                fill:               var(--dark);
+                font-weight:        300;
+                pointer-events:     none;
+                dominant-baseline:  middle;
+            }
+        }
+
+        rect{
+            &.treemap-bg{
+                fill:           var(--dark);        
+            }
+
+            &.recovered{
+                stroke:         var(--dark);
+
+                &.msw { fill:   var(--msw); }
+                &.ci {  fill:   var(--ci); }
+                &.cd {  fill:   var(--cd); }
+            }
+
+            &.landfill{ fill:   var(--white); }
+
+            &.treemap-hit-area{
+                fill:               transparent;
+                stroke:             none;
+            }
+        }
+    }
+}
+
+#tooltip {
+    position:           absolute;
+    pointer-events:     none;
+    background:         rgba(0, 0, 0, 0.85);
+    border:             1px solid #ccc;
+    border-radius:      4px;
+    padding:            6px 6px;
+    font-size:          1rem;
+    font-weight:        700;
+    min-width:          120px;
+    color:           #ffffff;
+    line-height:        1.8;
+    opacity:            0;
+    transition:         opacity 0.12s;
+    white-space:        nowrap;
+    z-index:            10;
+}
+

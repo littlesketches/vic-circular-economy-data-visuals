@@ -1,0 +1,116 @@
+
+  /* ----------------------------------------
+     EPA  BRAND COLOURS
+     ---------------------------------------- */
+
+:root{
+
+    --vic-gov-font-family:        'VIC', Arial, Helvetica, sans-serif;
+    --vic-gov-font-display:       'VIC Display', Arial, Helvetica, sans-serif;
+
+    --font-family:              var(--vic-gov-font-family);
+    --weight-regular:           400;
+    --weight-bold: 700;
+
+    --epa-primary-deep-ocean:   #0A3C73;
+    --epa-primary-deep-ocean-rbg:  10, 60, 115;
+    --epa-primary-cool-air:       #00B4E1;
+    --epa-primary-cool-air-rgb:     0, 180, 225;
+    --epa-primary-day-sky:        #005FB4;
+    --epa-primary-day-sky-rgb:      0, 95, 180;
+    --epa-primary-lime-life:      #C3D700;
+    --epa-primary-lime-life-rgb:    195, 215, 0;
+
+
+    --epa-loud-cherry:         #e7004c;
+    --epa-loud-cherry-rgb:      231, 0, 76;
+    --epa-citrus-noise:         #ffc529;
+    --epa-citrus-noise-rgb:     255, 197, 41;
+    --epa-aqua-splash:          #00adbb;
+    --epa-aqua-splash-rgb:      0, 173, 187;
+    --epa-purple-chemistry:     #b04fc4;
+    --epa-purple-chemistry-rgb: 76, 79, 196;
+    --epa-wasted-grape:         #7d56c5;
+    --epa-wasted-grape-rgb:     125, 86, 197;
+    --epa-green-stench:         #00bb70;
+    --epa-green-stench-rgb:     0, 187, 112;
+}
+
+/* VIC Font Family */
+@font-face {
+    font-family: 'VIC';
+    src: url('../../assets/fonts/VIC/Regular/VIC-Regular.woff2') format('woff2'),
+         url('../../assets/fonts/VIC/Regular/VIC-Regular.woff') format('woff'),
+         url('../../assets/fonts/VIC/Regular/VIC-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VIC';
+    src: url('../../assets/fonts/VIC/Italic/VIC-Italic.woff2') format('woff2'),
+         url('../../assets/fonts/VIC/Italic/VIC-Italic.woff') format('woff'),
+         url('../../assets/fonts/VIC/Italic/VIC-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VIC';
+    src: url('../../assets/fonts/VIC/SemiBold/VIC-SemiBold.woff2') format('woff2'),
+         url('../../assets/fonts/VIC/SemiBold/VIC-SemiBold.woff') format('woff'),
+         url('../../assets/fonts/VIC/SemiBold/VIC-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VIC';
+    src: url('../../assets/fonts/VIC/SemiBold Italic/VIC-SemiBoldItalic.woff2') format('woff2'),
+         url('../../assets/fonts/VIC/SemiBold Italic/VIC-SemiBoldItalic.woff') format('woff'),
+         url('../../assets/fonts/VIC/SemiBold Italic/VIC-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VIC';
+    src: url('../../assets/fonts/VIC/Bold/VIC-Bold.woff2') format('woff2'),
+         url('../../assets/fonts/VIC/Bold/VIC-Bold.woff') format('woff'),
+         url('../../assets/fonts/VIC/Bold/VIC-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VIC';
+    src: url('../../assets/fonts/VIC/Bold Italic/VIC-BoldItalic.woff2') format('woff2'),
+         url('../../assets/fonts/VIC/Bold Italic/VIC-BoldItalic.woff') format('woff'),
+         url('../../assets/fonts/VIC/Bold Italic/VIC-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+/* VIC Display Font Family */
+@font-face {
+    font-family: 'VIC Display';
+    src: url('../../assets/fonts/VIC Display/VIC-DisplayRegular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VIC Display';
+    src: url('../../assets/fonts/VIC Display/VIC-DisplayOblique.otf') format('opentype');
+    font-weight: 400;
+    font-style: oblique;
+    font-display: swap;
+}

@@ -1,0 +1,166 @@
+
+svg {
+    
+    --bg-A:                     var(--epa-primary-cool-air);
+    --target-A:                 var(--epa-primary-deep-ocean);
+    --bg-B:                     var(--epa-primary-deep-ocean);
+    --target-B:                 var(--epa-primary-cool-air);
+
+    --data:                     var(--epa-primary-lime-life);
+    --label-color:              var(--epa-primary-day-sky);
+    --label-color:              var(--epa-primary-deep-ocean);
+
+
+
+    g.vis-group{
+        text{
+            &.circular-label{
+                fill:           var(--color-bg);
+                font-weight:    400;
+            }
+
+            &.arc-label{
+                text-anchor: middle;
+
+                &.target{
+                    dominant-baseline:  central;
+                    fill:               var(--color-bg);
+                    font-weight:        600;       
+                }
+
+
+                &.interim-target{
+                    opacity:            0.5;                    
+                }   
+
+                &.data{
+                    dominant-baseline: hanging;
+                    font-weight:        700;   
+                    opacity:            0.75; 
+ 
+                    &.reverse{
+                        dominant-baseline:  alphabetic;
+                    }
+                }   
+                .baseline{
+                    &.reverse{
+                        dominant-baseline:  alphabetic;
+                    }                
+                }
+            }
+        }
+
+        g.target-group{
+            text{
+                &.label{
+                    dominant-baseline: middle;
+                }
+
+                &.target-header{
+                    dominant-baseline: middle;
+                    font-weight:        700;
+                    fill:               var(--color-bg);
+
+                    &.right{
+                        text-anchor:  end;
+                    }
+                }
+
+                &.arc-label{
+                    text-anchor: middle;
+                }
+
+            }
+
+            rect{
+                &.block-bg{
+                    &.target-1, &.target-3{  fill: var(--bg-A);  }
+                    &.target-2, &.target-4{  fill: var(--bg-B);  }
+
+                    &.target-1{ fill: url(#blue-gradient-1) }
+                    &.target-2{ fill: url(#blue-gradient-2) }
+                    &.target-3{ fill: url(#blue-gradient-3) }
+                    &.target-4{ fill: url(#blue-gradient-4) }
+                }
+            }
+            path.data-arc{
+          
+                    fill:           var(--data);
+                    fill-opacity:   0.4;
+                    mix-blend-mode: multiply;
+
+            }
+
+            circle{
+                &.target-arc{
+                    fill: var(--color-bg);
+
+               }
+                &.target-label,
+                &.inner-target-bg{
+                    &.target-1, &.target-3{  fill: var(--target-A);  } 
+                    &.target-2, &.target-4{  fill: var(--target-B);  } 
+                }
+
+                &.target-area{
+                    fill:           var(--color-bg);
+                }
+
+
+                &.target-interim-arc{
+                    fill:               none;
+                    stroke:             var(--target-A);
+                    stroke-dasharray:   5 5;
+                    stroke-width:       1;
+                    stroke-opacity:     0.5;
+                }
+
+                &.baseline-arc-bg{
+                    fill:             #fff
+                }
+
+                
+
+                &.data-circle{
+                    fill:           var(--data);
+                    fill-opacity:   0.4;
+                    mix-blend-mode: multiply;
+                }
+            }
+
+            g.circular-label-group{
+                textPath{
+                    dominant-baseline: central;
+                    text-anchor: middle;
+                }
+            }
+        }
+
+        g.label-group{
+            text{
+                &.center-label{
+                    dominant-baseline:  central;
+                    text-anchor:        middle;
+                    fill:               var(--color-bg);
+                      font-weight: 700;
+                    &.year{
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            circle{
+                &.outer{
+                    fill:  var(--label-color);
+                    fill: none;
+                }
+                &.inner{
+                    fill: var(--epa-primary-deep-ocean);
+                    fill: none;
+                }
+            }
+        }
+    }
+}
+
+

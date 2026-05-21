@@ -1,0 +1,9 @@
+g.waste-industry-illustration{
+    .palette-01 { fill: var(--color-bg); }
+    .palette-02 { fill: var(--epa-primary-cool-air); }
+    .palette-03 { fill: var(--epa-primary-day-sky); }
+    .palette-04 { fill: var(--epa-primary-deep-ocean);  }
+    .palette-05 { fill: var(--dark); }
+    .palette-06 { fill: var(--epa-primary-lime-life);  }
+
+}

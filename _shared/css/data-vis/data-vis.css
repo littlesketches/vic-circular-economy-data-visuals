@@ -1,0 +1,52 @@
+/**
+ * GLOBAL DEFAULT PALETTE & TYPEFACE FOR DATA VIS
+ */
+
+:root {
+    /* Chromatic palette */
+    --white:           #fff;
+    --dark:            #111;
+    --light-grey:       #b0b0b0;
+    --dark-grey:       #2d2b2b;
+
+
+    /* Default foreground/background theme */
+    --color-bg:             var(--white);
+    --color-off-bg:         var(--light-grey);
+    --color-fg:             var(--dark);
+    --color-off-fg:         var(--dark-grey);
+
+
+    /* All waste: neutral dark */
+    --all-waste:         var(--color-off-fg);
+
+    /* Waste sector palette */
+    --msw:              var(--epa-primary-deep-ocean);  
+    --ci:               var(--epa-primary-cool-air);  
+    --cd:               var(--epa-primary-day-sky);  
+
+    /* Waste fates */
+    --recovered:                var(--epa-primary-lime-life);
+    --recovered-rgb:            var(--epa-primary-lime-life-rgb);
+    --recovered-rgb:            176, 176, 176;
+    --recovered-breakdown:      var(--epa-primary-deep-ocean);  
+    --generated:                var(--color-off-bg);
+    --disposal:                 var(--color-fg);
+
+    /* Material stream palette: used only for prototyping with material colours */
+    --organics:                     var(--epa-green-stench);
+    --paper-and-cardboard:          var(--epa-citrus-noise);
+    --metals:                       var(--epa-primary-day-sky);
+    --plastic:                      var(--epa-aqua-splash);
+    --glass:                        var(--epa-purple-chemistry);
+    --textiles:                     var(--epa-primary-lime-life);
+    --tyres-and-rubber:             var(--epa-primary-cool-air);
+
+    /* Misc: matched to existing used  */
+    --bg-pattern:                   var(--all-waste);
+
+    /* Fonts */
+    text{
+        font-family:        var(--font-family);
+    }
+}

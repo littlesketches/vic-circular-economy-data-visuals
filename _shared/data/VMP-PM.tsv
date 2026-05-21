@@ -1,0 +1,892 @@
+Financial Year	Material Type	Material Name	Source Sector	Disposal	International Export	Interstate Export	Processed locally (including Waste to Energy)	Total Generation
+2015-2016	Aggregate, masonry and soils	Asphalt	CND	953	0	0	618,151	619,104
+2015-2016	Aggregate, masonry and soils	Asphalt	CNI	2,966	0	0	0	2,966
+2015-2016	Aggregate, masonry and soils	Asphalt	MSW	740	0	0	8,436	9,176
+2015-2016	Aggregate, masonry and soils	Bricks	CND	26,942	0	0	424,778	451,720
+2015-2016	Aggregate, masonry and soils	Bricks	CNI	25,397	0	0	0	25,397
+2015-2016	Aggregate, masonry and soils	Bricks	MSW	48,597	0	0	2,000	50,597
+2015-2016	Aggregate, masonry and soils	Concrete	CND	24,508	0	0	2,340,192	2,364,700
+2015-2016	Aggregate, masonry and soils	Concrete	CNI	30,009	0	0	0	30,009
+2015-2016	Aggregate, masonry and soils	Concrete	MSW	395	0	0	33,668	34,063
+2015-2016	Aggregate, masonry and soils	Plaster	CND	14,567	0	0	36,163	50,730
+2015-2016	Aggregate, masonry and soils	Plaster	CNI	20,948	0	0	82	21,030
+2015-2016	Aggregate, masonry and soils	Plaster	MSW	4,382	0	0	623	5,005
+2015-2016	Aggregate, masonry and soils	Rubble	CND	9,273	0	0	579,988	589,261
+2015-2016	Aggregate, masonry and soils	Rubble	CNI	13,251	0	0	2,552	15,803
+2015-2016	Aggregate, masonry and soils	Rubble	MSW	2,960	0	0	0	2,960
+2015-2016	Aggregate, masonry and soils	Soil and natural materials	CND	690,902	0	0	88,460	779,362
+2015-2016	Aggregate, masonry and soils	Soil and natural materials	CNI	100,786	0	0	10,937	111,723
+2015-2016	Aggregate, masonry and soils	Soil and natural materials	MSW	15,425	0	0	800	16,225
+2015-2016	Glass	Container glass	CND	641	4	0	519	1,164
+2015-2016	Glass	Container glass	CNI	26,445	114	0	20,140	46,699
+2015-2016	Glass	Container glass	MSW	38,785	3,047	0	161,095	202,927
+2015-2016	Glass	Other glass	CND	3,127	0	0	0	3,127
+2015-2016	Glass	Other glass	CNI	12,979	0	0	0	12,979
+2015-2016	Glass	Other glass	MSW	38,406	0	0	0	38,406
+2015-2016	Metals	Aluminium	CND	3,693	0	0	0	3,693
+2015-2016	Metals	Aluminium	CNI	16,416	0	0	35,080	51,496
+2015-2016	Metals	Aluminium	MSW	20,938	0	0	1,667	22,605
+2015-2016	Metals	Ferrous	CND	15,816	27,397	0	88,786	131,999
+2015-2016	Metals	Ferrous	CNI	53,355	132,568	0	174,649	360,572
+2015-2016	Metals	Ferrous	MSW	35,171	84,982	0	126,016	246,169
+2015-2016	Metals	Other metals	CND	0	620	0	20,333	20,953
+2015-2016	Metals	Other metals	CNI	0	8,283	0	415,810	424,093
+2015-2016	Metals	Other metals	MSW	0	1,279	0	28,602	29,881
+2015-2016	Organics	Food organics	CND	2,853	0	0	0	2,853
+2015-2016	Organics	Food organics	CNI	232,993	0	0	61,120	294,113
+2015-2016	Organics	Food organics	MSW	636,275	0	0	4,852	641,127
+2015-2016	Organics	Garden organics	CND	20,563	0	0	0	20,563
+2015-2016	Organics	Garden organics	CNI	58,726	0	0	185,595	244,321
+2015-2016	Organics	Garden organics	MSW	100,822	0	0	266,804	367,626
+2015-2016	Organics	Other organics	CND	499	0	0	0	499
+2015-2016	Organics	Other organics	CNI	28,989	0	0	82,941	111,930
+2015-2016	Organics	Other organics	MSW	100,565	0	0	12,979	113,544
+2015-2016	Organics	Wood /timber	CND	112,139	0	0	70,578	182,717
+2015-2016	Organics	Wood /timber	CNI	226,463	0	0	109,854	336,316
+2015-2016	Organics	Wood /timber	MSW	28,140	0	0	23,279	51,419
+2015-2016	Paper and cardboard	Cardboard	CND	4,106	11,273	0	257	15,636
+2015-2016	Paper and cardboard	Cardboard	CNI	75,534	202,905	0	514,548	792,986
+2015-2016	Paper and cardboard	Cardboard	MSW	36,960	11,273	0	1,159	49,392
+2015-2016	Paper and cardboard	Liquidpaperboard	CND	510	0	0	0	510
+2015-2016	Paper and cardboard	Liquidpaperboard	CNI	27,284	0	0	0	27,284
+2015-2016	Paper and cardboard	Liquidpaperboard	MSW	28,063	0	0	0	28,063
+2015-2016	Paper and cardboard	Newsprint and magazines	CND	0	6,562	0	0	6,562
+2015-2016	Paper and cardboard	Newsprint and magazines	CNI	0	91,862	0	30,186	122,048
+2015-2016	Paper and cardboard	Newsprint and magazines	MSW	0	32,808	0	0	32,808
+2015-2016	Paper and cardboard	Other paper	CND	1,555	44	0	0	1,599
+2015-2016	Paper and cardboard	Other paper	CNI	81,452	220,504	0	11,074	313,031
+2015-2016	Paper and cardboard	Other paper	MSW	126,279	115,367	0	127,137	368,783
+2015-2016	Paper and cardboard	Printing and writing paper	CND	1,589	0	0	0	1,589
+2015-2016	Paper and cardboard	Printing and writing paper	CNI	78,311	27,374	0	173,023	278,708
+2015-2016	Paper and cardboard	Printing and writing paper	MSW	84,301	0	0	0	84,301
+2015-2016	Plastic	HDPE (2)	CND	4,156	1,139	67	556	5,918
+2015-2016	Plastic	HDPE (2)	CNI	51,922	6,871	439	2,635	61,868
+2015-2016	Plastic	HDPE (2)	MSW	71,837	29,953	1,418	4,737	107,946
+2015-2016	Plastic	LDPE (4)	CND	3,113	0	2	23	3,137
+2015-2016	Plastic	LDPE (4)	CNI	38,887	14,716	363	317	54,283
+2015-2016	Plastic	LDPE (4)	MSW	34,265	4,905	393	10,985	50,548
+2015-2016	Plastic	Other plastics (7)	CND	2,228	0	0	0	2,228
+2015-2016	Plastic	Other plastics (7)	CNI	29,175	1,668	20	540	31,403
+2015-2016	Plastic	Other plastics (7)	MSW	84,718	37	0	228	84,983
+2015-2016	Plastic	PET (1)	CND	1,722	0	0	0	1,722
+2015-2016	Plastic	PET (1)	CNI	21,508	898	251	78	22,735
+2015-2016	Plastic	PET (1)	MSW	47,937	29,038	2,890	1,552	81,417
+2015-2016	Plastic	PP (5)	CND	3,339	0	0	0	3,339
+2015-2016	Plastic	PP (5)	CNI	41,712	9,732	439	390	52,273
+2015-2016	Plastic	PP (5)	MSW	36,753	4,760	516	6,859	48,888
+2015-2016	Plastic	PS (6)	CND	869	724	38	115	1,746
+2015-2016	Plastic	PS (6)	CNI	10,862	1,900	120	545	13,427
+2015-2016	Plastic	PS (6)	MSW	9,571	3,166	189	410	13,336
+2015-2016	Plastic	PVC (3)	CND	2,191	123	0	88	2,402
+2015-2016	Plastic	PVC (3)	CNI	27,373	1,105	0	791	29,269
+2015-2016	Plastic	PVC (3)	MSW	24,119	552	0	493	25,164
+2015-2016	Textiles	Clothing	CND	3,520	0	0	0	3,520
+2015-2016	Textiles	Clothing	CNI	36,452	0	0	0	36,452
+2015-2016	Textiles	Clothing	MSW	62,598	49,810	0	0	112,408
+2015-2016	Textiles	Other textiles	CND	6,275	0	0	6,250	12,525
+2015-2016	Textiles	Other textiles	CNI	55,990	167	0	3,176	59,332
+2015-2016	Textiles	Other textiles	MSW	20,498	2	0	15,319	35,819
+2015-2016	Tyres and rubber	Offroad tyres	CND	0	0	0	10	10
+2015-2016	Tyres and rubber	Offroad tyres	CNI	0	5,691	0	1,947	7,638
+2015-2016	Tyres and rubber	Offroad tyres	MSW	0	0	0	56	56
+2015-2016	Tyres and rubber	Other rubber	CND	170	0	0	6,250	6,420
+2015-2016	Tyres and rubber	Other rubber	CNI	7,839	1,591	0	3,125	12,556
+2015-2016	Tyres and rubber	Other rubber	MSW	2,459	193	0	15,000	17,652
+2015-2016	Tyres and rubber	Passenger tyres	CND	122	0	0	250	372
+2015-2016	Tyres and rubber	Passenger tyres	CNI	853	12,211	0	17,306	30,370
+2015-2016	Tyres and rubber	Passenger tyres	MSW	0	2,536	0	1,324	3,860
+2015-2016	Tyres and rubber	Truck tyres	CND	0	0	0	140	140
+2015-2016	Tyres and rubber	Truck tyres	CNI	0	6	0	20,944	20,950
+2015-2016	Tyres and rubber	Truck tyres	MSW	0	0	0	250	250
+2016-2017	Aggregate, masonry and soils	Asphalt	CND	953	0	0	755,452	756,405
+2016-2017	Aggregate, masonry and soils	Asphalt	CNI	2,966	0	0	0	2,966
+2016-2017	Aggregate, masonry and soils	Asphalt	MSW	765	0	0	2,000	2,765
+2016-2017	Aggregate, masonry and soils	Bricks	CND	26,948	0	0	584,157	611,105
+2016-2017	Aggregate, masonry and soils	Bricks	CNI	25,403	0	0	0	25,403
+2016-2017	Aggregate, masonry and soils	Bricks	MSW	50,271	0	0	2,000	52,271
+2016-2017	Aggregate, masonry and soils	Concrete	CND	24,513	0	0	2,227,056	2,251,569
+2016-2017	Aggregate, masonry and soils	Concrete	CNI	30,016	0	0	5,909	35,925
+2016-2017	Aggregate, masonry and soils	Concrete	MSW	408	0	0	30,000	30,408
+2016-2017	Aggregate, masonry and soils	Plaster	CND	14,571	0	0	33,750	48,321
+2016-2017	Aggregate, masonry and soils	Plaster	CNI	20,953	0	0	774	21,727
+2016-2017	Aggregate, masonry and soils	Plaster	MSW	4,533	0	0	0	4,533
+2016-2017	Aggregate, masonry and soils	Rubble	CND	9,275	0	0	339,212	348,487
+2016-2017	Aggregate, masonry and soils	Rubble	CNI	13,254	0	0	7,339	20,593
+2016-2017	Aggregate, masonry and soils	Rubble	MSW	3,062	0	0	0	3,062
+2016-2017	Aggregate, masonry and soils	Soil and natural materials	CND	691,062	0	0	76,889	767,951
+2016-2017	Aggregate, masonry and soils	Soil and natural materials	CNI	100,810	0	0	14,588	115,398
+2016-2017	Aggregate, masonry and soils	Soil and natural materials	MSW	15,957	0	0	800	16,757
+2016-2017	Glass	Container glass	CND	641	4	0	0	645
+2016-2017	Glass	Container glass	CNI	26,451	101	0	7,659	34,211
+2016-2017	Glass	Container glass	MSW	40,121	2,712	0	134,895	177,728
+2016-2017	Glass	Other glass	CND	3,127	0	0	0	3,127
+2016-2017	Glass	Other glass	CNI	12,982	0	0	0	12,982
+2016-2017	Glass	Other glass	MSW	39,729	0	0	0	39,729
+2016-2017	Metals	Aluminium	CND	3,694	0	0	0	3,694
+2016-2017	Metals	Aluminium	CNI	16,420	0	0	28,825	45,245
+2016-2017	Metals	Aluminium	MSW	21,659	0	0	1,445	23,104
+2016-2017	Metals	Ferrous	CND	15,819	34,895	0	92,500	143,214
+2016-2017	Metals	Ferrous	CNI	53,368	168,846	0	235,388	457,601
+2016-2017	Metals	Ferrous	MSW	36,383	108,238	0	285,190	429,811
+2016-2017	Metals	Other metals	CND	0	514	0	7,312	7,826
+2016-2017	Metals	Other metals	CNI	0	6,865	0	615,686	622,551
+2016-2017	Metals	Other metals	MSW	0	1,060	0	8,566	9,626
+2016-2017	Organics	Food organics	CND	2,853	0	0	0	2,853
+2016-2017	Organics	Food organics	CNI	233,047	0	0	25,381	258,428
+2016-2017	Organics	Food organics	MSW	658,193	0	0	7,555	665,748
+2016-2017	Organics	Garden organics	CND	20,567	0	0	0	20,567
+2016-2017	Organics	Garden organics	CNI	58,740	0	0	168,789	227,529
+2016-2017	Organics	Garden organics	MSW	104,295	0	0	360,403	464,698
+2016-2017	Organics	Other organics	CND	500	0	0	11,159	11,659
+2016-2017	Organics	Other organics	CNI	28,996	0	0	62,212	91,208
+2016-2017	Organics	Other organics	MSW	104,029	0	0	14,578	118,607
+2016-2017	Organics	Wood /timber	CND	112,165	0	0	59,892	172,057
+2016-2017	Organics	Wood /timber	CNI	226,515	0	0	148,489	375,004
+2016-2017	Organics	Wood /timber	MSW	29,109	0	0	19,025	48,134
+2016-2017	Paper and cardboard	Cardboard	CND	4,107	15,791	0	170	20,068
+2016-2017	Paper and cardboard	Cardboard	CNI	75,551	284,236	0	484,931	844,718
+2016-2017	Paper and cardboard	Cardboard	MSW	38,233	15,791	0	55	54,079
+2016-2017	Paper and cardboard	Liquidpaperboard	CND	510	0	0	0	510
+2016-2017	Paper and cardboard	Liquidpaperboard	CNI	27,291	0	0	0	27,291
+2016-2017	Paper and cardboard	Liquidpaperboard	MSW	29,030	0	0	0	29,030
+2016-2017	Paper and cardboard	Newsprint and magazines	CND	0	3,360	0	0	3,360
+2016-2017	Paper and cardboard	Newsprint and magazines	CNI	0	47,037	0	129,023	176,060
+2016-2017	Paper and cardboard	Newsprint and magazines	MSW	0	16,799	0	359	17,158
+2016-2017	Paper and cardboard	Other paper	CND	1,555	34	0	2,649	4,239
+2016-2017	Paper and cardboard	Other paper	CNI	81,471	174,101	0	24,579	280,151
+2016-2017	Paper and cardboard	Other paper	MSW	130,629	91,089	0	118,886	340,604
+2016-2017	Paper and cardboard	Printing and writing paper	CND	1,589	0	0	0	1,589
+2016-2017	Paper and cardboard	Printing and writing paper	CNI	78,329	12,184	0	24,293	114,806
+2016-2017	Paper and cardboard	Printing and writing paper	MSW	87,205	0	0	0	87,205
+2016-2017	Plastic	HDPE (2)	CND	4,157	1,529	94	109	5,889
+2016-2017	Plastic	HDPE (2)	CNI	51,934	6,475	629	3,902	62,941
+2016-2017	Plastic	HDPE (2)	MSW	74,312	27,699	1,682	1,414	105,107
+2016-2017	Plastic	LDPE (4)	CND	3,113	0	0	0	3,113
+2016-2017	Plastic	LDPE (4)	CNI	38,896	15,379	1,110	25,789	81,173
+2016-2017	Plastic	LDPE (4)	MSW	35,445	1,510	97	1,079	38,131
+2016-2017	Plastic	Other plastics (7)	CND	2,229	0	0	0	2,229
+2016-2017	Plastic	Other plastics (7)	CNI	29,182	1,713	30	4,928	35,853
+2016-2017	Plastic	Other plastics (7)	MSW	87,636	38	0	847	88,521
+2016-2017	Plastic	PET (1)	CND	1,722	0	0	0	1,722
+2016-2017	Plastic	PET (1)	CNI	21,513	1,355	204	804	23,876
+2016-2017	Plastic	PET (1)	MSW	49,588	21,953	2,083	227	73,850
+2016-2017	Plastic	PP (5)	CND	3,340	0	0	0	3,340
+2016-2017	Plastic	PP (5)	CNI	41,721	9,173	757	11,077	62,728
+2016-2017	Plastic	PP (5)	MSW	38,019	4,486	240	1,972	44,717
+2016-2017	Plastic	PS (6)	CND	870	630	23	191	1,715
+2016-2017	Plastic	PS (6)	CNI	10,865	1,654	129	1,375	14,022
+2016-2017	Plastic	PS (6)	MSW	9,901	2,757	155	482	13,295
+2016-2017	Plastic	PVC (3)	CND	2,192	22	3	177	2,393
+2016-2017	Plastic	PVC (3)	CNI	27,380	194	43	2,522	30,137
+2016-2017	Plastic	PVC (3)	MSW	24,950	97	14	815	25,877
+2016-2017	Textiles	Clothing	CND	3,521	0	0	0	3,521
+2016-2017	Textiles	Clothing	CNI	36,461	0	0	0	36,461
+2016-2017	Textiles	Clothing	MSW	64,754	53,750	0	0	118,504
+2016-2017	Textiles	Other textiles	CND	6,276	0	0	0	6,276
+2016-2017	Textiles	Other textiles	CNI	56,003	47	0	100	56,150
+2016-2017	Textiles	Other textiles	MSW	21,204	1	0	583	21,787
+2016-2017	Tyres and rubber	Offroad tyres	CND	0	0	0	0	0
+2016-2017	Tyres and rubber	Offroad tyres	CNI	0	4,499	0	8,000	12,499
+2016-2017	Tyres and rubber	Offroad tyres	MSW	0	0	0	4,745	4,745
+2016-2017	Tyres and rubber	Other rubber	CND	170	0	0	0	170
+2016-2017	Tyres and rubber	Other rubber	CNI	7,841	3,202	0	0	11,043
+2016-2017	Tyres and rubber	Other rubber	MSW	2,544	387	0	0	2,931
+2016-2017	Tyres and rubber	Passenger tyres	CND	122	0	0	0	122
+2016-2017	Tyres and rubber	Passenger tyres	CNI	853	10,460	0	16,911	28,224
+2016-2017	Tyres and rubber	Passenger tyres	MSW	0	2,172	0	1,894	4,066
+2016-2017	Tyres and rubber	Truck tyres	CND	0	0	0	0	0
+2016-2017	Tyres and rubber	Truck tyres	CNI	0	73	0	0	73
+2016-2017	Tyres and rubber	Truck tyres	MSW	0	0	0	7,880	7,880
+2017-2018	Aggregate, masonry and soils	Asphalt	CND	942	0	0	430,168	431,110
+2017-2018	Aggregate, masonry and soils	Asphalt	CNI	3,630	0	0	9,036	12,666
+2017-2018	Aggregate, masonry and soils	Asphalt	MSW	716	0	0	0	716
+2017-2018	Aggregate, masonry and soils	Bricks	CND	26,636	0	0	797,160	823,796
+2017-2018	Aggregate, masonry and soils	Bricks	CNI	31,088	0	0	0	31,088
+2017-2018	Aggregate, masonry and soils	Bricks	MSW	47,019	0	0	250	47,269
+2017-2018	Aggregate, masonry and soils	Concrete	CND	24,230	0	0	2,623,738	2,647,968
+2017-2018	Aggregate, masonry and soils	Concrete	CNI	36,732	0	0	0	36,732
+2017-2018	Aggregate, masonry and soils	Concrete	MSW	382	0	0	300	682
+2017-2018	Aggregate, masonry and soils	Plaster	CND	14,402	0	0	0	14,402
+2017-2018	Aggregate, masonry and soils	Plaster	CNI	25,642	0	0	35,983	61,625
+2017-2018	Aggregate, masonry and soils	Plaster	MSW	4,240	0	0	0	4,240
+2017-2018	Aggregate, masonry and soils	Rubble	CND	9,168	0	0	548,412	557,580
+2017-2018	Aggregate, masonry and soils	Rubble	CNI	16,220	0	0	3,732	19,952
+2017-2018	Aggregate, masonry and soils	Rubble	MSW	2,864	0	0	0	2,864
+2017-2018	Aggregate, masonry and soils	Soil and natural materials	CND	683,070	0	0	1,046,785	1,729,855
+2017-2018	Aggregate, masonry and soils	Soil and natural materials	CNI	123,369	0	0	11,635	135,004
+2017-2018	Aggregate, masonry and soils	Soil and natural materials	MSW	14,925	0	0	10	14,935
+2017-2018	Glass	Container glass	CND	634	16	0	0	649
+2017-2018	Glass	Container glass	CNI	32,370	419	0	0	32,789
+2017-2018	Glass	Container glass	MSW	37,526	11,186	0	218,376	267,088
+2017-2018	Glass	Other glass	CND	3,091	0	0	0	3,091
+2017-2018	Glass	Other glass	CNI	15,887	0	0	0	15,887
+2017-2018	Glass	Other glass	MSW	37,159	0	0	0	37,159
+2017-2018	Metals	Aluminium	CND	3,652	7,064	0	0	10,716
+2017-2018	Metals	Aluminium	CNI	20,094	56,708	0	0	76,802
+2017-2018	Metals	Aluminium	MSW	20,258	23,681	0	0	43,939
+2017-2018	Metals	Ferrous	CND	15,636	42,135	0	102,955	160,727
+2017-2018	Metals	Ferrous	CNI	65,310	203,879	0	225,280	494,469
+2017-2018	Metals	Ferrous	MSW	34,029	130,696	0	221,810	386,535
+2017-2018	Metals	Other metals	CND	0	1,910	0	8,643	10,553
+2017-2018	Metals	Other metals	CNI	0	25,504	0	391,950	417,454
+2017-2018	Metals	Other metals	MSW	0	3,938	0	15,795	19,733
+2017-2018	Organics	Food organics	CND	2,820	0	0	0	2,820
+2017-2018	Organics	Food organics	CNI	285,198	0	0	34,059	319,257
+2017-2018	Organics	Food organics	MSW	615,618	0	0	3,604	619,222
+2017-2018	Organics	Garden organics	CND	20,330	0	0	6,017	26,347
+2017-2018	Organics	Garden organics	CNI	71,884	0	0	163,077	234,961
+2017-2018	Organics	Garden organics	MSW	97,549	0	0	257,728	355,277
+2017-2018	Organics	Other organics	CND	494	0	0	780	1,274
+2017-2018	Organics	Other organics	CNI	35,484	0	0	128,447	163,931
+2017-2018	Organics	Other organics	MSW	97,300	0	0	106,207	203,507
+2017-2018	Organics	Wood /timber	CND	110,868	0	0	40,666	151,534
+2017-2018	Organics	Wood /timber	CNI	277,204	0	0	131,051	408,255
+2017-2018	Organics	Wood /timber	MSW	27,226	0	0	15,915	43,141
+2017-2018	Paper and cardboard	Cardboard	CND	4,060	21,083	0	0	25,143
+2017-2018	Paper and cardboard	Cardboard	CNI	92,458	379,501	0	438,998	910,957
+2017-2018	Paper and cardboard	Cardboard	MSW	35,760	21,083	0	0	56,844
+2017-2018	Paper and cardboard	Liquidpaperboard	CND	504	0	0	0	504
+2017-2018	Paper and cardboard	Liquidpaperboard	CNI	33,398	0	0	2,569	35,967
+2017-2018	Paper and cardboard	Liquidpaperboard	MSW	27,152	0	0	0	27,152
+2017-2018	Paper and cardboard	Newsprint and magazines	CND	0	2,665	0	0	2,665
+2017-2018	Paper and cardboard	Newsprint and magazines	CNI	0	37,314	0	87,247	124,561
+2017-2018	Paper and cardboard	Newsprint and magazines	MSW	0	13,327	0	31,546	44,873
+2017-2018	Paper and cardboard	Other paper	CND	1,537	18	0	0	1,556
+2017-2018	Paper and cardboard	Other paper	CNI	99,702	92,851	0	779	193,332
+2017-2018	Paper and cardboard	Other paper	MSW	122,179	48,579	0	27,158	197,916
+2017-2018	Paper and cardboard	Printing and writing paper	CND	1,571	0	0	0	1,571
+2017-2018	Paper and cardboard	Printing and writing paper	CNI	95,857	15,854	0	71,225	182,936
+2017-2018	Paper and cardboard	Printing and writing paper	MSW	81,564	0	0	0	81,564
+2017-2018	Plastic	HDPE (2)	CND	4,109	136	3	65	4,313
+2017-2018	Plastic	HDPE (2)	CNI	63,556	4,492	106	2,044	70,198
+2017-2018	Plastic	HDPE (2)	MSW	69,505	22,801	514	10,200	103,020
+2017-2018	Plastic	LDPE (4)	CND	3,077	87	1	95	3,260
+2017-2018	Plastic	LDPE (4)	CNI	47,601	11,208	92	14,436	73,337
+2017-2018	Plastic	LDPE (4)	MSW	33,152	611	8	804	34,575
+2017-2018	Plastic	Other plastics (7)	CND	2,203	167	0	128	2,498
+2017-2018	Plastic	Other plastics (7)	CNI	35,712	4,108	30	3,321	43,171
+2017-2018	Plastic	Other plastics (7)	MSW	81,967	0	0	0	81,967
+2017-2018	Plastic	PET (1)	CND	1,702	0	0	0	1,702
+2017-2018	Plastic	PET (1)	CNI	26,327	4,194	69	90	30,679
+2017-2018	Plastic	PET (1)	MSW	46,380	23,256	386	768	70,790
+2017-2018	Plastic	PP (5)	CND	3,301	0	0	0	3,301
+2017-2018	Plastic	PP (5)	CNI	51,058	3,671	0	4,549	59,278
+2017-2018	Plastic	PP (5)	MSW	35,560	6,850	0	8,433	50,843
+2017-2018	Plastic	PS (6)	CND	860	659	16	337	1,872
+2017-2018	Plastic	PS (6)	CNI	13,296	1,612	52	561	15,522
+2017-2018	Plastic	PS (6)	MSW	9,260	2,125	107	621	12,113
+2017-2018	Plastic	PVC (3)	CND	2,166	58	4	212	2,440
+2017-2018	Plastic	PVC (3)	CNI	33,507	445	34	1,822	35,807
+2017-2018	Plastic	PVC (3)	MSW	23,336	155	12	615	24,117
+2017-2018	Textiles	Clothing	CND	3,480	0	0	0	3,480
+2017-2018	Textiles	Clothing	CNI	44,620	0	0	0	44,620
+2017-2018	Textiles	Clothing	MSW	60,566	55,662	0	0	116,228
+2017-2018	Textiles	Other textiles	CND	6,203	0	0	0	6,203
+2017-2018	Textiles	Other textiles	CNI	68,535	110	0	0	68,645
+2017-2018	Textiles	Other textiles	MSW	19,832	2	0	0	19,834
+2017-2018	Tyres and rubber	Offroad tyres	CND	0	0	0	0	0
+2017-2018	Tyres and rubber	Offroad tyres	CNI	0	6,090	0	1,504	7,594
+2017-2018	Tyres and rubber	Offroad tyres	MSW	0	0	0	0	0
+2017-2018	Tyres and rubber	Other rubber	CND	168	0	0	0	168
+2017-2018	Tyres and rubber	Other rubber	CNI	9,596	19,016	0	0	28,612
+2017-2018	Tyres and rubber	Other rubber	MSW	2,379	2,301	0	0	4,680
+2017-2018	Tyres and rubber	Passenger tyres	CND	121	0	0	0	121
+2017-2018	Tyres and rubber	Passenger tyres	CNI	1,044	7,511	0	15,706	24,262
+2017-2018	Tyres and rubber	Passenger tyres	MSW	0	1,560	0	9,379	10,939
+2017-2018	Tyres and rubber	Truck tyres	CND	0	0	0	0	0
+2017-2018	Tyres and rubber	Truck tyres	CNI	0	30	0	15,581	15,611
+2017-2018	Tyres and rubber	Truck tyres	MSW	0	0	0	0	0
+2018-2019	Aggregate, masonry and soils	Asphalt	CND	1,005	0	0	952,496	953,501
+2018-2019	Aggregate, masonry and soils	Asphalt	CNI	3,873	0	0	761	4,634
+2018-2019	Aggregate, masonry and soils	Asphalt	MSW	720	0	0	25,000	25,720
+2018-2019	Aggregate, masonry and soils	Bricks	CND	28,420	0	0	804,600	833,020
+2018-2019	Aggregate, masonry and soils	Bricks	CNI	33,170	0	0	50	33,220
+2018-2019	Aggregate, masonry and soils	Bricks	MSW	47,298	0	0	0	47,298
+2018-2019	Aggregate, masonry and soils	Concrete	CND	25,853	0	0	2,710,407	2,736,260
+2018-2019	Aggregate, masonry and soils	Concrete	CNI	39,193	0	0	53	39,246
+2018-2019	Aggregate, masonry and soils	Concrete	MSW	384	0	0	0	384
+2018-2019	Aggregate, masonry and soils	Plaster	CND	15,367	0	0	0	15,367
+2018-2019	Aggregate, masonry and soils	Plaster	CNI	27,359	0	0	30,319	57,678
+2018-2019	Aggregate, masonry and soils	Plaster	MSW	4,265	0	0	0	4,265
+2018-2019	Aggregate, masonry and soils	Rubble	CND	9,782	0	0	487,083	496,865
+2018-2019	Aggregate, masonry and soils	Rubble	CNI	17,306	0	0	4,223	21,529
+2018-2019	Aggregate, masonry and soils	Rubble	MSW	2,881	0	0	0	2,881
+2018-2019	Aggregate, masonry and soils	Soil and natural materials	CND	728,821	0	0	1,256,524	1,985,345
+2018-2019	Aggregate, masonry and soils	Soil and natural materials	CNI	131,632	0	0	18,852	150,484
+2018-2019	Aggregate, masonry and soils	Soil and natural materials	MSW	15,013	0	0	25,000	40,013
+2018-2019	Glass	Container glass	CND	676	20	0	0	696
+2018-2019	Glass	Container glass	CNI	34,538	518	0	12,400	47,456
+2018-2019	Glass	Container glass	MSW	37,749	13,847	0	163,268	214,864
+2018-2019	Glass	Other glass	CND	3,298	0	0	900	4,198
+2018-2019	Glass	Other glass	CNI	16,951	0	0	3,700	20,651
+2018-2019	Glass	Other glass	MSW	37,380	0	0	0	37,380
+2018-2019	Metals	Aluminium	CND	3,896	6,298	0	338	10,532
+2018-2019	Metals	Aluminium	CNI	21,440	50,557	0	24,354	96,351
+2018-2019	Metals	Aluminium	MSW	20,378	21,112	0	0	41,491
+2018-2019	Metals	Ferrous	CND	16,684	43,335	0	101,379	161,398
+2018-2019	Metals	Ferrous	CNI	69,685	209,684	0	452,401	731,770
+2018-2019	Metals	Ferrous	MSW	34,231	134,417	0	200,758	369,406
+2018-2019	Metals	Other metals	CND	0	1,547	0	16,452	17,999
+2018-2019	Metals	Other metals	CNI	0	20,656	0	53,625	74,281
+2018-2019	Metals	Other metals	MSW	0	3,190	0	14,386	17,576
+2018-2019	Organics	Food organics	CND	3,009	0	0	0	3,009
+2018-2019	Organics	Food organics	CNI	304,300	0	0	18,729	323,030
+2018-2019	Organics	Food organics	MSW	571,366	0	0	39,795	611,161
+2018-2019	Organics	Garden organics	CND	21,691	0	0	17,840	39,531
+2018-2019	Organics	Garden organics	CNI	76,699	0	0	32,519	109,217
+2018-2019	Organics	Garden organics	MSW	98,128	0	0	416,193	514,321
+2018-2019	Organics	Other organics	CND	527	0	0	0	527
+2018-2019	Organics	Other organics	CNI	37,861	0	0	133,507	171,368
+2018-2019	Organics	Other organics	MSW	97,878	0	0	25,539	123,417
+2018-2019	Organics	Wood /timber	CND	118,294	0	0	126,320	244,614
+2018-2019	Organics	Wood /timber	CNI	295,771	0	0	66,774	362,545
+2018-2019	Organics	Wood /timber	MSW	27,388	0	0	0	27,388
+2018-2019	Paper and cardboard	Cardboard	CND	4,332	15,947	0	0	20,278
+2018-2019	Paper and cardboard	Cardboard	CNI	98,651	287,039	0	483,853	869,542
+2018-2019	Paper and cardboard	Cardboard	MSW	35,973	15,947	0	0	51,919
+2018-2019	Paper and cardboard	Liquidpaperboard	CND	538	0	0	0	538
+2018-2019	Paper and cardboard	Liquidpaperboard	CNI	35,635	0	0	0	35,635
+2018-2019	Paper and cardboard	Liquidpaperboard	MSW	27,313	0	0	0	27,313
+2018-2019	Paper and cardboard	Newsprint and magazines	CND	0	624	0	0	624
+2018-2019	Paper and cardboard	Newsprint and magazines	CNI	0	8,733	0	51,825	60,558
+2018-2019	Paper and cardboard	Newsprint and magazines	MSW	0	3,119	0	4,000	7,119
+2018-2019	Paper and cardboard	Other paper	CND	1,640	19	0	0	1,660
+2018-2019	Paper and cardboard	Other paper	CNI	106,380	96,733	0	33,326	236,439
+2018-2019	Paper and cardboard	Other paper	MSW	122,904	50,610	0	84,845	258,359
+2018-2019	Paper and cardboard	Printing and writing paper	CND	1,676	0	0	0	1,676
+2018-2019	Paper and cardboard	Printing and writing paper	CNI	102,278	5,218	0	29,099	136,595
+2018-2019	Paper and cardboard	Printing and writing paper	MSW	82,049	0	0	0	82,049
+2018-2019	Plastic	HDPE (2)	CND	4,384	625	50	253	5,313
+2018-2019	Plastic	HDPE (2)	CNI	67,813	5,877	491	3,302	77,484
+2018-2019	Plastic	HDPE (2)	MSW	69,918	20,446	1,685	9,070	101,119
+2018-2019	Plastic	LDPE (4)	CND	3,284	88	3	182	3,557
+2018-2019	Plastic	LDPE (4)	CNI	50,789	4,601	169	10,642	66,201
+2018-2019	Plastic	LDPE (4)	MSW	33,349	3,835	142	7,966	45,292
+2018-2019	Plastic	Other plastics (7)	CND	2,351	187	0	68	2,605
+2018-2019	Plastic	Other plastics (7)	CNI	38,104	6,219	0	4,512	48,835
+2018-2019	Plastic	Other plastics (7)	MSW	82,454	0	0	2	82,456
+2018-2019	Plastic	PET (1)	CND	1,816	0	0	0	1,816
+2018-2019	Plastic	PET (1)	CNI	28,090	8,777	941	1,951	39,759
+2018-2019	Plastic	PET (1)	MSW	46,656	13,044	1,404	1,728	62,832
+2018-2019	Plastic	PP (5)	CND	3,522	139	23	338	4,022
+2018-2019	Plastic	PP (5)	CNI	54,477	2,562	416	6,919	64,375
+2018-2019	Plastic	PP (5)	MSW	35,771	3,704	601	8,989	49,066
+2018-2019	Plastic	PS (6)	CND	917	772	38	654	2,382
+2018-2019	Plastic	PS (6)	CNI	14,187	1,132	35	1,126	16,480
+2018-2019	Plastic	PS (6)	MSW	9,315	1,287	85	1,067	11,754
+2018-2019	Plastic	PVC (3)	CND	2,311	89	9	522	2,932
+2018-2019	Plastic	PVC (3)	CNI	35,751	342	34	2,100	38,227
+2018-2019	Plastic	PVC (3)	MSW	23,475	193	19	1,060	24,747
+2018-2019	Textiles	Clothing	CND	3,713	0	0	0	3,713
+2018-2019	Textiles	Clothing	CNI	47,608	0	0	0	47,608
+2018-2019	Textiles	Clothing	MSW	60,925	59,803	0	250	120,978
+2018-2019	Textiles	Other textiles	CND	6,619	0	0	0	6,619
+2018-2019	Textiles	Other textiles	CNI	73,125	441	0	16,962	90,527
+2018-2019	Textiles	Other textiles	MSW	19,950	6	0	250	20,207
+2018-2019	Tyres and rubber	Offroad tyres	CND	0	0	0	0	0
+2018-2019	Tyres and rubber	Offroad tyres	CNI	0	9,994	0	7,420	17,414
+2018-2019	Tyres and rubber	Offroad tyres	MSW	0	0	0	0	0
+2018-2019	Tyres and rubber	Other rubber	CND	180	0	0	0	180
+2018-2019	Tyres and rubber	Other rubber	CNI	10,238	21,743	0	16,962	48,943
+2018-2019	Tyres and rubber	Other rubber	MSW	2,394	2,631	0	0	5,024
+2018-2019	Tyres and rubber	Passenger tyres	CND	129	0	0	0	129
+2018-2019	Tyres and rubber	Passenger tyres	CNI	1,114	6,105	0	17,093	24,313
+2018-2019	Tyres and rubber	Passenger tyres	MSW	0	1,268	0	0	1,268
+2018-2019	Tyres and rubber	Truck tyres	CND	0	0	0	0	0
+2018-2019	Tyres and rubber	Truck tyres	CNI	0	143	0	5,527	5,670
+2018-2019	Tyres and rubber	Truck tyres	MSW	0	0	0	0	0
+2019-2020	Aggregate, masonry and soils	Asphalt	CND	1,046	0	0	486,768	487,814
+2019-2020	Aggregate, masonry and soils	Asphalt	CNI	4,031	0	0	12,000	16,031
+2019-2020	Aggregate, masonry and soils	Asphalt	MSW	789	0	0	11,523	12,312
+2019-2020	Aggregate, masonry and soils	Bricks	CND	29,575	0	0	1,289,662	1,319,237
+2019-2020	Aggregate, masonry and soils	Bricks	CNI	34,518	0	0	3,659	38,177
+2019-2020	Aggregate, masonry and soils	Bricks	MSW	51,808	0	0	0	51,808
+2019-2020	Aggregate, masonry and soils	Concrete	CND	26,903	0	0	3,148,079	3,174,982
+2019-2020	Aggregate, masonry and soils	Concrete	CNI	40,785	0	0	17,975	58,760
+2019-2020	Aggregate, masonry and soils	Concrete	MSW	421	0	0	16,300	16,721
+2019-2020	Aggregate, masonry and soils	Plaster	CND	15,991	0	0	556	16,547
+2019-2020	Aggregate, masonry and soils	Plaster	CNI	28,471	0	0	32,060	60,531
+2019-2020	Aggregate, masonry and soils	Plaster	MSW	4,672	0	0	0	4,672
+2019-2020	Aggregate, masonry and soils	Rubble	CND	10,180	0	0	473,506	483,686
+2019-2020	Aggregate, masonry and soils	Rubble	CNI	18,010	0	0	32,000	50,010
+2019-2020	Aggregate, masonry and soils	Rubble	MSW	3,156	0	0	68,000	71,156
+2019-2020	Aggregate, masonry and soils	Soil and natural materials	CND	758,436	0	0	929,359	1,687,795
+2019-2020	Aggregate, masonry and soils	Soil and natural materials	CNI	136,980	0	0	17,242	154,222
+2019-2020	Aggregate, masonry and soils	Soil and natural materials	MSW	16,445	0	0	0	16,445
+2019-2020	Glass	Container glass	CND	703	5	0	900	1,609
+2019-2020	Glass	Container glass	CNI	35,941	141	0	12,100	48,182
+2019-2020	Glass	Container glass	MSW	41,348	3,766	0	283,804	328,918
+2019-2020	Glass	Other glass	CND	3,432	0	0	0	3,432
+2019-2020	Glass	Other glass	CNI	17,640	0	0	0	17,640
+2019-2020	Glass	Other glass	MSW	40,944	0	0	0	40,944
+2019-2020	Metals	Aluminium	CND	4,054	7,226	0	0	11,281
+2019-2020	Metals	Aluminium	CNI	22,311	58,008	0	21,707	102,027
+2019-2020	Metals	Aluminium	MSW	22,321	24,224	0	5,922	52,467
+2019-2020	Metals	Ferrous	CND	17,362	46,173	0	96,811	160,346
+2019-2020	Metals	Ferrous	CNI	72,516	223,418	0	421,229	717,163
+2019-2020	Metals	Ferrous	MSW	37,495	143,222	0	203,401	384,117
+2019-2020	Metals	Other metals	CND	0	1,358	0	7,705	9,063
+2019-2020	Metals	Other metals	CNI	0	18,129	0	68,763	86,892
+2019-2020	Metals	Other metals	MSW	0	2,799	0	13,990	16,789
+2019-2020	Organics	Food organics	CND	3,131	0	0	0	3,131
+2019-2020	Organics	Food organics	CNI	316,665	0	0	47,980	364,644
+2019-2020	Organics	Food organics	MSW	579,103	0	50,000	40,908	670,011
+2019-2020	Organics	Garden organics	CND	22,573	0	0	6,543	29,116
+2019-2020	Organics	Garden organics	CNI	79,815	0	0	80,272	160,087
+2019-2020	Organics	Garden organics	MSW	107,484	0	20,000	611,414	738,898
+2019-2020	Organics	Other organics	CND	548	0	0	0	548
+2019-2020	Organics	Other organics	CNI	39,399	1	0	135,493	174,894
+2019-2020	Organics	Other organics	MSW	107,210	1	0	12,705	119,915
+2019-2020	Organics	Wood /timber	CND	123,100	0	0	97,056	220,156
+2019-2020	Organics	Wood /timber	CNI	307,789	0	0	86,839	394,628
+2019-2020	Organics	Wood /timber	MSW	29,999	0	0	18,300	48,299
+2019-2020	Paper and cardboard	Cardboard	CND	4,508	11,913	0	0	16,420
+2019-2020	Paper and cardboard	Cardboard	CNI	102,659	214,427	0	401,280	718,366
+2019-2020	Paper and cardboard	Cardboard	MSW	39,402	11,913	0	45	51,360
+2019-2020	Paper and cardboard	Liquidpaperboard	CND	560	0	0	0	560
+2019-2020	Paper and cardboard	Liquidpaperboard	CNI	37,083	0	0	0	37,083
+2019-2020	Paper and cardboard	Liquidpaperboard	MSW	29,917	0	0	0	29,917
+2019-2020	Paper and cardboard	Newsprint and magazines	CND	0	1,912	0	0	1,912
+2019-2020	Paper and cardboard	Newsprint and magazines	CNI	0	26,769	0	23,680	50,449
+2019-2020	Paper and cardboard	Newsprint and magazines	MSW	0	9,561	0	45	9,606
+2019-2020	Paper and cardboard	Other paper	CND	1,707	18	0	0	1,725
+2019-2020	Paper and cardboard	Other paper	CNI	110,703	90,642	0	7,173	208,518
+2019-2020	Paper and cardboard	Other paper	MSW	134,623	47,424	0	125,075	307,121
+2019-2020	Paper and cardboard	Printing and writing paper	CND	1,744	0	0	0	1,744
+2019-2020	Paper and cardboard	Printing and writing paper	CNI	106,433	1,080	0	58,854	166,367
+2019-2020	Paper and cardboard	Printing and writing paper	MSW	89,872	0	0	0	89,872
+2019-2020	Plastic	HDPE (2)	CND	4,562	185	47	228	5,023
+2019-2020	Plastic	HDPE (2)	CNI	70,569	2,630	694	3,822	77,715
+2019-2020	Plastic	HDPE (2)	MSW	76,584	9,037	2,373	13,043	101,036
+2019-2020	Plastic	LDPE (4)	CND	3,417	26	9	346	3,798
+2019-2020	Plastic	LDPE (4)	CNI	52,853	1,371	443	19,029	73,696
+2019-2020	Plastic	LDPE (4)	MSW	36,529	389	129	5,430	42,477
+2019-2020	Plastic	Other plastics (7)	CND	2,446	0	0	0	2,446
+2019-2020	Plastic	Other plastics (7)	CNI	39,652	6,237	363	982	47,235
+2019-2020	Plastic	Other plastics (7)	MSW	90,315	693	0	227	91,235
+2019-2020	Plastic	PET (1)	CND	1,890	0	0	0	1,890
+2019-2020	Plastic	PET (1)	CNI	29,231	7,424	780	1,466	38,902
+2019-2020	Plastic	PET (1)	MSW	51,104	15,094	1,589	2,879	70,666
+2019-2020	Plastic	PP (5)	CND	3,665	18	2	41	3,726
+2019-2020	Plastic	PP (5)	CNI	56,691	3,025	397	12,846	72,959
+2019-2020	Plastic	PP (5)	MSW	39,182	2,732	356	11,387	53,657
+2019-2020	Plastic	PS (6)	CND	954	525	0	788	2,268
+2019-2020	Plastic	PS (6)	CNI	14,763	1,009	0	1,540	17,313
+2019-2020	Plastic	PS (6)	MSW	10,204	1,736	0	2,788	14,728
+2019-2020	Plastic	PVC (3)	CND	2,405	134	28	699	3,266
+2019-2020	Plastic	PVC (3)	CNI	37,203	334	74	1,912	39,524
+2019-2020	Plastic	PVC (3)	MSW	25,713	154	34	759	26,659
+2019-2020	Textiles	Clothing	CND	3,864	0	0	0	3,864
+2019-2020	Textiles	Clothing	CNI	49,543	0	0	0	49,543
+2019-2020	Textiles	Clothing	MSW	66,734	50,805	0	0	117,539
+2019-2020	Textiles	Other textiles	CND	6,888	0	0	0	6,888
+2019-2020	Textiles	Other textiles	CNI	76,097	352	32	15,640	92,121
+2019-2020	Textiles	Other textiles	MSW	21,852	5	0	0	21,857
+2019-2020	Tyres and rubber	Offroad tyres	CND	0	0	0	0	0
+2019-2020	Tyres and rubber	Offroad tyres	CNI	0	8,478	0	7,706	16,184
+2019-2020	Tyres and rubber	Offroad tyres	MSW	0	0	0	0	0
+2019-2020	Tyres and rubber	Other rubber	CND	187	0	0	0	187
+2019-2020	Tyres and rubber	Other rubber	CNI	10,654	13,564	0	15,640	39,859
+2019-2020	Tyres and rubber	Other rubber	MSW	2,622	1,641	0	0	4,263
+2019-2020	Tyres and rubber	Passenger tyres	CND	134	0	0	0	134
+2019-2020	Tyres and rubber	Passenger tyres	CNI	1,160	6,758	0	10,263	18,180
+2019-2020	Tyres and rubber	Passenger tyres	MSW	0	1,403	0	0	1,403
+2019-2020	Tyres and rubber	Truck tyres	CND	0	0	0	0	0
+2019-2020	Tyres and rubber	Truck tyres	CNI	0	93	0	14,589	14,682
+2019-2020	Tyres and rubber	Truck tyres	MSW	0	0	0	0	0
+2020-2021	Aggregate, masonry and soils	Asphalt	CND	1,052	0	0	937,977	939,029
+2020-2021	Aggregate, masonry and soils	Asphalt	CNI	4,053	0	0	1,698	5,751
+2020-2021	Aggregate, masonry and soils	Asphalt	MSW	767	0	0	0	767
+2020-2021	Aggregate, masonry and soils	Bricks	CND	29,739	0	0	1,015,723	1,045,462
+2020-2021	Aggregate, masonry and soils	Bricks	CNI	34,709	0	0	8,913	43,622
+2020-2021	Aggregate, masonry and soils	Bricks	MSW	50,391	0	0	0	50,391
+2020-2021	Aggregate, masonry and soils	Concrete	CND	27,052	0	0	2,652,087	2,679,139
+2020-2021	Aggregate, masonry and soils	Concrete	CNI	41,011	0	0	21,350	62,361
+2020-2021	Aggregate, masonry and soils	Concrete	MSW	409	0	0	0	409
+2020-2021	Aggregate, masonry and soils	Plaster	CND	16,080	0	0	32,641	48,721
+2020-2021	Aggregate, masonry and soils	Plaster	CNI	28,628	0	0	0	28,628
+2020-2021	Aggregate, masonry and soils	Plaster	MSW	4,544	0	0	0	4,544
+2020-2021	Aggregate, masonry and soils	Rubble	CND	10,236	0	0	780,733	790,969
+2020-2021	Aggregate, masonry and soils	Rubble	CNI	18,109	0	0	0	18,109
+2020-2021	Aggregate, masonry and soils	Rubble	MSW	3,070	0	0	11,608	14,678
+2020-2021	Aggregate, masonry and soils	Soil and natural materials	CND	762,635	0	0	1,117,581	1,880,216
+2020-2021	Aggregate, masonry and soils	Soil and natural materials	CNI	137,739	0	0	1,909	139,648
+2020-2021	Aggregate, masonry and soils	Soil and natural materials	MSW	15,995	0	0	0	15,995
+2020-2021	Glass	Container glass	CND	707	0	0	0	707
+2020-2021	Glass	Container glass	CNI	36,140	0	0	159,885	196,025
+2020-2021	Glass	Container glass	MSW	40,218	0	0	174,755	214,973
+2020-2021	Glass	Other glass	CND	3,451	0	0	0	3,451
+2020-2021	Glass	Other glass	CNI	17,738	0	0	0	17,738
+2020-2021	Glass	Other glass	MSW	39,825	0	0	0	39,825
+2020-2021	Metals	Aluminium	CND	4,077	8,011	0	0	12,088
+2020-2021	Metals	Aluminium	CNI	22,435	64,307	0	44,650	131,391
+2020-2021	Metals	Aluminium	MSW	21,711	26,854	0	1,462	50,027
+2020-2021	Metals	Ferrous	CND	17,458	44,758	0	0	62,216
+2020-2021	Metals	Ferrous	CNI	72,918	216,572	0	704,894	994,384
+2020-2021	Metals	Ferrous	MSW	36,470	138,833	0	45,848	221,151
+2020-2021	Metals	Other metals	CND	0	1,409	0	0	1,409
+2020-2021	Metals	Other metals	CNI	0	18,814	0	55,977	74,791
+2020-2021	Metals	Other metals	MSW	0	2,905	0	4,134	7,039
+2020-2021	Organics	Food organics	CND	3,149	0	0	0	3,149
+2020-2021	Organics	Food organics	CNI	318,418	0	0	47,114	365,532
+2020-2021	Organics	Food organics	MSW	522,595	0	0	75,226	597,821
+2020-2021	Organics	Garden organics	CND	22,698	0	0	0	22,698
+2020-2021	Organics	Garden organics	CNI	80,257	0	0	159,835	240,093
+2020-2021	Organics	Garden organics	MSW	104,546	0	0	676,772	781,318
+2020-2021	Organics	Other organics	CND	551	0	0	0	551
+2020-2021	Organics	Other organics	CNI	39,618	0	0	414,970	454,588
+2020-2021	Organics	Other organics	MSW	104,279	0	0	0	104,279
+2020-2021	Organics	Wood /timber	CND	123,782	0	0	0	123,782
+2020-2021	Organics	Wood /timber	CNI	309,493	0	0	214,938	524,431
+2020-2021	Organics	Wood /timber	MSW	29,179	0	0	74,500	103,679
+2020-2021	Paper and cardboard	Cardboard	CND	4,533	10,775	0	0	15,308
+2020-2021	Paper and cardboard	Cardboard	CNI	103,228	193,949	0	303,483	600,660
+2020-2021	Paper and cardboard	Cardboard	MSW	38,325	10,775	0	46	49,146
+2020-2021	Paper and cardboard	Liquidpaperboard	CND	563	0	0	0	563
+2020-2021	Paper and cardboard	Liquidpaperboard	CNI	37,288	0	0	0	37,288
+2020-2021	Paper and cardboard	Liquidpaperboard	MSW	29,099	0	0	0	29,099
+2020-2021	Paper and cardboard	Newsprint and magazines	CND	0	206	0	0	206
+2020-2021	Paper and cardboard	Newsprint and magazines	CNI	0	2,882	0	4,234	7,116
+2020-2021	Paper and cardboard	Newsprint and magazines	MSW	0	1,029	0	6,287	7,316
+2020-2021	Paper and cardboard	Other paper	CND	1,717	16	0	0	1,732
+2020-2021	Paper and cardboard	Other paper	CNI	111,316	79,154	0	24,253	214,723
+2020-2021	Paper and cardboard	Other paper	MSW	130,943	41,413	0	170,089	342,445
+2020-2021	Paper and cardboard	Printing and writing paper	CND	1,754	0	0	0	1,754
+2020-2021	Paper and cardboard	Printing and writing paper	CNI	107,023	0	0	10,902	117,925
+2020-2021	Paper and cardboard	Printing and writing paper	MSW	87,415	0	0	0	87,415
+2020-2021	Plastic	HDPE (2)	CND	4,588	170	33	241	5,032
+2020-2021	Plastic	HDPE (2)	CNI	70,959	2,767	512	3,169	77,407
+2020-2021	Plastic	HDPE (2)	MSW	74,491	10,685	1,958	12,185	99,318
+2020-2021	Plastic	LDPE (4)	CND	3,436	0	0	5	3,441
+2020-2021	Plastic	LDPE (4)	CNI	53,145	2,503	74	14,113	69,836
+2020-2021	Plastic	LDPE (4)	MSW	35,530	1,517	45	8,508	45,600
+2020-2021	Plastic	Other plastics (7)	CND	2,460	0	0	0	2,460
+2020-2021	Plastic	Other plastics (7)	CNI	39,872	5,832	288	2,146	48,138
+2020-2021	Plastic	Other plastics (7)	MSW	87,847	2,376	0	1,082	91,305
+2020-2021	Plastic	PET (1)	CND	1,900	0	0	34	1,934
+2020-2021	Plastic	PET (1)	CNI	29,393	7,788	518	1,852	39,551
+2020-2021	Plastic	PET (1)	MSW	49,707	17,070	1,135	4,252	72,164
+2020-2021	Plastic	PP (5)	CND	3,685	9	1	126	3,822
+2020-2021	Plastic	PP (5)	CNI	57,005	737	74	6,658	64,473
+2020-2021	Plastic	PP (5)	MSW	38,111	1,880	187	16,991	57,170
+2020-2021	Plastic	PS (6)	CND	960	373	38	1,530	2,901
+2020-2021	Plastic	PS (6)	CNI	14,845	550	55	2,303	17,753
+2020-2021	Plastic	PS (6)	MSW	9,925	864	87	3,589	14,464
+2020-2021	Plastic	PVC (3)	CND	2,419	435	0	199	3,053
+2020-2021	Plastic	PVC (3)	CNI	37,409	1,450	0	669	39,528
+2020-2021	Plastic	PVC (3)	MSW	25,010	0	0	35	25,045
+2020-2021	Textiles	Clothing	CND	3,886	0	0	0	3,886
+2020-2021	Textiles	Clothing	CNI	49,817	0	0	0	49,817
+2020-2021	Textiles	Clothing	MSW	64,910	50,152	0	0	115,062
+2020-2021	Textiles	Other textiles	CND	6,926	0	0	0	6,926
+2020-2021	Textiles	Other textiles	CNI	76,518	125	0	15,214	91,857
+2020-2021	Textiles	Other textiles	MSW	21,255	2	0	0	21,257
+2020-2021	Tyres and rubber	Offroad tyres	CND	0	0	0	0	0
+2020-2021	Tyres and rubber	Offroad tyres	CNI	0	8,653	0	6,814	15,467
+2020-2021	Tyres and rubber	Offroad tyres	MSW	0	0	0	0	0
+2020-2021	Tyres and rubber	Other rubber	CND	188	0	0	0	188
+2020-2021	Tyres and rubber	Other rubber	CNI	10,713	13,819	0	14,693	39,225
+2020-2021	Tyres and rubber	Other rubber	MSW	2,550	1,672	0	0	4,222
+2020-2021	Tyres and rubber	Passenger tyres	CND	135	0	0	0	135
+2020-2021	Tyres and rubber	Passenger tyres	CNI	1,166	8,545	0	23,287	32,999
+2020-2021	Tyres and rubber	Passenger tyres	MSW	0	1,775	0	0	1,775
+2020-2021	Tyres and rubber	Truck tyres	CND	0	0	0	0	0
+2020-2021	Tyres and rubber	Truck tyres	CNI	0	51	0	12,900	12,951
+2020-2021	Tyres and rubber	Truck tyres	MSW	0	0	0	0	0
+2021-2022	Aggregate, masonry and soils	Asphalt	CND	1,052	0	0	462,437	463,489
+2021-2022	Aggregate, masonry and soils	Asphalt	CNI	4,052	0	0	142,200	146,252
+2021-2022	Aggregate, masonry and soils	Asphalt	MSW	706	0	0	0	706
+2021-2022	Aggregate, masonry and soils	Bricks	CND	29,729	0	0	755,225	784,954
+2021-2022	Aggregate, masonry and soils	Bricks	CNI	34,698	0	0	996	35,694
+2021-2022	Aggregate, masonry and soils	Bricks	MSW	46,398	0	0	0	46,398
+2021-2022	Aggregate, masonry and soils	Concrete	CND	27,043	0	0	2,707,364	2,734,407
+2021-2022	Aggregate, masonry and soils	Concrete	CNI	40,998	0	0	4,667	45,665
+2021-2022	Aggregate, masonry and soils	Concrete	MSW	377	0	0	2,642	3,019
+2021-2022	Aggregate, masonry and soils	Plaster	CND	16,074	0	0	32,641	48,715
+2021-2022	Aggregate, masonry and soils	Plaster	CNI	28,619	0	0	0	28,619
+2021-2022	Aggregate, masonry and soils	Plaster	MSW	4,184	0	0	0	4,184
+2021-2022	Aggregate, masonry and soils	Rubble	CND	10,233	0	0	27,925	38,158
+2021-2022	Aggregate, masonry and soils	Rubble	CNI	18,104	0	0	0	18,104
+2021-2022	Aggregate, masonry and soils	Rubble	MSW	2,826	0	0	0	2,826
+2021-2022	Aggregate, masonry and soils	Soil and natural materials	CND	762,391	0	0	1,492,265	2,254,656
+2021-2022	Aggregate, masonry and soils	Soil and natural materials	CNI	137,695	0	0	221	137,916
+2021-2022	Aggregate, masonry and soils	Soil and natural materials	MSW	14,728	0	0	39,000	53,728
+2021-2022	Glass	Container glass	CND	707	0	0	7,861	8,568
+2021-2022	Glass	Container glass	CNI	36,129	491	0	62,584	99,204
+2021-2022	Glass	Container glass	MSW	37,030	1,146	0	144,185	182,361
+2021-2022	Glass	Other glass	CND	3,450	0	0	500	3,950
+2021-2022	Glass	Other glass	CNI	17,732	0	0	10,000	27,732
+2021-2022	Glass	Other glass	MSW	36,669	0	0	0	36,669
+2021-2022	Metals	Aluminium	CND	4,076	14,133	0	5,771	23,979
+2021-2022	Metals	Aluminium	CNI	22,428	89,532	0	35,781	147,740
+2021-2022	Metals	Aluminium	MSW	19,990	10,112	0	4,572	34,674
+2021-2022	Metals	Ferrous	CND	17,452	24,144	0	25,171	66,767
+2021-2022	Metals	Ferrous	CNI	72,894	286,035	0	299,076	658,006
+2021-2022	Metals	Ferrous	MSW	33,580	159,818	0	170,809	364,207
+2021-2022	Metals	Other metals	CND	0	417	0	3,007	3,424
+2021-2022	Metals	Other metals	CNI	0	21,192	0	215,943	237,135
+2021-2022	Metals	Other metals	MSW	0	1,115	0	10,359	11,474
+2021-2022	Organics	Food organics	CND	3,148	0	0	0	3,148
+2021-2022	Organics	Food organics	CNI	318,316	0	0	74,017	392,333
+2021-2022	Organics	Food organics	MSW	447,531	0	0	124,392	571,922
+2021-2022	Organics	Garden organics	CND	22,690	0	0	38	22,728
+2021-2022	Organics	Garden organics	CNI	80,232	0	0	65,418	145,650
+2021-2022	Organics	Garden organics	MSW	96,261	0	0	803,716	899,977
+2021-2022	Organics	Other organics	CND	551	0	0	0	551
+2021-2022	Organics	Other organics	CNI	39,605	0	0	146,413	186,018
+2021-2022	Organics	Other organics	MSW	96,015	0	0	32,804	128,819
+2021-2022	Organics	Wood /timber	CND	123,742	0	0	19,899	143,641
+2021-2022	Organics	Wood /timber	CNI	309,394	0	0	118,426	427,820
+2021-2022	Organics	Wood /timber	MSW	26,867	0	0	25,138	52,005
+2021-2022	Paper and cardboard	Cardboard	CND	4,531	0	0	0	4,531
+2021-2022	Paper and cardboard	Cardboard	CNI	103,195	142,418	0	409,519	655,131
+2021-2022	Paper and cardboard	Cardboard	MSW	35,288	16	0	130	35,434
+2021-2022	Paper and cardboard	Liquidpaperboard	CND	563	0	0	0	563
+2021-2022	Paper and cardboard	Liquidpaperboard	CNI	37,276	0	0	0	37,276
+2021-2022	Paper and cardboard	Liquidpaperboard	MSW	26,793	0	0	0	26,793
+2021-2022	Paper and cardboard	Newsprint and magazines	CND	0	0	0	0	0
+2021-2022	Paper and cardboard	Newsprint and magazines	CNI	0	2,296	0	4,155	6,451
+2021-2022	Paper and cardboard	Newsprint and magazines	MSW	0	3,473	0	6,287	9,760
+2021-2022	Paper and cardboard	Other paper	CND	1,716	0	0	0	1,716
+2021-2022	Paper and cardboard	Other paper	CNI	111,280	15,700	0	23,801	150,782
+2021-2022	Paper and cardboard	Other paper	MSW	120,566	112,231	0	170,131	402,927
+2021-2022	Paper and cardboard	Printing and writing paper	CND	1,753	0	0	0	1,753
+2021-2022	Paper and cardboard	Printing and writing paper	CNI	106,988	1	0	43,617	150,606
+2021-2022	Paper and cardboard	Printing and writing paper	MSW	80,487	0	0	0	80,487
+2021-2022	Plastic	HDPE (2)	CND	4,586	105	44	266	5,001
+2021-2022	Plastic	HDPE (2)	CNI	70,937	1,655	716	4,204	77,511
+2021-2022	Plastic	HDPE (2)	MSW	68,587	9,644	4,219	24,501	106,951
+2021-2022	Plastic	LDPE (4)	CND	3,435	51	1	86	3,572
+2021-2022	Plastic	LDPE (4)	CNI	53,128	17,691	424	30,086	101,329
+2021-2022	Plastic	LDPE (4)	MSW	32,715	1,307	31	2,223	36,276
+2021-2022	Plastic	Other plastics (7)	CND	2,459	0	102	19	2,580
+2021-2022	Plastic	Other plastics (7)	CNI	39,859	0	480	7,173	47,513
+2021-2022	Plastic	Other plastics (7)	MSW	80,885	0	17	3,042	83,944
+2021-2022	Plastic	PET (1)	CND	1,900	19	0	22	1,941
+2021-2022	Plastic	PET (1)	CNI	29,384	4,873	818	5,862	40,937
+2021-2022	Plastic	PET (1)	MSW	45,768	15,688	2,640	18,871	82,967
+2021-2022	Plastic	PP (5)	CND	3,684	3	5	136	3,827
+2021-2022	Plastic	PP (5)	CNI	56,987	263	698	13,415	71,363
+2021-2022	Plastic	PP (5)	MSW	35,090	184	488	9,412	45,175
+2021-2022	Plastic	PS (6)	CND	959	106	75	1,594	2,734
+2021-2022	Plastic	PS (6)	CNI	14,840	116	102	1,745	16,802
+2021-2022	Plastic	PS (6)	MSW	9,138	71	62	1,064	10,334
+2021-2022	Plastic	PVC (3)	CND	2,418	0	0	365	2,783
+2021-2022	Plastic	PVC (3)	CNI	37,398	0	0	2,005	39,403
+2021-2022	Plastic	PVC (3)	MSW	23,028	0	0	0	23,028
+2021-2022	Textiles	Clothing	CND	3,884	0	0	0	3,884
+2021-2022	Textiles	Clothing	CNI	49,801	0	0	178	49,979
+2021-2022	Textiles	Clothing	MSW	59,766	56,122	0	129	116,017
+2021-2022	Textiles	Other textiles	CND	6,924	0	0	0	6,924
+2021-2022	Textiles	Other textiles	CNI	76,493	290	13	116	76,913
+2021-2022	Textiles	Other textiles	MSW	19,570	0	0	1,674	21,244
+2021-2022	Tyres and rubber	Offroad tyres	CND	0	0	0	0	0
+2021-2022	Tyres and rubber	Offroad tyres	CNI	0	12,991	0	1,800	14,791
+2021-2022	Tyres and rubber	Offroad tyres	MSW	0	0	0	0	0
+2021-2022	Tyres and rubber	Other rubber	CND	188	0	0	0	188
+2021-2022	Tyres and rubber	Other rubber	CNI	10,710	7,059	0	0	17,769
+2021-2022	Tyres and rubber	Other rubber	MSW	2,348	784	0	0	3,132
+2021-2022	Tyres and rubber	Passenger tyres	CND	135	0	0	0	135
+2021-2022	Tyres and rubber	Passenger tyres	CNI	1,166	7,442	0	0	8,607
+2021-2022	Tyres and rubber	Passenger tyres	MSW	0	1,860	0	1,000	2,860
+2021-2022	Tyres and rubber	Truck tyres	CND	0	0	0	0	0
+2021-2022	Tyres and rubber	Truck tyres	CNI	0	2,784	0	11,400	14,184
+2021-2022	Tyres and rubber	Truck tyres	MSW	0	0	0	0	0
+2022-2023	Aggregate, masonry and soils	Asphalt	CND	1,026	0	0	649,669	650,695
+2022-2023	Aggregate, masonry and soils	Asphalt	CNI	3,954	0	0	169,470	173,424
+2022-2023	Aggregate, masonry and soils	Asphalt	MSW	737	0	0	0	737
+2022-2023	Aggregate, masonry and soils	Bricks	CND	29,012	0	0	969,073	998,085
+2022-2023	Aggregate, masonry and soils	Bricks	CNI	33,860	0	0	1,198	35,058
+2022-2023	Aggregate, masonry and soils	Bricks	MSW	48,416	0	0	0	48,416
+2022-2023	Aggregate, masonry and soils	Concrete	CND	26,391	0	0	2,871,924	2,898,315
+2022-2023	Aggregate, masonry and soils	Concrete	CNI	40,008	0	0	8,155	48,163
+2022-2023	Aggregate, masonry and soils	Concrete	MSW	393	0	0	2,642	3,035
+2022-2023	Aggregate, masonry and soils	Plaster	CND	15,687	0	0	32,641	48,328
+2022-2023	Aggregate, masonry and soils	Plaster	CNI	27,929	0	0	403	28,332
+2022-2023	Aggregate, masonry and soils	Plaster	MSW	4,366	0	0	0	4,366
+2022-2023	Aggregate, masonry and soils	Rubble	CND	9,986	0	0	28,750	38,736
+2022-2023	Aggregate, masonry and soils	Rubble	CNI	17,667	0	0	0	17,667
+2022-2023	Aggregate, masonry and soils	Rubble	MSW	2,949	0	0	0	2,949
+2022-2023	Aggregate, masonry and soils	Soil and natural materials	CND	743,990	0	0	987,709	1,731,699
+2022-2023	Aggregate, masonry and soils	Soil and natural materials	CNI	134,371	0	0	1,417	135,788
+2022-2023	Aggregate, masonry and soils	Soil and natural materials	MSW	15,368	0	0	16,200	31,568
+2022-2023	Glass	Container glass	CND	690	0	0	7,861	8,551
+2022-2023	Glass	Container glass	CNI	35,257	302	0	62,584	98,143
+2022-2023	Glass	Container glass	MSW	38,641	706	0	150,185	189,532
+2022-2023	Glass	Other glass	CND	3,367	0	0	200	3,567
+2022-2023	Glass	Other glass	CNI	17,304	0	0	12,000	29,304
+2022-2023	Glass	Other glass	MSW	38,264	0	0	0	38,264
+2022-2023	Metals	Aluminium	CND	3,977	17,531	0	7,292	28,800
+2022-2023	Metals	Aluminium	CNI	21,886	91,758	0	37,519	151,164
+2022-2023	Metals	Aluminium	MSW	20,860	12,542	0	5,667	39,069
+2022-2023	Metals	Ferrous	CND	17,031	16,063	0	21,172	54,266
+2022-2023	Metals	Ferrous	CNI	71,135	223,736	0	296,444	591,315
+2022-2023	Metals	Ferrous	MSW	35,041	122,665	0	165,902	323,607
+2022-2023	Metals	Other metals	CND	0	647	0	3,890	4,537
+2022-2023	Metals	Other metals	CNI	0	25,868	0	217,107	242,975
+2022-2023	Metals	Other metals	MSW	0	1,415	0	10,667	12,082
+2022-2023	Organics	Food organics	CND	3,072	0	0	0	3,072
+2022-2023	Organics	Food organics	CNI	310,633	0	0	82,413	393,047
+2022-2023	Organics	Food organics	MSW	467,000	0	0	149,611	616,611
+2022-2023	Organics	Garden organics	CND	22,143	0	0	38	22,181
+2022-2023	Organics	Garden organics	CNI	78,295	0	0	68,096	146,391
+2022-2023	Organics	Garden organics	MSW	100,449	0	0	827,423	927,871
+2022-2023	Organics	Other organics	CND	538	0	0	0	538
+2022-2023	Organics	Other organics	CNI	38,649	0	0	159,090	197,739
+2022-2023	Organics	Other organics	MSW	100,192	0	0	31,185	131,377
+2022-2023	Organics	Wood /timber	CND	120,756	0	0	19,569	140,325
+2022-2023	Organics	Wood /timber	CNI	301,927	0	0	114,818	416,744
+2022-2023	Organics	Wood /timber	MSW	28,036	0	0	34,531	62,566
+2022-2023	Paper and cardboard	Cardboard	CND	4,422	0	0	0	4,422
+2022-2023	Paper and cardboard	Cardboard	CNI	100,704	124,720	0	420,678	646,103
+2022-2023	Paper and cardboard	Cardboard	MSW	36,823	14	0	126	36,963
+2022-2023	Paper and cardboard	Liquidpaperboard	CND	549	0	0	0	549
+2022-2023	Paper and cardboard	Liquidpaperboard	CNI	36,376	0	0	0	36,376
+2022-2023	Paper and cardboard	Liquidpaperboard	MSW	27,959	0	0	0	27,959
+2022-2023	Paper and cardboard	Newsprint and magazines	CND	0	0	0	0	0
+2022-2023	Paper and cardboard	Newsprint and magazines	CNI	0	1,938	0	4,155	6,093
+2022-2023	Paper and cardboard	Newsprint and magazines	MSW	0	2,930	0	6,287	9,217
+2022-2023	Paper and cardboard	Other paper	CND	1,675	0	0	0	1,675
+2022-2023	Paper and cardboard	Other paper	CNI	108,594	16,799	0	23,801	149,194
+2022-2023	Paper and cardboard	Other paper	MSW	125,811	120,096	0	170,152	416,059
+2022-2023	Paper and cardboard	Printing and writing paper	CND	1,711	0	0	0	1,711
+2022-2023	Paper and cardboard	Printing and writing paper	CNI	104,406	3	0	26,514	130,923
+2022-2023	Paper and cardboard	Printing and writing paper	MSW	83,989	0	0	0	83,989
+2022-2023	Plastic	HDPE (2)	CND	4,475	89	99	438	5,101
+2022-2023	Plastic	HDPE (2)	CNI	69,224	1,111	926	3,829	75,090
+2022-2023	Plastic	HDPE (2)	MSW	71,571	5,524	7,156	32,620	116,872
+2022-2023	Plastic	LDPE (4)	CND	3,352	26	7	289	3,673
+2022-2023	Plastic	LDPE (4)	CNI	51,846	11,621	498	11,159	75,124
+2022-2023	Plastic	LDPE (4)	MSW	34,138	2,178	152	4,756	41,223
+2022-2023	Plastic	Other plastics (7)	CND	2,400	0	97	64	2,560
+2022-2023	Plastic	Other plastics (7)	CNI	38,897	0	7	2,155	41,059
+2022-2023	Plastic	Other plastics (7)	MSW	84,404	0	1,396	10,420	96,220
+2022-2023	Plastic	PET (1)	CND	1,854	0	0	0	1,854
+2022-2023	Plastic	PET (1)	CNI	28,675	1,473	322	516	30,986
+2022-2023	Plastic	PET (1)	MSW	47,759	8,348	6,589	32,328	95,024
+2022-2023	Plastic	PP (5)	CND	3,595	0	4	23	3,622
+2022-2023	Plastic	PP (5)	CNI	55,611	9	852	5,357	61,829
+2022-2023	Plastic	PP (5)	MSW	36,617	9	3,122	19,649	59,397
+2022-2023	Plastic	PS (6)	CND	936	133	85	1,313	2,467
+2022-2023	Plastic	PS (6)	CNI	14,482	152	70	1,160	15,865
+2022-2023	Plastic	PS (6)	MSW	9,536	181	50	710	10,476
+2022-2023	Plastic	PVC (3)	CND	2,359	5	0	1,065	3,429
+2022-2023	Plastic	PVC (3)	CNI	36,495	16	0	932	37,443
+2022-2023	Plastic	PVC (3)	MSW	24,030	0	0	12	24,042
+2022-2023	Textiles	Clothing	CND	3,791	0	0	0	3,791
+2022-2023	Textiles	Clothing	CNI	48,599	0	0	323	48,922
+2022-2023	Textiles	Clothing	MSW	62,366	64,051	0	118	126,535
+2022-2023	Textiles	Other textiles	CND	6,757	0	0	0	6,757
+2022-2023	Textiles	Other textiles	CNI	74,647	521	56	86	75,310
+2022-2023	Textiles	Other textiles	MSW	20,422	0	0	1,602	22,024
+2022-2023	Tyres and rubber	Offroad tyres	CND	0	0	0	0	0
+2022-2023	Tyres and rubber	Offroad tyres	CNI	0	459	0	2,000	2,459
+2022-2023	Tyres and rubber	Offroad tyres	MSW	0	0	0	0	0
+2022-2023	Tyres and rubber	Other rubber	CND	184	0	0	0	184
+2022-2023	Tyres and rubber	Other rubber	CNI	10,451	9,446	0	0	19,897
+2022-2023	Tyres and rubber	Other rubber	MSW	2,450	1,050	0	0	3,500
+2022-2023	Tyres and rubber	Passenger tyres	CND	132	0	0	0	132
+2022-2023	Tyres and rubber	Passenger tyres	CNI	1,138	2,198	0	0	3,336
+2022-2023	Tyres and rubber	Passenger tyres	MSW	0	550	0	1,200	1,750
+2022-2023	Tyres and rubber	Truck tyres	CND	0	0	0	0	0
+2022-2023	Tyres and rubber	Truck tyres	CNI	0	4,505	0	20,500	25,005
+2022-2023	Tyres and rubber	Truck tyres	MSW	0	0	0	0	0
+2023-2024	Aggregate, masonry and soils	Asphalt	CND	1019.155409	0	0	298,490	299509.1554
+2023-2024	Aggregate, masonry and soils	Asphalt	CNI	3926.674912	0	0	141,681	145607.6749
+2023-2024	Aggregate, masonry and soils	Asphalt	MSW	661.095825	0	0	0	661.095825
+2023-2024	Aggregate, masonry and soils	Bricks	CND	28812.4499	0	0	917,996	946808.4499
+2023-2024	Aggregate, masonry and soils	Bricks	CNI	33627.42665	0	0	970	34597.42665
+2023-2024	Aggregate, masonry and soils	Bricks	MSW	43423.15836	0	0	0	43423.15836
+2023-2024	Aggregate, masonry and soils	Concrete	CND	26209.25763	0	0	2,263,534	2289743.258
+2023-2024	Aggregate, masonry and soils	Concrete	CNI	39733.32739	0	0	2,786	42519.32739
+2023-2024	Aggregate, masonry and soils	Concrete	MSW	352.550659	0	0	118,545	118897.5507
+2023-2024	Aggregate, masonry and soils	Plaster	CND	15578.65408	0	0	1,436	17014.65408
+2023-2024	Aggregate, masonry and soils	Plaster	CNI	27736.46568	0	0	4,521	32257.46568
+2023-2024	Aggregate, masonry and soils	Plaster	MSW	3915.770449	0	0	0	3915.770449
+2023-2024	Aggregate, masonry and soils	Rubble	CND	9917.055768	0	0	0	9917.055768
+2023-2024	Aggregate, masonry and soils	Rubble	CNI	17545.18586	0	0	1,385	18930.18586
+2023-2024	Aggregate, masonry and soils	Rubble	MSW	2645.066705	0	0	0	2645.066705
+2023-2024	Aggregate, masonry and soils	Soil and natural materials	CND	738874.0504	0	0	1,427,964	2166838.05
+2023-2024	Aggregate, masonry and soils	Soil and natural materials	CNI	133447.3531	0	0	15,616	149063.3531
+2023-2024	Aggregate, masonry and soils	Soil and natural materials	MSW	13783.34394	0	0	0	13783.34394
+2023-2024	Glass	Container glass	CND	685.332791	0	0	3,246	3931.332791
+2023-2024	Glass	Container glass	CNI	35014.40438	0	0	107,924	142938.4044
+2023-2024	Glass	Container glass	MSW	34656.21205	0	0	100,672	135328.2121
+2023-2024	Glass	Other glass	CND	3343.622728	0	0	0	3343.622728
+2023-2024	Glass	Other glass	CNI	17184.97887	0	0	11,575	28759.97887
+2023-2024	Glass	Other glass	MSW	34317.78344	0	0	0	34317.78344
+2023-2024	Metals	Aluminium	CND	3949.842474	21258.39277	0	6,174	31382.23525
+2023-2024	Metals	Aluminium	CNI	21735.73159	111270.4835	0	42,206	175212.2151
+2023-2024	Metals	Aluminium	MSW	18708.71376	15208.97875	0	7,187	41104.69252
+2023-2024	Metals	Ferrous	CND	16913.76092	20545.6367	0	71,760	109219.5376
+2023-2024	Metals	Ferrous	CNI	70645.94035	286163.9764	0	325,602	682412.0968
+2023-2024	Metals	Ferrous	MSW	31426.86201	156891.7549	0	203,035	391353.1569
+2023-2024	Metals	Other metals	CND	0	540.269112	0	4,901	5441.269112
+2023-2024	Metals	Other metals	CNI	0	21604.14893	0	244,301	265905.1489
+2023-2024	Metals	Other metals	MSW	0	1181.976506	0	10,587	11768.97651
+2023-2024	Organics	Food organics	CND	3050.620424	0	0	0	3050.620424
+2023-2024	Organics	Food organics	CNI	308497.2673	0	0	72,320	380817.6673
+2023-2024	Organics	Food organics	MSW	418837.4594	0	0	123,988	542825.3294
+2023-2024	Organics	Garden organics	CND	21990.48617	0	0	11,272	33262.48617
+2023-2024	Organics	Garden organics	CNI	77756.79384	0	0	72,270	150027.1938
+2023-2024	Organics	Garden organics	MSW	90089.14116	0	0	754,501	844590.2712
+2023-2024	Organics	Other organics	CND	534.071886	0	0	43,828	44362.07189
+2023-2024	Organics	Other organics	CNI	38383.2849	0	0	272,006	310389.2849
+2023-2024	Organics	Other organics	MSW	89859.24713	0	0	82,420	172279.2471
+2023-2024	Organics	Wood /timber	CND	119925.3625	0	0	43,242	163167.8125
+2023-2024	Organics	Wood /timber	CNI	299850.7283	0	0	105,441	405291.8783
+2023-2024	Organics	Wood /timber	MSW	25144.25734	0	0	349	25493.70734
+2023-2024	Paper and cardboard	Cardboard	CND	4391.417092	0	0	70	4461.507092
+2023-2024	Paper and cardboard	Cardboard	CNI	100011.3702	173905.5708	0	161,802	435718.771
+2023-2024	Paper and cardboard	Cardboard	MSW	33025.64809	19.016194	0	4,180	37225.15428
+2023-2024	Paper and cardboard	Liquidpaperboard	CND	545.227414	0	0	0	545.227414
+2023-2024	Paper and cardboard	Liquidpaperboard	CNI	36126.08269	0	0	332	36458.08269
+2023-2024	Paper and cardboard	Liquidpaperboard	MSW	25075.4781	0	0	0	25075.4781
+2023-2024	Paper and cardboard	Newsprint and magazines	CND	0	0	0	0	0
+2023-2024	Paper and cardboard	Newsprint and magazines	CNI	0	1104.870331	0	6,748	7852.870331
+2023-2024	Paper and cardboard	Newsprint and magazines	MSW	0	1671.129669	0	3	1674.129669
+2023-2024	Paper and cardboard	Other paper	CND	1663.066522	0	0	0	1663.066522
+2023-2024	Paper and cardboard	Other paper	CNI	107847.6742	15475.83935	0	70,754	194077.5136
+2023-2024	Paper and cardboard	Other paper	MSW	112835.6165	110639.8967	0	415,059	638534.5132
+2023-2024	Paper and cardboard	Printing and writing paper	CND	1699.311562	0	0	0	1699.311562
+2023-2024	Paper and cardboard	Printing and writing paper	CNI	103688.2805	3357	0	39,768	146813.2805
+2023-2024	Paper and cardboard	Printing and writing paper	MSW	75326.96067	0	0	0	75326.96067
+2023-2024	Plastic	HDPE (2)	CND	4444.671688	46.415179	82.71554029	250	4824.182671
+2023-2024	Plastic	HDPE (2)	CNI	68748.40605	580.91467	935.6938259	3,170	73435.12439
+2023-2024	Plastic	HDPE (2)	MSW	64189.79114	2889.061152	7314.622103	35,259	109652.0036
+2023-2024	Plastic	LDPE (4)	CND	3328.854527	29.405105	3.731918864	146	3508.262665
+2023-2024	Plastic	LDPE (4)	CNI	51489.39198	13340.67739	513.3112837	23,958	89301.39872
+2023-2024	Plastic	LDPE (4)	MSW	30617.08503	2500.112675	76.0419106	1,515	34707.958
+2023-2024	Plastic	Other plastics (7)	CND	2383.185688	0	128.4440298	0	2511.629718
+2023-2024	Plastic	Other plastics (7)	CNI	38629.69811	0	266.8526199	11,525	50421.28567
+2023-2024	Plastic	Other plastics (7)	MSW	75698.99171	0	1125.29356	10,456	87280.18453
+2023-2024	Plastic	PET (1)	CND	1841.098314	6.012045	0	21	1868.413314
+2023-2024	Plastic	PET (1)	CNI	28477.37322	1383.035988	316.1723001	2,324	32500.13422
+2023-2024	Plastic	PET (1)	MSW	42833.46721	3395.401957	6097.743588	42,983	95309.1342
+2023-2024	Plastic	PP (5)	CND	3570.614912	0	0	0	3570.614912
+2023-2024	Plastic	PP (5)	CNI	55228.84503	30.42	839.273752	7,201	63299.16241
+2023-2024	Plastic	PP (5)	MSW	32840.67221	28.08	2503.030972	17,781	53152.87102
+2023-2024	Plastic	PS (6)	CND	929.847633	46.242919	97.16420318	1,639	2712.439585
+2023-2024	Plastic	PS (6)	CNI	14382.51173	52.84511	104.172059	1,339	15878.78557
+2023-2024	Plastic	PS (6)	MSW	8552.258389	62.711971	54.18573823	714	9382.83546
+2023-2024	Plastic	PVC (3)	CND	2343.216037	0	0	837	3180.568037
+2023-2024	Plastic	PVC (3)	CNI	36243.92955	0	0	984	37227.95554
+2023-2024	Plastic	PVC (3)	MSW	21551.69114	0	0	0	21551.69114
+2023-2024	Textiles	Clothing	CND	3764.550284	0	0	0	3764.550284
+2023-2024	Textiles	Clothing	CNI	48264.89389	0	0	353	48617.89389
+2023-2024	Textiles	Clothing	MSW	55933.99189	70791.41781	0	198	126923.4097
+2023-2024	Textiles	Other textiles	CND	6710.197089	0	0	2	6711.997089
+2023-2024	Textiles	Other textiles	CNI	74133.91263	170.99791	100	328	74732.51054
+2023-2024	Textiles	Other textiles	MSW	18315.71701	0	0	1,320	19635.51701
+2023-2024	Tyres and rubber	Offroad tyres	CND	0	0	0	0	0
+2023-2024	Tyres and rubber	Offroad tyres	CNI	0	135.25693	0	275	410.25693
+2023-2024	Tyres and rubber	Offroad tyres	MSW	0	0	0	0	0
+2023-2024	Tyres and rubber	Other rubber	CND	182.262044	0	0	0	182.262044
+2023-2024	Tyres and rubber	Other rubber	CNI	10379.47068	29330.03076	0	0	39709.50145
+2023-2024	Tyres and rubber	Other rubber	MSW	2197.477539	3258.892307	0	0	5456.369846
+2023-2024	Tyres and rubber	Passenger tyres	CND	130.719718	0	0	0	130.719718
+2023-2024	Tyres and rubber	Passenger tyres	CNI	1129.823659	15.04	0	0	1144.863659
+2023-2024	Tyres and rubber	Passenger tyres	MSW	0	3.76	0	4,325	4328.76
+2023-2024	Tyres and rubber	Truck tyres	CND	0	0	0	0	0
+2023-2024	Tyres and rubber	Truck tyres	CNI	0	176.955	0	21,900	22076.955
+2023-2024	Tyres and rubber	Truck tyres	MSW	0	0	0	0	0

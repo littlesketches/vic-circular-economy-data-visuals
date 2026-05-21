@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verspil de Stijl Waste</title>
+	<link rel="icon" href = "../_shared/assets/img/vic-favicon.png" />
+    <link rel="stylesheet" href="../../_shared/css/brand/vic-gov.css">
+    <link rel="stylesheet" href="../../_shared/css/brand/epa-brand.css">
+    <link rel="stylesheet" href="../../_shared/css/data-vis/vis-page-layout.css">
+    <link rel="stylesheet" href="../../_shared/css/data-vis/data-vis.css">
+    <link rel="stylesheet" href="../../_shared/css/data-vis/waste-treemap.css">
+
+    <link rel="stylesheet" href="./css/vis.css">
+</head>
+
+
+<body class="data-vis">
+    <main class="content__wrapper hide-sidebar_">
+ 
+        <header class="sidebar__upper">
+            <div class = 'title-block'>
+                <h1 id = 'vis-title'>Verspil<br>De Stijl</h1>
+                <select id = 'year-select'> </select>
+            </div>
+
+            <div class = 'lead-block'>
+                <p>A look at the breakdown of Victoria's managed waste by source and material stream, with a touch of <i>stijl</i>.</p>
+            </div>
+        </header>
+    
+        <section class = "vis__container">
+            <div id = "vis__wrapper" class = "vis__wrapper">
+                <svg id="data-vis" width = "100%" class = 'mondrian'> </svg>
+            </div>
+
+            <div id="tooltip"></div>
+        </section>
+    
+
+        <footer class="sidebar__lower">
+            <div class = 'option__container'>
+                <label for="composition-select">Composition</label>
+                <select id="composition-select"></select>
+            </div>
+            <div class = 'option__container'>
+                <label for="variation-no">Variant</label>
+                <input id = 'variation-no'type ='number' min="0"></input>
+            </div>
+
+        </footer>
+    
+    </main>
+
+    <script type="module" src = './js/main.js'></script>
+</body>
+
+
+</html>

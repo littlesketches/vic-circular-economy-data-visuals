@@ -1,0 +1,313 @@
+/************************************************************** 
+    DEECA Brand Design Tokens
+    -------------------------
+    - Compiled by Claude.ai  with source css files extracted manually from https://www.deeca.vic.gov.au/ in May 2026
+    - Source files: deeca.vic.gov.au (main.css + delwp_additions_overrides.css)
+
+    - Used as a 'master palette' to curate a more refined data visualisation palette
+ **************************************************************/
+
+
+:root {
+  /* ----------------------------------------
+     TYPOGRAPHY
+  ---------------------------------------- */
+
+  --deeca-font-family:        'VIC', Arial, Helvetica, sans-serif;
+  --deeca-font-display:       'VIC Display', Arial, Helvetica, sans-serif;
+
+  --deeca-font-weight-extralight:   200;
+  --deeca-font-weight-light:        300;
+  --deeca-font-weight-regular:      400;
+  --deeca-font-weight-medium:       500;
+  --deeca-font-weight-semibold:     600;
+  --deeca-font-weight-bold:         700;
+
+  /* Type colours */
+  --deeca-text-default:       #201547;  /* Navy — primary body text */
+  --deeca-text-dark:          #242424;  /* Near-black for FFM contexts */
+  --deeca-text-light:         #ffffff;
+  --deeca-text-link:          #0019c1;
+  --deeca-text-muted:         #6e6e6e;
+
+  /* ----------------------------------------
+     CORE BRAND COLOURS
+     Primary DEECA identity colours
+  ---------------------------------------- */
+
+  --deeca-navy:               #201547;  /* Primary dark navy — dominant brand colour */
+  --deeca-navy-alt:           #201647;  /* Slight variant used in overrides */
+  --deeca-navy-deep:          #011a3c;  /* Deepest navy, used in dark contexts */
+  --deeca-teal:               #00b7bd;  /* Primary teal — key brand accent */
+  --deeca-teal-mid:           #4db7bd;  /* Lighter teal, used in alerts */
+  --deeca-teal-hover:         #20a5b2;  /* Teal hover/interaction state */
+  --deeca-teal-light:         #93d4d4;  /* Pale teal, button hover backgrounds */
+  --deeca-teal-bg:            #eff9f9;  /* Very light teal background */
+  --deeca-teal-dark:          #006b75;  /* Dark teal variant */
+
+  /* ----------------------------------------
+     EXTENDED BRAND PALETTE
+     Secondary / supporting colours found
+     across components and sub-brands
+  ---------------------------------------- */
+
+  --deeca-purple:             #797391;  /* Muted purple, gradient base */
+  --deeca-purple-dark:        #4d456c;  /* Dark purple variant */
+  --deeca-purple-deep:        #110a2a;  /* Deepest purple */
+  --deeca-heritage:           #642567;  /* Heritage/acknowledgement purple */
+  --deeca-blue:               #0052c2;  /* Vic Gov primary blue (Ripple default) */
+  --deeca-blue-dark:          #004c97;  /* Darker blue variant */
+  --deeca-blue-link:          #0019c1;  /* Link blue used in breakout components */
+  --deeca-blue-mid:           #0064b5;  /* Mid blue */
+  --deeca-navy-credit:        #1c2b56;  /* Image credit bar background */
+
+  /* ----------------------------------------
+     FOREST FIRE MANAGEMENT SUB-BRAND
+  ---------------------------------------- */
+
+  --ffm-green:                #007b4b;  /* FFM primary green */
+  --ffm-green-dark:           #00573f;  /* FFM dark green */
+  --ffm-green-mid:            #00623b;  /* FFM mid green */
+  --ffm-charcoal:             #242424;  /* FFM text/dark backgrounds */
+
+  /* ----------------------------------------
+     OUR PEOPLE THEIR STORIES (OPTS) SUB-BRAND
+  ---------------------------------------- */
+
+  --opts-orange:              #ff6912;  /* OPTS primary orange */
+  --opts-orange-dark:         #cc4b00;  /* OPTS dark orange */
+  --opts-orange-alt:          #ce4b00;  /* OPTS orange alt variant */
+  --opts-black:               #000000;  /* OPTS header/text black */
+
+  /* ----------------------------------------
+     SEMANTIC / UI COLOURS
+  ---------------------------------------- */
+
+  --deeca-error:              #d0021b;  /* Error red */
+  --deeca-warning-orange:     #e57200;  /* Warning orange */
+  --deeca-success-green:      #007b4b;  /* Success green (shared with FFM) */
+
+  /* ----------------------------------------
+     NEUTRAL PALETTE
+     Full greyscale scale used across components
+  ---------------------------------------- */
+
+  --deeca-white:              #ffffff;
+  --deeca-neutral-50:         #fafafa;
+  --deeca-neutral-100:        #f8f8f8;
+  --deeca-neutral-150:        #f6f6f6;
+  --deeca-neutral-200:        #f4f4f4;
+  --deeca-neutral-250:        #f2f2f2;
+  --deeca-neutral-300:        #e9e9e9;
+  --deeca-neutral-350:        #e6e6e6;
+  --deeca-neutral-400:        #e0e0e0;
+  --deeca-neutral-450:        #dddddd;
+  --deeca-neutral-500:        #d9d9d9;
+  --deeca-neutral-550:        #cccccc;
+  --deeca-neutral-600:        #c8c8c8;
+  --deeca-neutral-650:        #c0c0c0;
+  --deeca-neutral-700:        #b3b3b3;
+  --deeca-neutral-750:        #aaaaaa;
+  --deeca-neutral-800:        #929292;
+  --deeca-neutral-850:        #7d7d7d;
+  --deeca-neutral-900:        #6e6e6e;
+  --deeca-neutral-950:        #3d3d3d;
+  --deeca-neutral-dark:       #333333;
+  --deeca-black:              #000000;
+
+  /* Decorative warm neutral used in dividers/rules */
+  --deeca-warm-neutral:       #eae7e2;
+
+  /* ----------------------------------------
+     GRADIENTS
+  ---------------------------------------- */
+
+  /* Primary DEECA teal-to-purple gradient
+     Used on TOC border, breakout components */
+  --deeca-gradient-teal-purple: linear-gradient(
+    0deg,
+    #797391 0%,
+    #00b7bd 50%
+  );
+
+  /* FFM dark gradient */
+  --deeca-gradient-ffm: linear-gradient(
+    0deg,
+    #242424 0%,
+    #007b4b 50%
+  );
+
+  /* Ripple default vic.gov.au spectrum gradient */
+  --deeca-gradient-spectrum-h: linear-gradient(
+    to right,
+    #0052C2  0%,
+    #825DFF  12%,
+    #EF4A81  24%,
+    #E57200  36%,
+    #FFC166  52%,
+    #F9E062  80%
+  );
+
+  --deeca-gradient-spectrum-v: linear-gradient(
+    to bottom,
+    #0052C2  0%,
+    #825DFF  12%,
+    #EF4A81  24%,
+    #E57200  36%,
+    #FFC166  52%,
+    #F9E062  80%
+  );
+
+  /* ----------------------------------------
+     ALPHA / OVERLAY COLOURS
+     navy at various opacities for overlays
+  ---------------------------------------- */
+
+  --deeca-navy-10:            rgba(32, 21, 71, 0.10);
+  --deeca-navy-30:            rgba(32, 21, 71, 0.30);
+  --deeca-navy-50:            rgba(32, 21, 71, 0.50);
+  --deeca-navy-60:            rgba(32, 21, 71, 0.60);
+  --deeca-navy-70:            rgba(32, 21, 71, 0.70);
+  --deeca-navy-79:            rgba(32, 21, 71, 0.79);
+  --deeca-navy-90:            rgba(32, 21, 71, 0.90);
+
+  --deeca-white-20:           rgba(255, 255, 255, 0.20);
+  --deeca-white-30:           rgba(255, 255, 255, 0.30);
+  --deeca-white-50:           rgba(255, 255, 255, 0.50);
+
+  --deeca-black-10:           rgba(0, 0, 0, 0.10);
+  --deeca-black-20:           rgba(0, 0, 0, 0.20);
+  --deeca-black-33:           rgba(0, 0, 0, 0.33);
+  --deeca-black-75:           rgba(0, 0, 0, 0.75);
+
+
+  /* ----------------------------------------
+     RIPPLE BASE TOKENS (vic.gov.au defaults)
+     Kept for reference / Ripple component compat
+  ---------------------------------------- */
+
+  --rpl-clr-primary:              #0052C2;
+  --rpl-clr-primary-alpha:        rgb(0 82 194 / 50%);
+  --rpl-clr-primary-alt:          #003174;
+  --rpl-clr-accent:               #0095EC;
+  --rpl-clr-accent-alt:           #E6F5FD;
+
+  --rpl-clr-neutral-0:            #FFFFFF;
+  --rpl-clr-neutral-100:          #F5F5F5;
+  --rpl-clr-neutral-200:          #E6E6E6;
+  --rpl-clr-neutral-300:          #CCCCCC;
+  --rpl-clr-neutral-400:          #999999;
+  --rpl-clr-neutral-500:          #7F7F7F;
+  --rpl-clr-neutral-600:          #666666;
+  --rpl-clr-neutral-700:          #333333;
+  --rpl-clr-neutral-800:          #1A1A1A;
+  --rpl-clr-neutral-900:          #0D0D0D;
+  --rpl-clr-neutral-alpha-0:      rgb(255 255 255 / 75%);
+  --rpl-clr-neutral-alpha-700:    rgb(51 51 51 / 90%);
+
+  --rpl-clr-light:                #FFFFFF;
+  --rpl-clr-dark:                 #1A1A1A;
+
+  --rpl-clr-type-default:         #1A1A1A;
+  --rpl-clr-type-light:           #FFFFFF;
+  --rpl-clr-type-primary-contrast:#FFFFFF;
+  --rpl-clr-type-accent-contrast: #FFFFFF;
+
+  --rpl-clr-link:                 #0052C2;
+  --rpl-clr-link-visited:         #9F46B1;
+  --rpl-clr-focus:                #FF9E1B;
+
+  --rpl-clr-information:          #005BA5;
+  --rpl-clr-information-light:    #E6EFF6;
+  --rpl-clr-information-dark:     #004984;
+  --rpl-clr-success:              #007D85;
+  --rpl-clr-success-light:        #E6F2F3;
+  --rpl-clr-success-dark:         #00646A;
+  --rpl-clr-warning:              #B75B00;
+  --rpl-clr-warning-light:        #F8EFE6;
+  --rpl-clr-warning-dark:         #924900;
+  --rpl-clr-error:                #AA0028;
+  --rpl-clr-error-light:          #F7E6EA;
+  --rpl-clr-error-dark:           #880020;
+  --rpl-clr-focus:                #FF9E1B;
+
+}
+
+/* VIC Font Family */
+@font-face {
+  font-family: 'VIC';
+  src: url('../assets/fonts/VIC/Regular/VIC-Regular.woff2') format('woff2'),
+       url('../assets/fonts/VIC/Regular/VIC-Regular.woff') format('woff'),
+       url('../assets/fonts/VIC/Regular/VIC-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VIC';
+  src: url('../assets/fonts/VIC/Italic/VIC-Italic.woff2') format('woff2'),
+       url('../assets/fonts/VIC/Italic/VIC-Italic.woff') format('woff'),
+       url('../assets/fonts/VIC/Italic/VIC-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VIC';
+  src: url('../assets/fonts/VIC/SemiBold/VIC-SemiBold.woff2') format('woff2'),
+       url('../assets/fonts/VIC/SemiBold/VIC-SemiBold.woff') format('woff'),
+       url('../assets/fonts/VIC/SemiBold/VIC-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VIC';
+  src: url('../assets/fonts/VIC/SemiBold Italic/VIC-SemiBoldItalic.woff2') format('woff2'),
+       url('../assets/fonts/VIC/SemiBold Italic/VIC-SemiBoldItalic.woff') format('woff'),
+       url('../assets/fonts/VIC/SemiBold Italic/VIC-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VIC';
+  src: url('../assets/fonts/VIC/Bold/VIC-Bold.woff2') format('woff2'),
+       url('../assets/fonts/VIC/Bold/VIC-Bold.woff') format('woff'),
+       url('../assets/fonts/VIC/Bold/VIC-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VIC';
+  src: url('../assets/fonts/VIC/Bold Italic/VIC-BoldItalic.woff2') format('woff2'),
+       url('../assets/fonts/VIC/Bold Italic/VIC-BoldItalic.woff') format('woff'),
+       url('../assets/fonts/VIC/Bold Italic/VIC-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+/* VIC Display Font Family */
+@font-face {
+  font-family: 'VIC Display';
+  src: url('../assets/fonts/VIC Display/VIC-DisplayRegular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VIC Display';
+  src: url('../assets/fonts/VIC Display/VIC-DisplayOblique.otf') format('opentype');
+  font-weight: 400;
+  font-style: oblique;
+  font-display: swap;
+}

@@ -1,0 +1,841 @@
+/*
+ * ============================================================
+ *  vic.gov.au — Ripple 2.0 Design Tokens
+ *  Source: entry_LzAMgtZM.css (Recycling Victoria / vic.gov.au)
+ *  Note: Recycling Victoria uses the vic.gov.au masterbrand
+ *        with no department-level theme overrides.
+ * ============================================================
+ */
+
+:root {
+
+    /* ----------------------------------------
+        TYPOGRAPHY
+    ---------------------------------------- */
+
+    --font-family: 'VIC', Arial, Helvetica, sans-serif;
+    --weight-regular: 400;
+    --weight-bold: 700;
+
+    /* Type size scale */
+    --rpl-type-size-1: 1.4rem;
+    /* 14px */
+    --rpl-type-size-2: 1.6rem;
+    /* 16px */
+    --rpl-type-size-3: 2rem;
+    /* 20px */
+    --rpl-type-size-4: 2.4rem;
+    /* 24px */
+    --rpl-type-size-5: 2.8rem;
+    /* 28px */
+    --rpl-type-size-6: 3.2rem;
+    /* 32px */
+    --rpl-type-size-7: 4rem;
+    /* 40px */
+    --rpl-type-size-8: 5.6rem;
+    /* 56px */
+
+    /* Line height scale */
+    --rpl-type-lh-1: 1.4rem;
+    --rpl-type-lh-2: 1.6rem;
+    --rpl-type-lh-3: 2rem;
+    --rpl-type-lh-4: 2.4rem;
+    --rpl-type-lh-5: 2.8rem;
+    --rpl-type-lh-6: 3.2rem;
+    --rpl-type-lh-7: 3.6rem;
+    --rpl-type-lh-8: 4rem;
+    --rpl-type-lh-9: 4.4rem;
+    --rpl-type-lh-10: 5.2rem;
+    --rpl-type-lh-11: 6rem;
+    --rpl-type-lh-12: 8rem;
+
+    /* Letter spacing scale */
+    --rpl-type-ls-1: 0.0192em;
+    --rpl-type-ls-2: 0.018em;
+    --rpl-type-ls-3: 0.0168em;
+    --rpl-type-ls-4: 0.016em;
+    --rpl-type-ls-5: 0.014em;
+    --rpl-type-ls-6: 0.012em;
+    --rpl-type-ls-7: 0.008em;
+
+    /* ----------------------------------------
+        COLOUR — Core Brand
+    ---------------------------------------- */
+
+    --rpl-clr-primary: #0052c2;
+    /* vic.gov.au blue */
+    --rpl-clr-primary-alt: #003174;
+    /* dark navy blue */
+    --rpl-clr-primary-alpha: rgba(0, 82, 194, 0.5);
+
+    --rpl-clr-accent: #0095ec;
+    /* light accent blue */
+    --rpl-clr-accent-alt: #e6f5fd;
+    /* pale accent blue background */
+
+    /* ----------------------------------------
+        COLOUR — Typography
+    ---------------------------------------- */
+
+    --rpl-clr-type-default: var(--rpl-clr-neutral-800);
+    /* #1a1a1a */
+    --rpl-clr-type-light: var(--rpl-clr-neutral-0);
+    /* #fff */
+    --rpl-clr-type-primary-contrast: var(--rpl-clr-neutral-0);
+    /* #fff on primary bg */
+    --rpl-clr-type-accent-contrast: var(--rpl-clr-neutral-0);
+    /* #fff on accent bg */
+    --rpl-clr-type-primary-accessible: #0052c2;
+    --rpl-clr-type-primary-alt-accessible: #003174;
+    --rpl-clr-type-primary-contrast-alpha: hsla(0, 0%, 100%, 0.75);
+
+    /* ----------------------------------------
+        COLOUR — Links & Focus
+    ---------------------------------------- */
+
+    --rpl-clr-link: #0052c2;
+    --rpl-clr-link-visited: #9f46b1;
+    --rpl-clr-link-alpha: rgba(0, 82, 194, 0.2);
+    --rpl-clr-focus: #ff9e1b;
+    /* amber focus ring */
+
+    /* ----------------------------------------
+        COLOUR — Neutral Scale
+    ---------------------------------------- */
+
+    --rpl-clr-neutral-0: #ffffff;
+    --rpl-clr-neutral-100: #f5f5f5;
+    --rpl-clr-neutral-200: #e6e6e6;
+    --rpl-clr-neutral-300: #cccccc;
+    --rpl-clr-neutral-400: #999999;
+    --rpl-clr-neutral-500: #7f7f7f;
+    --rpl-clr-neutral-600: #666666;
+    --rpl-clr-neutral-700: #333333;
+    --rpl-clr-neutral-800: #1a1a1a;
+    --rpl-clr-neutral-900: #0d0d0d;
+    --rpl-clr-neutral-alpha-0: hsla(0, 0%, 100%, 0.75);
+    --rpl-clr-neutral-alpha-700: rgba(51, 51, 51, 0.9);
+
+    --rpl-clr-light: var(--rpl-clr-neutral-0);
+    --rpl-clr-dark: var(--rpl-clr-neutral-800);
+
+    /* ----------------------------------------
+        COLOUR — Footer
+    ---------------------------------------- */
+
+    --rpl-clr-footer: var(--rpl-clr-primary-alt);
+    /* #003174 */
+    --rpl-clr-footer-alt: var(--rpl-clr-primary);
+    /* #0052c2 */
+    --rpl-clr-type-footer-contrast: var(--rpl-clr-type-primary-contrast);
+    --rpl-clr-type-footer-accessible: var(--rpl-clr-type-primary-alt-accessible);
+    --rpl-clr-type-focus-contrast: var(--rpl-clr-dark);
+
+
+    /* ----------------------------------------
+        COLOUR — Semantic
+    ---------------------------------------- */
+
+    /* Information */
+    --rpl-clr-information: #005ba5;
+    --rpl-clr-information-light: #e6eff6;
+    --rpl-clr-information-dark: #004984;
+
+    /* Success */
+    --rpl-clr-success: #007d85;
+    --rpl-clr-success-light: #e6f2f3;
+    --rpl-clr-success-dark: #00646a;
+
+    /* Warning */
+    --rpl-clr-warning: #b75b00;
+    --rpl-clr-warning-light: #f8efe6;
+    --rpl-clr-warning-dark: #924900;
+
+    /* Error */
+    --rpl-clr-error: #aa0028;
+    --rpl-clr-error-light: #f7e6ea;
+    --rpl-clr-error-dark: #880020;
+
+    /* ----------------------------------------
+        SPACING SCALE
+    ---------------------------------------- */
+
+    --rpl-sp-1: 4px;
+    --rpl-sp-2: 8px;
+    --rpl-sp-3: 12px;
+    --rpl-sp-4: 16px;
+    --rpl-sp-5: 20px;
+    --rpl-sp-6: 24px;
+    --rpl-sp-7: 28px;
+    --rpl-sp-8: 32px;
+    --rpl-sp-9: 40px;
+    --rpl-sp-10: 48px;
+    --rpl-sp-11: 56px;
+    --rpl-sp-12: 64px;
+    --rpl-sp-13: 80px;
+    --rpl-sp-14: 120px;
+
+    /* ----------------------------------------
+        BORDER
+    ---------------------------------------- */
+
+    --rpl-border-1: 1px;
+    --rpl-border-2: 2px;
+    --rpl-border-3: 4px;
+    --rpl-border-4: 8px;
+
+    --rpl-border-radius-1: 2px;
+    --rpl-border-radius-2: 4px;
+    --rpl-border-radius-3: 8px;
+    --rpl-border-radius-4: 12px;
+    --rpl-border-radius-full: 999px;
+
+    /* ----------------------------------------
+        ELEVATION / SHADOW
+    ---------------------------------------- */
+
+    --rpl-elevation-1: 0 2px 8px rgba(26, 26, 26, 0.16);
+    --rpl-elevation-2: 0 4px 8px 2px rgba(26, 26, 26, 0.16);
+
+    /* ----------------------------------------
+        MOTION / ANIMATION
+    ---------------------------------------- */
+
+    --rpl-motion-speed-1: 60ms;
+    --rpl-motion-speed-2: 80ms;
+    --rpl-motion-speed-3: 0.12s;
+    --rpl-motion-speed-4: 0.16s;
+    --rpl-motion-speed-5: 0.2s;
+    --rpl-motion-speed-6: 0.24s;
+    --rpl-motion-speed-7: 0.3s;
+    --rpl-motion-speed-8: 0.36s;
+    --rpl-motion-speed-9: 0.42s;
+    --rpl-motion-speed-10: 0.5s;
+
+    /* ----------------------------------------
+        LAYOUT
+    ---------------------------------------- */
+
+    --rpl-content-max-width: 615px;
+    /* max width for body copy column */
+
+    /* Z-index layers */
+    --rpl-layer-1: 1;
+    --rpl-layer-2: 2;
+    --rpl-layer-3: 3;
+    --rpl-layer-4: 4;
+    --rpl-layer-5: 5;
+
+}
+
+
+
+/* VIC Font Family */
+/* VIC Font Family */
+@font-face {
+    font-family: 'VIC';
+    src: url('../../assets/fonts/VIC/Regular/VIC-Regular.woff2') format('woff2'),
+         url('../../assets/fonts/VIC/Regular/VIC-Regular.woff') format('woff'),
+         url('../../assets/fonts/VIC/Regular/VIC-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* @font-face {
+    font-family: 'VIC';
+    src: url('../../assets/fonts/VIC/Italic/VIC-Italic.woff2') format('woff2'),
+         url('../../assets/fonts/VIC/Italic/VIC-Italic.woff') format('woff'),
+         url('../../assets/fonts/VIC/Italic/VIC-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+} */
+
+@font-face {
+    font-family: 'VIC';
+    src: url('../../assets/fonts/VIC/SemiBold/VIC-SemiBold.woff2') format('woff2'),
+         url('../../assets/fonts/VIC/SemiBold/VIC-SemiBold.woff') format('woff'),
+         url('../../assets/fonts/VIC/SemiBold/VIC-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VIC';
+    src: url('../../assets/fonts/VIC/SemiBold Italic/VIC-SemiBoldItalic.woff2') format('woff2'),
+         url('../../assets/fonts/VIC/SemiBold Italic/VIC-SemiBoldItalic.woff') format('woff'),
+         url('../../assets/fonts/VIC/SemiBold Italic/VIC-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VIC';
+    src: url('../../assets/fonts/VIC/Bold/VIC-Bold.woff2') format('woff2'),
+         url('../../assets/fonts/VIC/Bold/VIC-Bold.woff') format('woff'),
+         url('../../assets/fonts/VIC/Bold/VIC-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VIC';
+    src: url('../../assets/fonts/VIC/Bold Italic/VIC-BoldItalic.woff2') format('woff2'),
+         url('../../assets/fonts/VIC/Bold Italic/VIC-BoldItalic.woff') format('woff'),
+         url('../../assets/fonts/VIC/Bold Italic/VIC-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+/* VIC Display Font Family */
+@font-face {
+    font-family: 'VIC Display';
+    src: url('../../assets/fonts/VIC Display/VIC-DisplayRegular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VIC Display';
+    src: url('../../assets/fonts/VIC Display/VIC-DisplayOblique.otf') format('opentype');
+    font-weight: 400;
+    font-style: oblique;
+    font-display: swap;
+}
+
+
+/*
+ * ============================================================
+ *  Ripple 2.0 Typography
+ *  vic.gov.au / Recycling Victoria masterbrand
+ *
+ *  Maps design tokens to HTML elements with fluid responsive
+ *  scaling between mobile and desktop breakpoints.
+ *
+ *  Breakpoints:
+ *    Mobile:   < 768px
+ *    Tablet:   768px – 1199px
+ *    Desktop:  >= 1200px
+ *
+ *  Font stack: VIC, Arial, Helvetica, sans-serif
+ *  Weights used: 400 (regular), 700 (bold) only
+ * ============================================================
+ */
+
+
+/* ----------------------------------------
+   BASE / RESET
+---------------------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px for easy rem math */
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--rpl-type-font-family);
+    font-weight: var(--rpl-type-weight-regular);
+    font-size: var(--rpl-type-size-2);
+    /* 16px */
+    line-height: var(--rpl-type-lh-4);
+    /* 24px */
+    letter-spacing: var(--rpl-type-ls-1);
+    /* 0.0192em */
+    color: var(--rpl-clr-type-default);
+    /* #1a1a1a */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ----------------------------------------
+   HEADINGS
+   Fluid scaling: mobile size → desktop size
+   using clamp() for smooth interpolation
+---------------------------------------- */
+
+h1,
+.rpl-type-h1 {
+    font-family: var(--rpl-type-font-family);
+    font-weight: var(--rpl-type-weight-bold);
+    /* 32px mobile → 56px desktop */
+    font-size: clamp(var(--rpl-type-size-6), 4.5vw, var(--rpl-type-size-8));
+    /* 36px mobile → 60px desktop */
+    line-height: clamp(var(--rpl-type-lh-7), 5vw, var(--rpl-type-lh-11));
+    letter-spacing: var(--rpl-type-ls-7);
+    /* 0.008em desktop */
+    color: var(--rpl-clr-type-default);
+    margin-top: 0;
+    margin-bottom: var(--rpl-sp-6);
+    /* 24px */
+}
+
+h2,
+.rpl-type-h2 {
+    font-family: var(--rpl-type-font-family);
+    font-weight: var(--rpl-type-weight-bold);
+    /* 24px mobile → 32px desktop */
+    font-size: clamp(var(--rpl-type-size-4), 3vw, var(--rpl-type-size-6));
+    /* 32px mobile → 40px desktop */
+    line-height: clamp(var(--rpl-type-lh-6), 3.5vw, var(--rpl-type-lh-8));
+    letter-spacing: var(--rpl-type-ls-5);
+    /* 0.014em */
+    color: var(--rpl-clr-type-default);
+    margin-top: 0;
+    margin-bottom: var(--rpl-sp-5);
+    /* 20px */
+}
+
+h3,
+.rpl-type-h3 {
+    font-family: var(--rpl-type-font-family);
+    font-weight: var(--rpl-type-weight-bold);
+    /* 20px mobile → 24px desktop */
+    font-size: clamp(var(--rpl-type-size-3), 2.2vw, var(--rpl-type-size-4));
+    /* 28px mobile → 32px desktop */
+    line-height: clamp(var(--rpl-type-lh-5), 2.8vw, var(--rpl-type-lh-6));
+    letter-spacing: var(--rpl-type-ls-4);
+    /* 0.016em */
+    color: var(--rpl-clr-type-default);
+    margin-top: 0;
+    margin-bottom: var(--rpl-sp-4);
+    /* 16px */
+}
+
+h4,
+.rpl-type-h4 {
+    font-family: var(--rpl-type-font-family);
+    font-weight: var(--rpl-type-weight-bold);
+    /* 16px mobile → 20px desktop */
+    font-size: clamp(var(--rpl-type-size-2), 1.8vw, var(--rpl-type-size-3));
+    /* 24px mobile → 28px desktop */
+    line-height: clamp(var(--rpl-type-lh-4), 2.4vw, var(--rpl-type-lh-5));
+    letter-spacing: var(--rpl-type-ls-2);
+    /* 0.018em */
+    color: var(--rpl-clr-type-default);
+    margin-top: 0;
+    margin-bottom: var(--rpl-sp-4);
+    /* 16px */
+}
+
+h5,
+.rpl-type-h5 {
+    font-family: var(--rpl-type-font-family);
+    font-weight: var(--rpl-type-weight-bold);
+    font-size: var(--rpl-type-size-2);
+    /* 16px — no scaling */
+    line-height: var(--rpl-type-lh-4);
+    /* 24px */
+    letter-spacing: var(--rpl-type-ls-1);
+    /* 0.0192em */
+    color: var(--rpl-clr-type-default);
+    margin-top: 0;
+    margin-bottom: var(--rpl-sp-3);
+    /* 12px */
+}
+
+h6,
+.rpl-type-h6 {
+    font-family: var(--rpl-type-font-family);
+    font-weight: var(--rpl-type-weight-bold);
+    font-size: var(--rpl-type-size-1);
+    /* 14px */
+    line-height: var(--rpl-type-lh-3);
+    /* 20px */
+    letter-spacing: var(--rpl-type-ls-1);
+    /* 0.0192em */
+    color: var(--rpl-clr-type-default);
+    margin-top: 0;
+    margin-bottom: var(--rpl-sp-3);
+    /* 12px */
+}
+
+
+/* ----------------------------------------
+   BODY / PARAGRAPH TEXT
+---------------------------------------- */
+
+p,
+.rpl-type-p {
+    font-size: var(--rpl-type-size-2);
+    /* 16px */
+    line-height: var(--rpl-type-lh-4);
+    /* 24px */
+    letter-spacing: var(--rpl-type-ls-1);
+    /* 0.0192em */
+    margin-top: 0;
+    margin-bottom: var(--rpl-sp-6);
+    /* 24px */
+}
+
+/* Large paragraph — intro / lead text */
+.rpl-type-p--large {
+    font-size: clamp(var(--rpl-type-size-3), 2vw, var(--rpl-type-size-4));
+    /* 20px → 24px */
+    line-height: clamp(var(--rpl-type-lh-5), 2.6vw, var(--rpl-type-lh-6));
+    /* 28px → 32px */
+    letter-spacing: var(--rpl-type-ls-4);
+    /* 0.016em */
+    margin-bottom: var(--rpl-sp-7);
+    /* 28px */
+}
+
+/* Small paragraph — captions, disclaimers */
+.rpl-type-p--small,
+small {
+    font-size: var(--rpl-type-size-1);
+    /* 14px */
+    line-height: var(--rpl-type-lh-3);
+    /* 20px */
+    letter-spacing: var(--rpl-type-ls-1);
+}
+
+
+/* ----------------------------------------
+   LINKS
+---------------------------------------- */
+
+a {
+    color: var(--rpl-clr-link);
+    /* #0052c2 */
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color var(--rpl-motion-speed-3) ease;
+}
+
+a:hover {
+    color: var(--rpl-clr-primary-alt);
+    /* #003174 */
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--rpl-clr-link-visited);
+    /* #9f46b1 */
+}
+
+a:focus-visible {
+    outline: 3px solid var(--rpl-clr-focus);
+    /* #ff9e1b amber */
+    outline-offset: 2px;
+    border-radius: var(--rpl-border-radius-1);
+}
+
+
+/* ----------------------------------------
+   LISTS
+---------------------------------------- */
+
+ul,
+ol {
+    font-size: var(--rpl-type-size-2);
+    /* 16px */
+    line-height: var(--rpl-type-lh-4);
+    /* 24px */
+    letter-spacing: var(--rpl-type-ls-1);
+    padding-left: var(--rpl-sp-8);
+    /* 32px */
+    margin-top: 0;
+    margin-bottom: var(--rpl-sp-6);
+    /* 24px */
+}
+
+li {
+    margin-bottom: var(--rpl-sp-2);
+    /* 8px */
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+/* Nested lists */
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin-top: var(--rpl-sp-2);
+    margin-bottom: 0;
+}
+
+
+/* ----------------------------------------
+   BLOCKQUOTE / PULL QUOTES
+---------------------------------------- */
+
+blockquote,
+.rpl-type-blockquote {
+    font-size: clamp(var(--rpl-type-size-3), 2vw, var(--rpl-type-size-4));
+    /* 20px → 24px */
+    line-height: clamp(var(--rpl-type-lh-5), 2.6vw, var(--rpl-type-lh-6));
+    /* 28px → 32px */
+    font-weight: var(--rpl-type-weight-bold);
+    letter-spacing: var(--rpl-type-ls-4);
+    color: var(--rpl-clr-primary);
+    /* #0052c2 */
+    border-left: var(--rpl-border-4) solid var(--rpl-clr-primary);
+    /* 8px */
+    padding: var(--rpl-sp-4) var(--rpl-sp-6);
+    /* 16px 24px */
+    margin: var(--rpl-sp-8) 0;
+    /* 32px 0 */
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+blockquote cite,
+.rpl-type-cite {
+    display: block;
+    font-size: var(--rpl-type-size-1);
+    /* 14px */
+    font-weight: var(--rpl-type-weight-regular);
+    letter-spacing: var(--rpl-type-ls-1);
+    color: var(--rpl-clr-neutral-600);
+    margin-top: var(--rpl-sp-3);
+}
+
+
+/* ----------------------------------------
+   INLINE TEXT ELEMENTS
+---------------------------------------- */
+
+strong,
+b {
+    font-weight: var(--rpl-type-weight-bold);
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+code,
+kbd,
+samp,
+pre {
+    font-family: monospace, monospace;
+    font-size: 0.9em;
+}
+
+code {
+    background: var(--rpl-clr-neutral-100);
+    /* #f5f5f5 */
+    border: var(--rpl-border-1) solid var(--rpl-clr-neutral-200);
+    border-radius: var(--rpl-border-radius-1);
+    /* 2px */
+    padding: 0.1em 0.4em;
+}
+
+pre {
+    background: var(--rpl-clr-neutral-100);
+    border: var(--rpl-border-1) solid var(--rpl-clr-neutral-200);
+    border-radius: var(--rpl-border-radius-2);
+    /* 4px */
+    padding: var(--rpl-sp-4) var(--rpl-sp-6);
+    overflow-x: auto;
+    margin-bottom: var(--rpl-sp-6);
+}
+
+pre code {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+mark {
+    background: #fff7c0;
+    padding: 0 0.2em;
+}
+
+abbr[title] {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+hr {
+    border: none;
+    border-top: var(--rpl-border-1) solid var(--rpl-clr-neutral-200);
+    margin: var(--rpl-sp-9) 0;
+    /* 40px 0 */
+}
+
+
+/* ----------------------------------------
+   LABEL & CAPTION UTILITY CLASSES
+---------------------------------------- */
+
+/* Used for labels, tags, category chips */
+.rpl-type-label {
+    font-size: var(--rpl-type-size-1);
+    /* 14px */
+    font-weight: var(--rpl-type-weight-bold);
+    line-height: var(--rpl-type-lh-2);
+    /* 16px */
+    letter-spacing: var(--rpl-type-ls-3);
+    /* 0.0168em */
+    text-transform: uppercase;
+}
+
+/* Used for image captions, table captions */
+.rpl-type-caption {
+    font-size: var(--rpl-type-size-1);
+    /* 14px */
+    font-weight: var(--rpl-type-weight-regular);
+    line-height: var(--rpl-type-lh-3);
+    /* 20px */
+    letter-spacing: var(--rpl-type-ls-1);
+    color: var(--rpl-clr-neutral-600);
+    /* #666 */
+}
+
+
+/* ----------------------------------------
+   COLOUR VARIANTS
+   Apply to any text element for light/dark contexts
+---------------------------------------- */
+
+.rpl-type--light {
+    color: var(--rpl-clr-type-light);
+    /* #fff */
+}
+
+.rpl-type--light a {
+    color: var(--rpl-clr-type-light);
+    text-decoration-color: rgba(255, 255, 255, 0.6);
+}
+
+.rpl-type--light a:hover {
+    text-decoration-color: #fff;
+}
+
+.rpl-type--primary {
+    color: var(--rpl-clr-primary);
+    /* #0052c2 */
+}
+
+.rpl-type--muted {
+    color: var(--rpl-clr-neutral-600);
+    /* #666 */
+}
+
+
+/* ----------------------------------------
+   CONTENT COLUMN WIDTH CONSTRAINT
+   Matches Ripple's --rpl-content-max-width
+---------------------------------------- */
+
+.rpl-content {
+    max-width: var(--rpl-content-max-width);
+    /* 615px */
+}
+
+
+/* ----------------------------------------
+   RESPONSIVE OVERRIDES
+   Explicit breakpoint fallbacks for browsers
+   that don't support clamp()
+---------------------------------------- */
+
+@media (max-width: 767px) {
+
+    h1,
+    .rpl-type-h1 {
+        font-size: var(--rpl-type-size-6);
+        /* 32px */
+        line-height: var(--rpl-type-lh-7);
+        /* 36px */
+        letter-spacing: var(--rpl-type-ls-4);
+        /* 0.016em */
+    }
+
+    h2,
+    .rpl-type-h2 {
+        font-size: var(--rpl-type-size-4);
+        /* 24px */
+        line-height: var(--rpl-type-lh-6);
+        /* 32px */
+        letter-spacing: var(--rpl-type-ls-4);
+        /* 0.016em */
+    }
+
+    h3,
+    .rpl-type-h3 {
+        font-size: var(--rpl-type-size-3);
+        /* 20px */
+        line-height: var(--rpl-type-lh-5);
+        /* 28px */
+        letter-spacing: var(--rpl-type-ls-2);
+        /* 0.018em */
+    }
+
+    h4,
+    .rpl-type-h4 {
+        font-size: var(--rpl-type-size-2);
+        /* 16px */
+        line-height: var(--rpl-type-lh-4);
+        /* 24px */
+        letter-spacing: var(--rpl-type-ls-1);
+        /* 0.0192em */
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    h1,
+    .rpl-type-h1 {
+        font-size: var(--rpl-type-size-8);
+        /* 56px */
+        line-height: var(--rpl-type-lh-11);
+        /* 60px */
+        letter-spacing: var(--rpl-type-ls-7);
+        /* 0.008em */
+    }
+
+    h2,
+    .rpl-type-h2 {
+        font-size: var(--rpl-type-size-6);
+        /* 32px */
+        line-height: var(--rpl-type-lh-8);
+        /* 40px */
+        letter-spacing: var(--rpl-type-ls-5);
+        /* 0.014em */
+    }
+
+    h3,
+    .rpl-type-h3 {
+        font-size: var(--rpl-type-size-4);
+        /* 24px */
+        line-height: var(--rpl-type-lh-6);
+        /* 32px */
+        letter-spacing: var(--rpl-type-ls-4);
+        /* 0.016em */
+    }
+
+    h4,
+    .rpl-type-h4 {
+        font-size: var(--rpl-type-size-3);
+        /* 20px */
+        line-height: var(--rpl-type-lh-5);
+        /* 28px */
+        letter-spacing: var(--rpl-type-ls-2);
+        /* 0.018em */
+    }
+
+}

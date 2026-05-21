@@ -1,0 +1,288 @@
+/**
+ *  CIRCULAR ECONOMY "SYSTEM" GRAPHIC STYLES 
+ *  For components:
+ *  - "ce-metrics" 
+ *  - "material-flow" 
+ *  - "recovery-breakdown"
+ */
+
+svg {
+    overflow: visible;
+
+    text {
+        fill:                   var(--dark); 
+
+        &.section-title{
+            text-transform:     lowercase;
+            font-weight:        700;
+            opacity:            0.65;
+        }
+    }
+
+    .title-bar{
+        fill-opacity:       0.15;
+    }
+
+    g.ce-metrics,
+    g.ce-metrics-bg,
+    g.ce-metrics-annotation{
+        rect {
+            &.tmf {  
+                fill:           url(#tmf-gradient);  
+                /* fill:           transparent;  */
+                /* fill:           #ddd;  */
+                /* stroke:          #000; */
+                /* stroke-width: 2px; */
+            }
+            &.dmc { 
+                fill:  url(#h-medium);  
+            }
+            &.title-bar {  
+                fill:  url(#lime-gradient);  
+            }
+        }
+
+        circle{
+            &.smc{
+                fill:           var(--color-bg);
+
+                &.circularity-rate-label-bg{
+                    fill:       var(--color-fg);
+                }
+            }
+        }
+
+        text{
+            &.circularity-rate{
+                text-anchor:        middle; 
+                font-weight:        700;
+
+                &.outer-description{
+                    font-weight:        700;
+                    fill:               var(--color-bg);   
+                    text-transform:     uppercase;
+                }
+            }
+        }
+    }
+
+    g.material-flow,
+    g.material-flow-annotation{
+
+        /* Waste flow lines and disposal polygon*/
+        line, path, rect, polygon{
+            fill:               none;    
+
+            &.recovery-rate-label.bg{
+                fill:           var(--dark);
+            }
+        }
+        
+        .generated { 
+            stroke:             var(--generated); 
+        }
+
+        .recovered { 
+            stroke:             var(--recovered); 
+            stroke-linecap:     round;
+        }
+
+        polygon{
+            &.disposal{
+                /* stroke:           var(--disposal);  */
+                fill:             var(--disposal); 
+                fill:             url(#disposal-gradient); 
+                /* fill-opacity:     0.125; */
+            }
+        }
+
+        rect{
+            &.stream-label-bg { 
+                fill:               var(--color-bg);
+            }
+
+            &.sector-band{
+                &.msw{ fill: var(--msw); }  
+                &.cd{  fill: var(--cd); }   
+                &.ci{  fill: var(--ci); }   
+            } 
+            &.title-bar {  
+                fill:  url(#blue-gradient);  
+            }
+        }
+
+        path{ 
+            &.connector-ribbon{
+                &.angular{
+                    fill:      none;
+                }
+            }
+
+        }
+
+        line{
+            &.disposal.slope-line{
+                stroke:         var(--disposal); 
+            }
+        }
+
+        text {
+            textPath{
+                text-anchor:            middle;
+            }
+
+            /* Waste sector label */ 
+            &.sector-label{
+                fill:                   var(--color-bg); 
+                font-weight:            800; 
+                dominant-baseline:      central;
+            }
+
+            /* Waste stream label */ 
+            &.stream-label{
+                /* font-weight:            700;  */
+                dominant-baseline:      central;
+
+                &.clockwise,
+                &.invert{
+                    text-anchor:            end;
+                }
+            }
+
+            /* Headline Rate labels */
+            &.disposal-label,
+            &.recovery-rate-label{
+                font-weight:            700; 
+                text-anchor:            middle;
+
+                &.pct{
+                    text-anchor:        start;
+                }
+            } 
+
+            &.disposal-label { 
+                dominant-baseline:      central;
+
+            }
+
+            &.recovery-rate-label {   
+                &.outer-description{
+                    fill:               var(--white);   
+                    text-transform:     uppercase;
+                }
+            }
+
+            /* Waste management stage labels */
+            &.generation-label,
+            &.disposal-label,
+            &.recovery-label {
+                font-weight:            400;
+                /* text-transform:         uppercase; */
+                dominant-baseline:      middle;
+
+                tspan{  /* Volume */
+                    font-weight:        700;
+                    text-transform:     none;
+                }
+            }
+
+            &.disposal-label{
+                text-anchor:            end;
+            }
+
+            /* Landfill labels */
+            &.landfill-label{
+                text-anchor:            middle;
+                text-transform:         none;
+            }
+
+            &.disposal-triangle-label{
+                font-weight:            700;
+                text-anchor:            middle;
+                dominant-baseline:      middle;                
+                fill: var(--color-bg);
+
+                &.to-landfill{
+                    /* text-transform:     uppercase; */
+                    /* font-weight:        400; */
+                }
+            }
+        }
+
+        /* Recovery by source pie */
+        .recovery-pie-group{
+            .msw{ fill: var(--msw)}   
+            .cd{  fill: var(--cd)}   
+            .ci{  fill: var(--ci)}   
+        }
+    }
+
+    g.recovery-breakdown,
+    g.recovery-breakdown-annotation{
+        text{
+            &.recovery-base-label{
+                font-weight:              600;
+                opacity: 0.5;
+            }
+        }
+
+        polygon{
+            &.recovery-triangle-bg{
+                fill:        url(#recovery-gradient);
+            }
+        }
+
+
+        path{
+            &.recovery-segment {
+                fill:           var(--recovered-breakdown);    
+                stroke:         rgb(239, 239, 239);  
+                stroke-width:   3px;
+                mix-blend-mode: overlay;
+            }
+        }
+    }
+
+}
+
+
+
+.minimalist svg{
+    text {
+        &.section-title{
+            display: none;
+        }
+    }
+
+    g.material-flow,
+    g.material-flow-annotation{
+
+        rect{
+            &.title-bar {  
+                display: none;
+            }
+        }
+    }
+
+    g.recovery-breakdown,
+    g.recovery-breakdown-annotation{
+        text{
+            &.recovery-base-label,
+            &.recovery-breakdown-label{
+                display: none;
+            }
+        }
+
+        path{
+            &.recovery-segment {
+                display: none;
+            }
+        }
+        polygon{
+            &.recovery-triangle-bg{
+                /* display: none; */
+            }
+        }
+
+    }
+}

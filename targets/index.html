@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Economy Targets</title>
+	<link rel="icon" href = "../_shared/assets/img/vic-favicon.png" />
+    <link rel="stylesheet" href="../_shared/css/brand/vic-gov.css">
+    <link rel="stylesheet" href="../_shared/css/brand/epa-brand.css">
+    <link rel="stylesheet" href="../_shared/css/data-vis/vis-page-layout.css">
+    <link rel="stylesheet" href="../_shared/css/data-vis/data-vis.css">
+    <link rel="stylesheet" href="../_shared/css/data-vis/waste-treemap.css">
+    <link rel="stylesheet" href="./css/vis.css">
+</head>
+
+
+<body class="data-vis">
+    <main class="content__wrapper hide-sidebar_">
+ 
+        <header class="sidebar__upper">
+
+            <div class = 'title-block'>
+                <div class = 'subtitle'>Tracking progress towards </div>
+                <h2 id = 'vis-title'></span>Victoria's 2030  Waste Targets</h2>
+                <select id = 'year-select'></select>
+            </div>
+
+            <div class = 'lead-block'>
+                <p>Data calculated for each target metric is shown in green arcs, for all available years from the 2020 baseline year. </p>
+            </div>
+        </header>
+    
+        <section class = "vis__container">
+            <div id = "vis__wrapper" class = "vis__wrapper">
+                <svg id="data-vis" width = "100%" >
+                    <defs>
+                        <linearGradient id="blue-gradient-1" x1="0%" y1="0%" x2="200%" y2="200%">
+                          <stop offset="0%"     stop-color="var(--epa-primary-cool-air)" />  
+                          <stop offset="100%"   stop-color="var(--epa-primary-deep-ocean)" />
+                        </linearGradient>
+
+                        <linearGradient id="blue-gradient-2" x1="100%" y1="0%" x2="-100%" y2="200%">
+                            <stop offset="0%"   stop-color="var(--epa-primary-deep-ocean)" />
+                            <stop offset="100%" stop-color="var(--epa-primary-cool-air)" />
+                        </linearGradient>
+
+                        <linearGradient id="blue-gradient-3" x1="100%" y1="100%" x2="-200%" y2="-200%">
+                          <stop offset="0%"     stop-color="var(--epa-primary-cool-air)" />  
+                          <stop offset="100%"   stop-color="var(--epa-primary-deep-ocean)" />
+                        </linearGradient>
+
+                        <linearGradient id="blue-gradient-4" x1="0%" y1="100%" x2="200%" y2="-100%">
+                            <stop offset="0%"   stop-color="var(--epa-primary-deep-ocean)"  />
+                            <stop offset="100%" stop-color="var(--epa-primary-cool-air)" />
+                        </linearGradient>
+
+                    </defs>
+                </svg>
+            </div>
+
+            <div id="tooltip"></div>
+        </section>
+    
+
+        <footer class="sidebar__lower">
+            <div class = 'footnote-block'>
+                <p>All targets are scaled from their 2020 baseline, with the exception of recovery rate which has been scaled to place the interim target at the halfway point of the 2020—2030 target period.</p>
+            </div>
+        </footer>
+    
+    </main>
+
+    <script type="module" src = './js/main.js'></script>
+</body>
+
+
+</html>

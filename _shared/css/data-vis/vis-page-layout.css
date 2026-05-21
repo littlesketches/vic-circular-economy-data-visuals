@@ -1,0 +1,196 @@
+/* ============================================================
+   layout.css — data-vis layout
+   Contexts: web (desktop + mobile), iframe embed, print/PDF
+
+   Grid children of .content__wrapper:
+     .sidebar__upper  — title + summary
+     .vis__container  — square SVG canvas
+     .sidebar__lower  — details + links
+   ============================================================ */
+
+:root {
+    --sidebar-pad:          calc(100vmin * 50 / 1200);
+    --padding-std:          1rem;
+    --color-page-bg:        #fff;
+    --color-screen-bg:       #222020;
+}
+
+
+body.data-vis {
+    margin:             0;
+    padding:            0;
+    min-height:         100dvh;
+    display:            flex;
+    align-items:        center;
+    justify-content:    center;
+    font-family:        var(--font-family);
+    background:         var(--color-screen-bg);
+
+
+    main.content__wrapper {
+        display:                grid;
+        grid-template-columns:  1fr auto;
+        grid-template-rows:     1fr auto;
+        grid-template-areas:    "sidebar-upper  vis"
+                                "sidebar-lower  vis";
+        height:                 100vmin;
+        aspect-ratio:           1.4141 / 1;
+        background:             var(--color-page-bg);
+        overflow:               hidden;
+    
+
+        .sidebar__upper {
+            grid-area:          sidebar-upper;
+            align-self:         start;
+            padding:            var(--sidebar-pad) var(--sidebar-pad) calc(var(--sidebar-pad) / 2);
+            max-width:          60rem;
+
+            .title-block{
+  
+                h1, h2{
+                    font-family:        'VIC Display';
+                    line-height:        1.5;
+                }
+                .subtitle{                    
+                    padding-bottom:     1rem;
+                }
+
+                select{
+                    width:              100%;
+                    border:             none;
+                    padding:            none;
+                    border-bottom:      1px solid;
+                    font-family:        var(--font-family);
+                    font-size:          2rem;
+                }
+
+            }
+
+            .lead-block{
+                margin-top:     var(--sidebar-pad);
+                opacity:        0.65;
+                p, ul{
+                    font-size: small;
+                }
+            }
+
+        }
+    
+        .sidebar__lower {
+            grid-area:          sidebar-lower;
+            align-self:         end;
+            padding:            calc(var(--sidebar-pad) / 2) var(--sidebar-pad) var(--sidebar-pad);
+
+            .footnote-block{
+                border-top:      1px #ccc solid;
+                padding-top:     var(--padding-std);
+                opacity:         0.7;
+
+                p, ul{
+                    font-size:          x-small;
+                    line-height: 1.25;
+                    margin-block-start: 0;
+                    margin-block-end:   0;
+                }
+            }
+        }
+    
+        .vis__container {
+            grid-area:          vis;
+            aspect-ratio:       1 / 1;
+            width:              100%;
+            height:             100vmin;
+            background:         var(--color-vis-bg);
+        }
+
+        /* --------------------------------------------------------
+        hide-sidebar modifier — only show the vis, centred
+        Grid collapses to a single cell; body flex centres it.
+        -------------------------------------------------------- */
+        &.hide-sidebar {
+            grid-template-columns:  1fr;
+            grid-template-rows:     1fr;
+            grid-template-areas:    "vis";
+            height:                 100vmin;
+            aspect-ratio:           1 / 1;
+    
+            & .sidebar__upper,
+            & .sidebar__lower {
+                display:            none;
+            }
+    
+            /* Print + hide-sidebar: square centred on A4 landscape page */
+            @media print {
+                width:              210mm;
+                height:             210mm;
+                max-width:          210mm;
+                max-height:         210mm;
+                margin:             auto;
+            }
+        }
+    
+        /* --------------------------------------------------------
+        Portrait — mobile + portrait iframe
+        -------------------------------------------------------- */
+        @media (orientation: portrait) {
+            align-self:                 start;
+            grid-template-columns:      1fr;
+            grid-template-rows:         auto 1fr auto;
+            grid-template-areas:        "sidebar-upper"     
+                                        "vis"       
+                                        "sidebar-lower";
+            width:                      100vw;
+            height:                     stretch;
+            aspect-ratio:               1 / 1.4141;
+            overflow:                   scroll;
+
+    
+            & .sidebar__upper,
+            & .sidebar__lower {
+                padding:                var(--sidebar-pad);
+            }
+
+        }
+    
+        /* --------------------------------------------------------
+        Print — A4 landscape
+        -------------------------------------------------------- */
+        @media print {
+            width:                  297mm;
+            height:                 210mm;
+            grid-template-columns:  1fr auto;
+            grid-template-rows:     1fr auto;
+            grid-template-areas:    "sidebar-upper  vis"
+                                    "sidebar-lower  vis";
+            page-break-inside:      avoid;
+    
+        }
+    }
+}
+
+   
+@media print {
+	@page {
+		size:               A4 landscape;
+		margin:             0mm;
+	}
+ 
+	body.data-vis {
+		min-height:         unset;
+		display:            block;
+    background: transparent !important;
+	}
+ 
+	/* Centre hide-sidebar layout on the printed page */
+	body.data-vis:has(.content__wrapper.hide-sidebar) {
+		display:            flex;
+		align-items:        center;
+		justify-content:    center;
+		height:             210mm;
+	}
+ 
+	button, [role="button"], .controls, .tooltip {
+		display:            none !important;
+	}
+}
+ 
