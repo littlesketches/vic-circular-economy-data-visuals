@@ -148,12 +148,16 @@ export class SystemVis extends DataVis{
         }
 
         // Other settings
-        if(app.queryParams.illustration) this.state.render.illustration = true
+        if(app.queryParams.illustration) 
 
         if(app.queryParams.year){
             const isValidYear = this.app.module.dataModel.schema.years.map( d=> d.year).includes(+app.queryParams.year)
             if(isValidYear) this.app.state.select.year = +app.queryParams.year
         }
+
+        if(app.queryParams.flat) this.state.flowConfig.rotateByRecoveryRate = false
+        
+        if(app.queryParams.flow){ this.state.render.ceMetrics = false}
 
     }
 

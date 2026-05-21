@@ -6,7 +6,7 @@ import { DataVis } from "../../_shared/js/DataVis.js";
 import { WasteBreakdownTreemap } from "../../_shared/js/WasteBreakdownTreemap.js";
 
 // => Data Visualisation class
-export class ceJourneyVis extends DataVis {
+export class JourneyVis extends DataVis {
 
     ///////////////////////////////////
     //// STATIC CONFIG AND METHODS ////
