@@ -219,7 +219,7 @@ export class JoyVis extends DataVis {
         return { series, yDomain }
     }
 
-    // II. CHART RENDERING
+    // II. CHART RENDERING + HELPERS
     #drawRidgelinePlot(series, config = {}) {
 
         const cfg = {
@@ -433,12 +433,11 @@ export class JoyVis extends DataVis {
             showValues:         false,
             showDates:          false,
             yDomain:            null,
-            strokeColor:        '#262626',
-            strokeWidth:        1,
             curve:              d3.curveCatmullRom.alpha(0.5),
             formatValue:        v => v.toFixed(1) + '%',
             labelPad:           4,
-            labelMap:       {},   
+            labelMap:           {},   
+            fillGradientId:     null,   
             ...config,
         }
 
@@ -473,7 +472,7 @@ export class JoyVis extends DataVis {
             .curve(cfg.curve)
 
 
-        // iv. Add SVG gropu
+        // iv. Add SVG group
         const g = this.el.vis.recoveryRate
             .append('g')
             .classed('sparkline', true)
@@ -482,8 +481,10 @@ export class JoyVis extends DataVis {
         // v. Area fill
         g.append('path')
             .datum(values)
-            .classed('sparkline-area', true)
             .attr('d', area)
+            .classed('sparkline-area', true)
+            .attr('fill', cfg.fillGradientId ? `url(#${cfg.fillGradientId})` : null)
+
 
         // Line
         g.append('path')
@@ -542,6 +543,23 @@ export class JoyVis extends DataVis {
         }
     }
 
+    #createSparkGradient(id, cellY, plotH, stops) {
+        this.el.defs.select(`#${id}`).remove()
+
+        const g = this.el.defs.append('linearGradient')
+            .attr('id', id)
+            .attr('x1', '0%')
+            .attr('x2', '0%')
+            .attr('y1', '100%')
+            .attr('y2', '0%')
+
+        stops.forEach(({ offset, color }) => {
+            g.append('stop').attr('offset', offset).attr('stop-color', color)
+        })
+
+        return `url(#${id})`
+    }
+
     // III. SPARKLINE LAYOUT 
     #makeGrid(count, { x = 0, y = 0, width, height, cols = null, padX = 12, padY = 12 }) {
         const numCols  = cols ?? Math.ceil(Math.sqrt(count))
@@ -561,7 +579,7 @@ export class JoyVis extends DataVis {
         })
     }
 
-    // Titles and labels
+    // IV. TITLES AND LABELS
     #addVolumeTitles(rowY){
         const { width, height, margin } = DataVis.CONFIG.dims,
             canvasWidth  = width  - margin.left - margin.right,
@@ -579,7 +597,7 @@ export class JoyVis extends DataVis {
             .classed('volume-change title', true)
             .attr('x', canvasWidth * 0.5)
             .style('font-size', titleFs)
-            .text(`How the volumes of Victoria's waste have evolved`)
+            .text(`How the per capita volume of Victoria's waste has evolved`)
 
         titleG.append('text')
             .classed('volume-change subtitle', true)
@@ -818,7 +836,8 @@ export class JoyVis extends DataVis {
         // II. Get domain for all series
         const allSparkSeries = [...totalSpark.series, ...sectorSpark.series, ...streamSpark.series],
             allSparkValues   = allSparkSeries.flatMap(s => s.values.map(v => v.value)),
-            sparkYDomain     = [d3.min(allSparkValues)*0, d3.max(allSparkValues)]
+            sparkYDomain     = [0, d3.max(allSparkValues)]
+
 
         // III. Grid layout: split into 1. total + sector | 2. Streams
         const gridConfig = {
@@ -854,34 +873,44 @@ export class JoyVis extends DataVis {
         })
 
 
-        // IV. Render grids
-        grid1Series.forEach((s, i) => {
+        // IV. Create gradients — one per grid since plotH differs between them
+        const domainMin = 0
+        const domainMax = sparkYDomain[1]
+        const pct = v => ((v - domainMin) / (domainMax - domainMin) * 100).toFixed(1) + '%'
 
+        const gradientStops = [
+            { offset: '0%',   color: 'var(--epa-primary-deep-ocean)' },   // bottom = red
+            { offset: '80%',  color: ' var(--epa-primary-cool-air)' },
+        ]
+                    
+        const fill1 = this.#createSparkGradient('sparkline-gradient-1', sparkCells1[0].y, sparkCells1[0].height - 4, gradientStops)
+        const fill2 = this.#createSparkGradient('sparkline-gradient-2', streamCells[0].y, streamCells[0].height - 4, gradientStops)
+
+        // V. Render grids
+        grid1Series.forEach((s, i) => {
             this.#drawSparkline(s, sparkCells1[i], {
-                yDomain:     sparkYDomain,
-                showValues:  true,
-                showDates:   false,
-                formatValue: v => Math.round(v) + '%',
+                yDomain:        sparkYDomain,
+                showValues:     true,
+                showDates:      false,
+                formatValue:    v => Math.round(v) + '%',
                 labelMap:       { 'Total': 'Victoria' },
-                seriesType:   i > 0 ?  'sector' : null,
+                seriesType:     i > 0 ? 'sector' : null,
+                fillGradientId: 'sparkline-gradient-1',
             })
         })
 
         streamSpark.series.forEach((s, i) => {
             this.#drawSparkline(s, streamCells[i], {
-                yDomain:     sparkYDomain,
-                showValues:  true,
-                showDates:   false,
-                formatValue: v => Math.round(v) + '%',
+                yDomain:        sparkYDomain,
+                showValues:     true,
+                showDates:      false,
+                formatValue:    v => Math.round(v) + '%',
+                fillGradientId: 'sparkline-gradient-2',
             })
         })
 
-
         // IV. Add titles and labels
         this.#addRecoveryRateTitles()
-
-
-
 
     }
 }

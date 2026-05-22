@@ -5,7 +5,7 @@
 :root {
     /* Chromatic palette */
     --white:           #fff;
-    --dark:            #111;
+    --dark:            rgb(26, 26, 26);
     --light-grey:       #b0b0b0;
     --dark-grey:       #2d2b2b;
 

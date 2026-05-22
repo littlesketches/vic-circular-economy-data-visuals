@@ -148,7 +148,7 @@ export class SystemVis extends DataVis{
         }
 
         // Other settings
-        if(app.queryParams.illustration) 
+        if(app.queryParams.illustration) this.state.render.illustration = true
 
         if(app.queryParams.year){
             const isValidYear = this.app.module.dataModel.schema.years.map( d=> d.year).includes(+app.queryParams.year)
@@ -628,11 +628,11 @@ export class SystemVis extends DataVis{
             const titleGroup = annotation.append('g').classed('waste-title-group', true)
                 .attr('transform', `translate(${DataVis.CONFIG.dims.margin.left}, ${g.groupTop - g.slotH * 0.8 * g.n})`)
 
-            const titleFs = DataVis.CONFIG.dims.height * 0.025
+            const titleFs = DataVis.CONFIG.dims.height * 0.0225
 
             titleGroup.append('text').classed('waste-industry-label section-title', true)
                 .style('font-size', titleFs)
-                .text('Managing our waste')
+                .text('How waste recovery drives the circular economy')
 
             titleGroup.append('rect').classed('title-bar waste-industry', true)
                 .attr('y',  -DataVis.CONFIG.dims.height * 0.035)

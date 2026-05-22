@@ -1,4 +1,6 @@
+:root{
 
+}
 svg {
     --landfill-flow:                #9a9a9a;
     --aggregate-masonry-and-soils:  var( --epa-loud-cherry);
@@ -6,7 +8,12 @@ svg {
     --canvas-bg:                    var(--color-bg);
     --ridge-line:                  var(--color-fg);
     --ridge-area:                   var(--color-bg);
+    --title-color:                  var(--epa-primary-deep-ocean);
+    --subtitle-color:                  var(--epa-primary-cool-air);
 
+    --no-recovery:        var(--epa-primary-deep-ocean);
+    --mid-recovery:        var(--epa-primary-cool-air);
+    --full-recovery:        var(--epa-primary-lime-life);
 
     g.vis-group{
         text{
@@ -47,6 +54,7 @@ svg {
                 &.ridge-line{
                     fill:                   none;
                     stroke:                 var(--ridge-line);
+                    &.
                 }
             }
         
@@ -74,7 +82,6 @@ svg {
                     dominant-baseline:          hanging;
 
                     &.start{ text-anchor:       start; }
-
                     &.end{  text-anchor:        end; }
                 }
             }
@@ -83,9 +90,10 @@ svg {
                 &.sparkline-line{
                     fill:               none;
                     stroke:             var(--color-fg);
+                    stroke:             none;
                 }
                 &.sparkline-area{
-                    fill:               var(--color-fg);
+                    /* fill:               var(--color-fg); */
 
                 }
             }
@@ -102,18 +110,20 @@ svg {
 
             &.title{
                 font-weight:            800;
+                fill:                   var(--title-color);
             }
 
             &.subtitle{
+                fill:                   var(--subtitle-color);
                 font-weight:            600;
-                &.recovery-rate{
-    
-                }
             }
 
             &.section{
+                fill: var(--color-fg);
                 font-weight:            600;
-                    dominant-baseline: central;
+                dominant-baseline:      central;
+                opacity:                0.5;
+
                 &.volume-change{
                     dominant-baseline: alphabetic;
                 }

@@ -11,7 +11,6 @@ svg {
     --label-color:              var(--epa-primary-deep-ocean);
 
 
-
     g.vis-group{
         text{
             &.circular-label{
@@ -84,11 +83,9 @@ svg {
                 }
             }
             path.data-arc{
-          
-                    fill:           var(--data);
-                    fill-opacity:   0.4;
-                    mix-blend-mode: multiply;
-
+                fill:           var(--data);
+                fill-opacity:   0.4;
+                mix-blend-mode: multiply;
             }
 
             circle{
@@ -105,7 +102,6 @@ svg {
                 &.target-area{
                     fill:           var(--color-bg);
                 }
-
 
                 &.target-interim-arc{
                     fill:               none;
@@ -135,6 +131,11 @@ svg {
                 }
             }
 
+
+
+        }
+
+        g.sparkline-group{
             .sparkline-path {
                 stroke:         var(--color-bg);
                 stroke-width:   5px; 
@@ -144,7 +145,6 @@ svg {
             .sparkline-arrow { 
                 fill:           var(--color-bg);
             } 
-
         }
 
         g.label-group{
