@@ -100,7 +100,7 @@ export class TargetsVis extends DataVis {
                     r:         targetScale(targetMeta.detail.interim.target),
                     fs:        w * 0.02,
                     dy:        -w * 0.0125,
-                    label:     `${targetMeta.detail.interim.year} target ${targetMeta.detail.interim.target}%`,
+                    label:     `${targetMeta.detail.interim.year} target of ${targetMeta.detail.interim.target}%`,
                     className: `arc-label interim-target target-1`,
                     offset:    '50%'
                 },
@@ -160,7 +160,7 @@ export class TargetsVis extends DataVis {
                 {
                     id:        'baseline',
                     r:         baselineRadius,
-                    fs:        w * 0.0175,
+                    fs:        w * 0.02,
                     dy:        w * 0.0225,
                     label:     `${fmt(baselineValue)} t per capita in ${data[0].year}`,
                     className: `arc-label arc-label-baseline target-2`,
@@ -199,7 +199,7 @@ export class TargetsVis extends DataVis {
                     r:         targetScale(baselineValue * (1 - targetMeta.detail.interim.target / 100)),
                     fs:        w * 0.02,
                     dy:        -w * 0.025,
-                    label:     `${targetMeta.detail.interim.year} target ${targetMeta.detail.interim.target}%`,
+                    label:     `${targetMeta.detail.interim.year} target of ${targetMeta.detail.interim.target}%`,
                     className: `arc-label interim-target reverse target-3`,
                     offset:    '50%'
                 },
@@ -215,7 +215,7 @@ export class TargetsVis extends DataVis {
                 {
                     id:        'baseline',
                     r:         baselineRadius,
-                    fs:        w * 0.0175,
+                    fs:        w * 0.02,
                     dy:        w * 0.01,
                     label:     `${fmt(baselineValue)} Mt in ${data[0].year}`,
                     className: `arc-label baseline reverse target-3`,
@@ -259,7 +259,7 @@ export class TargetsVis extends DataVis {
                 {
                     id:        'baseline',
                     r:         baselineRadius,
-                    fs:        w * 0.0175,
+                    fs:        w * 0.02,
                     dy:        w * 0.01,
                     label:     `${fmt(baselineValue)}% in ${data[0].year}`,
                     className: `arc-label baseline reverse target-4`,
@@ -533,6 +533,32 @@ export class TargetsVis extends DataVis {
                     .attr('startOffset', offset)
                     .text(label)
         })
+
+        // VI. SPARKLINE
+        this.#renderSparkline(targetNum, { x, y, width: w, height: h }, {
+            ...(targetNum === '1' && {
+                getValue: d => d.recoveryRate,
+                width:    w * 0.25,  height:    w * 0.05,  
+                position: { ax: w * 0.175,   ay: (1 - 0.575) * h}
+            }),
+            ...(targetNum === '2' && {
+                getValue: d => d.totalGeneration / d.population,
+                width:    w * 0.25,  height:    w * 0.05,  
+                position: { ax: (2 -  0.25) * w,   ay: (1 - 0.575) * h}
+                // invertY:  true,
+            }),
+            ...(targetNum === '3' && {
+                getValue: d => d.landfillOrganics / 1000000,
+                width:    w * 0.25,  height:    w * 0.05,  
+                position: { ax: (2 -  0.25) * w,   ay: (2 - 0.325) * h}
+                // invertY:  true,
+            }),
+            ...(targetNum === '4' && {
+                getValue: d => d.noKerbsideOrganics / d.noCouncils * 100,
+                width:    w * 0.25,  height:    w * 0.05,  
+                position: { ax: w * 0.175,   ay: (2 - 0.325) * h}
+            }),
+        })
     }
 
     #renderLabel(layout){
@@ -542,66 +568,101 @@ export class TargetsVis extends DataVis {
             .classed('label-group', true)
             .attr('transform', `translate(${cx}, ${cy} )`)
 
-        // Circular label
-        const circularLabelR = radius  * 0.9
-        const circularLabelWidth = radius  * 0.1
 
-        labelGroup.append('circle').classed('outer', true).attr('r', circularLabelR + circularLabelWidth * 0.5)
-        labelGroup.append('circle').classed('inner', true).attr('r', circularLabelR - circularLabelWidth * 0.5)
 
-        const latestYear = this.targetData[this.targetData.length - 1].year
-        // const labelText = `tracking our performance to ${latestYear}`,
-        const labelText = ``,
-            labelFs = circularLabelWidth * 0.45
+    }
 
-        this.el.defs.append('path')
-            .attr('id', 'label-arc-top')
-            .attr('d', `M ${cx - circularLabelR} ${cy} A ${circularLabelR} ${circularLabelR} 0 0 1 ${cx + circularLabelR} ${cy}`)
+    /**
+    * Renders a minimal sparkline trendline for a given target quadrant.
+    *
+    * @param {string}   targetNum          - '1' | '2' | '3' | '4'
+    * @param {object}   layout             - { x, y, width, height } of the quadrant
+    * @param {object}   options
+    * @param {function} options.getValue   - (d) => number  value accessor
+    * @param {number}   [options.width]    - sparkline width in px  (default: qw * 0.4)
+    * @param {number}   [options.height]   - sparkline height in px (default: qh * 0.12)
+    * @param {number[]} [options.yDomain]  - [min, max] explicit domain; derived from data if omitted
+    * @param {boolean}  [options.invertY]  - true if lower = better (targets 2 & 3)
+    */
+    #renderSparkline(targetNum, layout, options = {}) {
+        const { getValue, invertY = false, yDomain } = options
 
-        this.el.defs.append('path')
-            .attr('id', 'label-arc-bottom')
-            .attr('d', `M ${cx - circularLabelR} ${cy} A ${circularLabelR} ${circularLabelR} 0 0 0 ${cx + circularLabelR} ${cy}`)
+        const cfg         = TargetsVis.TARGET_CONFIG[targetNum]
+        const targetClass = `target-${targetNum}`
+        const data        = this.targetData
 
-        const textGroup = this.el.vis.group.append('g').classed('circular-label-group', true)
+        const { x: qx, y: qy, width: qw, height: qh } = layout
 
-        textGroup.append('text').classed('circular-label top', true)
-            .append('textPath')
-                .attr('href', '#label-arc-top')
-                .attr('startOffset', '50%')
-                .attr('text-anchor', 'middle')
-                .attr('dominant-baseline', 'central')
-                .text(labelText)
-                .style('font-size', labelFs)
+        const sw = options.width  ?? qw * 0.4
+        const sh = options.height ?? qh * 0.12
 
-        textGroup.append('text').classed('circular-label bottom', true)
-            .append('textPath')
-                .attr('href', '#label-arc-bottom')
-                .attr('startOffset', '50%')
-                .attr('text-anchor', 'middle')
-                .attr('dominant-baseline', 'central')
-                .text(labelText)
-                .style('font-size', labelFs)
+        // ── Position: outer half of quadrant, between title and centreline ────────
+        // Anchored to the outer corner (away from arc origin), centred in that zone
+        const SPARK_POS = {
+            'bottom-right': { ax: qx + qw * 0.05, ay: qy + qh * 0.55 },
+            'bottom-left':  { ax: qx + qw * 0.55, ay: qy + qh * 0.55 },
+            'top-right':    { ax: qx + qw * 0.05, ay: qy + qh * 0.28 },
+            'top-left':     { ax: qx + qw * 0.55, ay: qy + qh * 0.28 },
+        }
 
-        // Central label
-        labelGroup.append('text')
-            .attr('dy',-radius * 0.175)
-            .classed('center-label year', true)
-            .style('font-size', radius * 0.4)
-            .text(2030)
+        const { ax, ay } = options.position ?? SPARK_POS[cfg.corner]
 
-        // labelGroup.append('text')
-        //     .classed('center-label', true)
-        //     .attr('y', -radius * 0.275)
-        //     .style('font-size', radius * 0.15)
-        //     .text("Victoria's")
+        // ── Scales ────────────────────────────────────────────────────────────────
+        const values  = data.map(getValue)
+        const [dMin, dMax] = yDomain ?? [d3.min(values), d3.max(values)]
 
-        labelGroup.append('text')
-            .classed('center-label', true)
-            .attr('dy',-radius * 0.125)
-            .attr('y', radius * 0.275)
-            .style('font-size', radius * 0.25)
-            .text('targets')
+        const xScale = d3.scaleLinear()
+            .domain([data[0].year, data[data.length - 1].year])
+            .range([0, sw])
 
+        const yScale = d3.scaleLinear()
+            .domain(invertY ? [dMax, dMin] : [dMin, dMax])
+            .range([sh, 0])
+
+        // ── Group ─────────────────────────────────────────────────────────────────
+        const g = this.el.vis.group.append('g')
+            .classed(`sparkline-group sparkline-${targetClass}`, true)
+            .attr('transform', `translate(${ax}, ${ay})`)
+
+        // ── Line ──────────────────────────────────────────────────────────────────
+        const line = d3.line()
+            .x(d => xScale(d.year))
+            .y(d => yScale(getValue(d)))
+            .curve(d3.curveLinear)
+
+        g.append('path')
+            .datum(data)
+            .classed(`sparkline-path ${targetClass}`, true)
+            .attr('d', line)
+            .attr('fill', 'none')
+
+        // ── Baseline dot ──────────────────────────────────────────────────────────
+        const x0 = xScale(data[0].year)
+        const y0 = yScale(getValue(data[0]))
+
+        g.append('circle')
+            .classed(`sparkline-dot ${targetClass}`, true)
+            .attr('cx', x0)
+            .attr('cy', y0)
+            .attr('r',  3)
+
+        // ── Direction triangle at latest point ────────────────────────────────────
+        // Triangle points in the direction of travel along the line's final tangent
+        const last   = data[data.length - 1]
+        const prev   = data[data.length - 2]
+        const x1     = xScale(prev.year),  y1 = yScale(getValue(prev))
+        const x2     = xScale(last.year),  y2 = yScale(getValue(last))
+
+        const angle  = Math.atan2(y2 - y1, x2 - x1) * (180 / Math.PI)
+        const TR     = 10   // triangle "radius" (half-size)
+
+        // Equilateral triangle pointing right, rotated to match line direction
+        const tri = `M ${TR} 0 L ${-TR} ${-TR * 0.85} L ${-TR} ${TR * 0.85} Z`
+
+        g.append('path')
+            .classed(`sparkline-arrow ${targetClass}`, true)
+            .attr('d', tri)
+            .attr('transform', `translate(${x2}, ${y2}) rotate(${angle})`)
     }
 
     #clearDynamic() {

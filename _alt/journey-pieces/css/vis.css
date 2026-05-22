@@ -1,0 +1,192 @@
+
+svg {
+    --landfill-flow:                #9a9a9a;
+    --aggregate-masonry-and-soils:  var( --epa-loud-cherry);
+
+    --recovery-line:                var(--dark);
+    --recovery-contour:             var(--dark);
+
+    g.vis-group{
+
+        g.cell{
+            path{
+                &.spark-line{ 
+                    stroke:         #000;
+                    fill:           none;
+                }
+
+                &.trend-line{
+                    stroke:         var(--dark);
+                        fill:      none;
+                }
+
+                &.spark-area { 
+                    fill:           var(--all-waste); 
+                    opacity:        1;
+                    &.msw { fill:   var(--msw); }
+                    &.ci {  fill:   var(--ci); }
+                    &.cd {  fill:   var(--cd); }
+                }
+
+                &.contour-line{
+
+                    stroke:         var(--recovery-contour);
+                    opacity:        0.5;
+                    fill:           none;
+                    &.msw { stroke:   var(--msw); }
+                    &.ci {  stroke:   var(--ci); }
+                    &.cd {  stroke:   var(--cd); }
+                    &.solid-contour{
+                        stroke:   #FFF;
+                    }
+                }
+            }
+
+            rect{
+                &.area-title-bg{
+                    fill:           var(--color-bg); 
+                    opacity:        0.5;
+                }
+            }
+
+            text {
+                &.spark-title {
+                    font-weight:            700;
+
+                    &.area-title{
+                        text-anchor:        middle;
+                    }
+                }
+
+                &.spark-value{
+                    text-anchor:            middle;
+
+                    &.latest{
+                        font-weight:        700;
+                    }
+                }
+
+                &.spark-year-label{
+                    text-anchor:            middle;
+                    dominant-baseline:      central;
+                }
+
+                &.material-trend-spark-header{
+                    text-anchor:            middle;
+                    font-weight:            700;
+                }
+
+                &.trend-spark-value{
+                    dominant-baseline:      central;
+
+                    &.start{
+                        text-anchor:        end;
+                    }
+                }
+            }
+
+            path {
+                &.dual-line{
+                    fill: none;
+                }
+
+                &.dual-area{
+                    &.recovered { 
+                        fill:           var(--all-waste); 
+                        stroke:           var(--all-waste); 
+                        /* stroke-width: 3; */
+                        &.msw { 
+                            fill:       var(--msw); 
+                            stroke:     var(--msw); 
+                        }
+                        &.ci {  
+                            fill:       var(--ci); 
+                            stroke:     var(--ci); 
+                        }
+                        &.cd {  
+                            fill:       var(--cd); 
+                            stroke:      var(--cd); 
+                        }
+
+                    }
+                    &.disposed  { 
+                        fill:      none;
+                        stroke:   var(--dark);
+                    }
+
+                }
+            }
+
+            line {
+
+                &.dual-baseline{
+                    stroke:             var(--dark);
+                    stroke-opacity:    1;
+                    stroke-width:       0.25;
+                }
+            }
+
+            g.waste-breakdown-treemap{
+
+                rect{
+                    &.treemap-bg{
+                        fill:           var(--dark);        
+                    }
+
+                    &.recovered{
+                        stroke:         var(--dark);
+
+                        &.msw { fill:   var(--msw); }
+                        &.ci {  fill:   var(--ci); }
+                        &.cd {  fill:   var(--cd); }
+
+                        /* &.aggregate-masonry-and-soils { fill: var(--aggregate-masonry-and-soils) }; 
+                        &.organics {                    fill: var(--organics) }; 
+                        &.paper-and-cardboard {         fill: var(--paper-and-cardboard) }; 
+                        &.metals {                      fill: var(--metals) }; 
+                        &.plastic {                     fill: var(--plastic) }; 
+                        &.glass {                       fill: var(--glass) };                   
+                        &.textiles {                    fill: var(--textiles) };                   
+                        &.tyres-and-rubber {            fill: var(--tyres-and-rubber) };  */
+
+                    }
+
+                    &.landfill{ fill:   var(--white); }
+
+                    &.treemap-hit-area{
+                        fill:               transparent;
+                        stroke:             none;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+    g.annotation-group{
+        text{
+            &.section-label{
+                font-weight:        600;
+                dominant-baseline: central;
+            }
+
+        }
+        g.commentary{
+            text{
+                .commentary{
+                    fill:   #fff;
+                }
+
+            }
+            rect{
+                &.commentary-bg{
+                    fill:  #e9e9e9;
+                }
+            }
+        }
+
+
+    }
+}

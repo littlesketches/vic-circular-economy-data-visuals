@@ -134,6 +134,17 @@ svg {
                     text-anchor: middle;
                 }
             }
+
+            .sparkline-path {
+                stroke:         var(--color-bg);
+                stroke-width:   5px; 
+                fill:           none; 
+            }
+            .sparkline-dot,
+            .sparkline-arrow { 
+                fill:           var(--color-bg);
+            } 
+
         }
 
         g.label-group{
