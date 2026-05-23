@@ -1,27 +1,29 @@
-:root{
 
-}
 svg {
-    --landfill-flow:                #9a9a9a;
-    --aggregate-masonry-and-soils:  var( --epa-loud-cherry);
-
     --canvas-bg:                    var(--color-bg);
-    --ridge-line:                  var(--color-fg);
-    --ridge-area:                   var(--color-bg);
-    --title-color:                  var(--epa-primary-deep-ocean);
-    --subtitle-color:                  var(--epa-primary-cool-air);
+    --ridge-line:                   var(--epa-primary-lime-life);
+    --ridge-area:                   var(--epa-primary-deep-ocean);
+    --ridge-area-recovered:          var(--epa-primary-cool-air);
 
-    --no-recovery:        var(--epa-primary-deep-ocean);
-    --mid-recovery:        var(--epa-primary-cool-air);
-    --full-recovery:        var(--epa-primary-lime-life);
+
+    --title-color:                  var(--epa-primary-deep-ocean);
+    --section-color:                var(--epa-primary-day-sky);
+    --subtitle-color:               var(--color-bg);
+    --recovered-color:              var(--epa-primary-lime-life);
+    --all-waste:                    var(--epa-primary-deep-ocean);
+
+    --recover-rate-0:               var(--epa-primary-deep-ocean);
+    --recover-rate-100:           var(--epa-primary-cool-air);
 
     g.vis-group{
         text{
             fill:                       var(--color-fg);
+            opacity:                0.65;
         }
-        rect.bg{
-            /* stroke:              #ccc; */
-            fill:                  var(--color-bg);
+        rect{
+            &.bg{
+                fill:                  var(--color-bg);
+            }
         }
 
         g.volume-change-group{
@@ -49,15 +51,30 @@ svg {
             path{
                 &.ridge-area{
                     fill:                   var( --ridge-area);
+                    &.recovered{
+                        fill:               var(--ridge-area-recovered);
+                    }
                 }
 
                 &.ridge-line{
                     fill:                   none;
-                    stroke:                 var(--ridge-line);
-                    &.
+                    stroke:                 var(--color-bg);
+
+                    &.generated{
+                        stroke:                 var(--color-bg);
+                        stroke-linecap:         square;
+                    }
+                }
+            }   
+        
+            rect{
+                &.ridgeline-bg{
+                    fill:                   var(--ridge-area);
+                    &.recovered{
+                        fill:               var(--ridge-area-recovered);
+                    }
                 }
             }
-        
         }
 
         g.recovery-rate-group{
@@ -99,7 +116,6 @@ svg {
             }
 
         }
-
     }
 
 
@@ -119,16 +135,16 @@ svg {
             }
 
             &.section{
-                fill: var(--color-fg);
+                fill:                   var(--section-color);
                 font-weight:            600;
                 dominant-baseline:      central;
-                opacity:                0.5;
+                /* opacity:                0.5; */
 
                 &.volume-change{
                     dominant-baseline: alphabetic;
                 }
 
-                &.recovery-rate{
+                &.recovery-rate {
                     text-anchor:        start;
                 }
             }
@@ -137,9 +153,9 @@ svg {
         line{
             &.section-divider{
                 stroke:                 var(--color-fg);
-                stroke-opacity:         0.25;
+                stroke-opacity:         0.075;
+                stroke-width:           3.5;
             }
         }
-
     }
 }

@@ -1,0 +1,107 @@
+export const natureScene = `
+<svg width="500" height="200" viewBox="-250 -100 500 200" role="img"
+    xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .np-01 { fill: #b4b2a9; }
+        .np-02 { fill: #808080; }
+        .np-03 { fill: #3b6d11; }
+        .np-04 { fill: #ef9f27; }
+        .np-05 { fill: #ba7517; }
+        .np-06 { fill: #8b6f47; }
+        .np-07 { fill: #0f6e56; }
+        .np-08 { fill: #1d9e75; }
+        .np-09 { fill: #5dcaa5; }
+        .np-10 { fill: #5f5e5a; }
+        .np-11 { fill: #fac775; }
+        .np-12 { fill: #185fa5; }
+        .np-13 { fill: #639922; }
+        .np-14 { fill: #c3d700; }
+    </style>
+
+    <g id="nature-scene">
+        <g id="mountain-group">
+            <path class="np-01" d="M 74.5834,10.5846 19.3337,-81.0612 -53.4228,-1.653 Z" />
+            <path class="np-02" d="M 15.5578,4.7217 -31.7206,-50.3802 -72.3164,8.8442 Z" />
+        </g>
+        <g id="flower">
+            <rect class="np-03" x="-8.6027" y="-15.4937" width="2.2254" height="18.545" transform="rotate(-1.336)" />
+            <g id="flower-petals" class="np-04">
+                <circle cx="-10.677" cy="-18.8708" r="2.6559" transform="rotate(-1.336)" />
+                <circle cx="-8.6851" cy="-20.7299" r="2.6559" transform="rotate(-1.336)" />
+                <circle cx="-6.162" cy="-20.8627" r="2.6559" transform="rotate(-1.336)" />
+                <circle cx="-4.3029" cy="-19.0036" r="2.6559" transform="rotate(-1.336)" />
+                <circle cx="-4.3029" cy="-16.3477" r="2.6559" transform="rotate(-1.336)" />
+                <circle cx="-6.162" cy="-14.3558" r="2.6559" transform="rotate(-1.336)" />
+                <circle cx="-8.6851" cy="-14.3558" r="2.6559" transform="rotate(-1.336)" />
+                <circle cx="-10.677" cy="-16.2149" r="2.6559" transform="rotate(-1.336)" />
+            </g>
+            <circle class="np-05" cx="-7.49" cy="-17.6756" r="3.1871" transform="rotate(-1.336)" />
+        </g>
+        <g id="tree-1" transform="rotate(-5.9111,3.8013,406.2122)">
+            <rect class="np-06" x="101.1089" y="-37.3211" width="8.5461" height="21.3652" transform="rotate(20.2388)" />
+            <polygon class="np-07" points="183,380 120,230 57,380" transform="matrix(0.3645,0.1344,-0.1344,0.3645,119.1138,-153.1875)" />
+            <polygon class="np-08" points="173,310 120,195 67,310" transform="matrix(0.3645,0.1344,-0.1344,0.3645,119.1138,-153.1875)" />
+            <polygon class="np-09" points="165,250 120,160 75,250" transform="matrix(0.3645,0.1344,-0.1344,0.3645,119.1138,-153.1875)" />
+        </g>
+        <g id="native-tree">
+            <rect class="np-10" x="107.5995" y="-127.4503" width="5.9184" height="106.0378" transform="rotate(23.6702)" />
+            <path class="np-07" d="m 109.4824,-48.0857 a 29.5919,29.5919 0 0 1 54.2048,23.7606 z" />
+            <path class="np-08" d="m 125.1683,-65.4424 a 23.6736,23.6736 0 0 1 40.6536,17.8205 z" />
+            <path class="np-09" d="m 140.6252,-78.5915 a 15.7824,15.7824 0 0 1 24.3922,10.6923 z" />
+        </g>
+        <g id="sunflower">
+            <rect class="np-03" x="-37.2062" y="-21.8042" width="2.5911" height="23.5317" transform="rotate(-5.6988)" />
+            <g id="sunflower-petals" transform="rotate(9.5721,13.4659,301.1118)" class="np-04">
+                <polygon points="0,-52 -9,-28 9,-28" transform="matrix(-0.233,0.0636,-0.063,-0.2308,-91.8169,-10.8115)" />
+                <polygon points="-9,-28 9,-28 0,-52" transform="matrix(0.233,-0.0636,0.063,0.2308,-91.8169,-10.8115)" />
+                <polygon points="-9,-28 9,-28 0,-52" transform="matrix(0.2333,0.0603,-0.0619,0.2317,-91.8169,-10.8115)" />
+                <polygon points="-9,-28 9,-28 0,-52" transform="matrix(0.1711,0.1681,-0.1703,0.1705,-91.8169,-10.8115)" />
+                <polygon points="-9,-28 9,-28 0,-52" transform="matrix(0.063,0.2308,-0.233,0.0636,-91.8169,-10.8115)" />
+                <polygon points="-9,-28 9,-28 0,-52" transform="matrix(-0.0619,0.2317,-0.2333,-0.0603,-91.8169,-10.8115)" />
+                <polygon points="-9,-28 9,-28 0,-52" transform="matrix(-0.1703,0.1705,-0.1711,-0.1681,-91.8169,-10.8115)" />
+                <polygon points="-9,-28 9,-28 0,-52" transform="matrix(-0.2333,-0.0603,0.0619,-0.2317,-91.8169,-10.8115)" />
+                <polygon points="-9,-28 9,-28 0,-52" transform="matrix(-0.1711,-0.1681,0.1703,-0.1705,-91.8169,-10.8115)" />
+                <polygon points="-9,-28 9,-28 0,-52" transform="matrix(-0.063,-0.2308,0.233,-0.0636,-91.8169,-10.8115)" />
+                <polygon points="-9,-28 9,-28 0,-52" transform="matrix(0.0619,-0.2317,0.2333,0.0603,-91.8169,-10.8115)" />
+                <polygon points="-9,-28 9,-28 0,-52" transform="matrix(0.1703,-0.1705,0.1711,0.1681,-91.8169,-10.8115)" />
+            </g>
+            <circle class="np-06" cx="-35.9107" cy="-27.6787" r="7.6527" transform="rotate(-5.6988)" />
+        </g>
+        <g id="wattle" transform="rotate(-7.8505,21.8736,278.2244)">
+            <rect class="np-10" x="77.4401" y="-47.176" width="3.895" height="38.9504" transform="rotate(15.2609)" />
+            <circle class="np-04" cx="79.3876" cy="-66.6512" r="16.8785" transform="rotate(15.2609)" />
+            <circle class="np-05" cx="63.8075" cy="-56.9135" r="12.3343" transform="rotate(15.2609)" />
+            <circle class="np-05" cx="94.9678" cy="-56.9135" r="12.3343" transform="rotate(15.2609)" />
+            <circle class="np-04" cx="70.2992" cy="-77.0379" r="9.7376" transform="rotate(15.2609)" />
+            <circle class="np-04" cx="88.476" cy="-77.0379" r="9.7376" transform="rotate(15.2609)" />
+            <circle class="np-11" cx="79.3876" cy="-80.2838" r="7.1409" transform="rotate(15.2609)" />
+        </g>
+        <g id="tree-2">
+            <rect class="np-06" x="96.5428" y="-24.4021" width="5.1309" height="12.8272" transform="rotate(17.092)" />
+            <polygon class="np-07" points="183,380 120,230 57,380" transform="matrix(0.2229,0.0685,-0.0685,0.2229,101.1997,-87.1311)" />
+            <polygon class="np-08" points="173,310 120,195 67,310" transform="matrix(0.2229,0.0685,-0.0685,0.2229,101.1997,-87.1311)" />
+            <polygon class="np-09" points="165,250 120,160 75,250" transform="matrix(0.2229,0.0685,-0.0685,0.2229,101.1997,-87.1311)" />
+        </g>
+        <g id="surface-group">
+            <path id="soil" class="np-06" d="M -114.805,22.8361 A 300,300 0 0 1 -39.1579,2.5665 l 0.979,7.4359 a 292.5,292.5 0 0 0 -73.756,19.7628 z" />
+            <path id="grass-1" class="np-03" d="M -39.1579,2.5665 A 300,300 0 0 1 0,0 v 7.5 a 292.5,292.5 0 0 0 -38.1789,2.5024 z" />
+            <path id="water" class="np-12" d="m 0,0 a 300,300 0 0 1 39.1579,2.5665 l -0.979,7.4359 A 292.5,292.5 0 0 0 0,7.5 Z" />
+            <path id="grass-2" class="np-03" d="m 39.1579,2.5665 a 300,300 0 0 1 75.6471,20.2696 l -2.8701,6.9291 A 292.5,292.5 0 0 0 38.1789,10.0024 Z" />
+        </g>
+        <g id="crops">
+            <polygon class="np-13" points="1027,260 1016,330 1038,330 " transform="matrix(0.2995,-0.1197,0.0965,0.2416,-453.7387,44.7658)" />
+            <rect class="np-14" x="-107.6907" y="-40.9131" width="1.9352" height="23.4112" transform="rotate(-21.7758)" />
+            <polygon class="np-03" points="1040,310 1062,310 1051,240 " transform="matrix(0.3042,-0.1071,0.0864,0.2454,-452.0396,28.9537)" />
+            <rect class="np-14" x="-97.9751" y="-42.1938" width="1.9352" height="28.6137" transform="rotate(-19.399)" />
+            <polygon class="np-13" points="1075,255 1064,325 1086,325 " transform="matrix(0.3081,-0.0954,0.0769,0.2485,-449.4626,14.0884)" />
+            <rect class="np-14" x="-87.757" y="-34.9532" width="1.9352" height="24.7119" transform="rotate(-17.2056)" />
+            <polygon class="np-03" points="1099,278 1088,345 1110,345 " transform="matrix(0.3127,-0.079,0.0637,0.2522,-446.3342,-6.387)" />
+            <rect class="np-14" x="-77.682" y="-25.7425" width="1.9352" height="19.5094" transform="rotate(-14.174)" />
+            <polygon class="np-13" points="1123,248 1112,318 1134,318 " transform="matrix(0.3146,-0.071,0.0573,0.2537,-442.418,-16.4732)" />
+            <rect class="np-14" x="-66.696" y="-30.7482" width="1.9352" height="26.5327" transform="rotate(-12.7179)" />
+            <rect class="np-14" x="-55.3411" y="-23.439" width="1.9352" height="20.81" transform="rotate(-10.8226)" />
+            <polygon class="np-03" points="1158,340 1147,272 1136,340 " transform="matrix(0.3168,-0.0606,0.0488,0.2555,-437.7835,-30.2165)" />
+        </g>
+    </g>
+</svg>
+`

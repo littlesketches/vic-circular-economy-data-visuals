@@ -18,6 +18,7 @@ async function initApp() {
     // i. App/DataVis level queryConfig options
     const queryConfig = {
         visOnly:        params.get('visOnly') === null ? false : true,      
+        invert:         params.get('invert') === null ? false : true,      
         year:           params.get('year'),    
         view:           params.get('view'),    
     }

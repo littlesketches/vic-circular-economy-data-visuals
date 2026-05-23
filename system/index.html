@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../_shared/css/data-vis/vis-page-layout.css">
     <link rel="stylesheet" href="../_shared/css/data-vis/data-vis.css">
     <link rel="stylesheet" href="../_shared/css/data-vis/waste-treemap.css">
-    <link rel="stylesheet" href="../_shared/css/illustration/waste-industry.css">
+    <link rel="stylesheet" href="../_shared/css/illustration/illustration.css">
     <link rel="stylesheet" href="./css/vis.css">
 </head>
 
@@ -26,6 +26,13 @@
             </div>
 
             <div class = 'lead-block'>
+                <p>Victorian's consume an estimated [31] tonnes per person of materials each year. This material footprint includes all the materials and resources that goes into everyday products, services and infrastructure we use, but the energy and systems that support our food, transport and energy systems....and much more. It includes everything. An estimated [7.5%] of these resources come from recycled and reused materials.
+
+                </p>
+
+                <p>Our waste management system deals with the materials we discard. In [2024] this was xxx kg per Victorian. 
+
+                </p>
             </div>
         </header>
     
@@ -61,15 +68,6 @@
                         <stop offset="60%"   stop-color="var(--disposal)"  />
     
                         </radialGradient>
-
-                        <pattern id="zigzag" width="10" height="10" patternUnits="userSpaceOnUse">
-                            <path d="M0 10 L5 0 L15 20 L20 10"
-                                fill="none"
-                                stroke="var(--bg-pattern)"
-                                stroke-width="1"
-                            />
-                        </pattern>
-
                         <!-- Fine horizontal lines — 4px spacing, light stroke -->
                         <pattern id="h-fine" width="10" height="4" patternUnits="userSpaceOnUse">
                             <line x1="0" y1="2" x2="10" y2="2" stroke="var(--bg-pattern)" stroke-width="0.75"/>
@@ -80,38 +78,6 @@
                             <line x1="0" y1="5" x2="10" y2="5" stroke="var(--bg-pattern)" stroke-width="0.75"/>
                         </pattern>
 
-                        <!-- Coarse horizontal lines — 16px spacing, heavier stroke -->
-                        <pattern id="h-coarse" width="10" height="16" patternUnits="userSpaceOnUse">
-                            <line x1="0" y1="8" x2="10" y2="8" stroke="var(--bg-pattern)" stroke-width="1.75"/>
-                        </pattern>
-
-                        <!-- Ladder — alternating thick/thin pair every 6px -->
-                        <pattern id="h-ladder" width="10" height="6" patternUnits="userSpaceOnUse">
-                            <line x1="0" y1="2" x2="10" y2="2" stroke="var(--bg-pattern)" stroke-width="1.5"/>
-                            <line x1="0" y1="5" x2="10" y2="5" stroke="var(--bg-pattern)" stroke-width="0.5"/>
-                        </pattern>
-
-                        <!-- Diagonal 45° hatching — 8px tile -->
-                        <pattern id="diag-45" width="8" height="8" patternUnits="userSpaceOnUse">
-                            <line x1="-1" y1="9"  x2="9"  y2="-1" stroke="var(--bg-pattern)" stroke-width="1"/>
-                            <line x1="-1" y1="17" x2="17" y2="-1" stroke="var(--bg-pattern)" stroke-width="1"/>
-                        </pattern>
-
-                        <!-- Crosshatch — horizontal + vertical, 8px grid -->
-                        <pattern id="crosshatch" width="8" height="8" patternUnits="userSpaceOnUse">
-                            <line x1="0" y1="4" x2="8" y2="4" stroke="var(--bg-pattern)" stroke-width="0.75"/>
-                            <line x1="4" y1="0" x2="4" y2="8" stroke="var(--bg-pattern)" stroke-width="0.75"/>
-                        </pattern>
-
-                        <!-- Dots — 8px grid, r=1 -->
-                        <pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse">
-                            <circle cx="4" cy="4" r="1" fill="var(--bg-pattern)"/>
-                        </pattern>
-
-                        <!-- Sparse horizontal — 24px gap, 2px stroke, best for large shapes -->
-                        <pattern id="h-sparse" width="10" height="24" patternUnits="userSpaceOnUse">
-                            <line x1="0" y1="12" x2="10" y2="12" stroke="var(--bg-pattern)" stroke-width="2"/>
-                        </pattern>
                     </defs>
                 </svg>
             </div>

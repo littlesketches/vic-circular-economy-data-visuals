@@ -26,13 +26,13 @@ svg {
                     fill:               var(--color-bg);
                     font-weight:        600;       
                 }
-
-
                 &.interim-target{
-                    opacity:            0.5;                    
+                    fill:               var(--color-fg);
+                    opacity:            0.5;                  
                 }   
 
                 &.data{
+                    fill:               var(--label-color);
                     dominant-baseline: hanging;
                     font-weight:        700;   
                     opacity:            0.75; 
@@ -41,8 +41,11 @@ svg {
                         dominant-baseline:  alphabetic;
                     }
                 }   
-                .baseline{
+                &.baseline{
+                    fill:               var(--color-fg);
+                    opacity:            0.75;
                     &.reverse{
+
                         dominant-baseline:  alphabetic;
                     }                
                 }

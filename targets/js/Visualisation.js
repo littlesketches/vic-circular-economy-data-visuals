@@ -119,7 +119,7 @@ export class TargetsVis extends DataVis {
                     fs:        w * 0.015,
                     dy:        0,
                     label:     '',
-                    className: `arc-label arc-label-baseline target-1`,
+                    className: `arc-label baseline target-1`,
                     offset:    '50%'
                 },
             ],
@@ -163,7 +163,7 @@ export class TargetsVis extends DataVis {
                     fs:        w * 0.02,
                     dy:        w * 0.0225,
                     label:     `${fmt(baselineValue)} t per capita in ${data[0].year}`,
-                    className: `arc-label arc-label-baseline target-2`,
+                    className: `arc-label baseline target-2`,
                     offset:    '50%'
                 },
             ],
@@ -411,7 +411,7 @@ export class TargetsVis extends DataVis {
         const isOuter       = this.state.mode === 'outer' ? true : false
 
         const outerRadius = w * 0.65,
-            innerRadius  = w * 0.25
+            innerRadius  = w * 0.2
 
         // I. SCALE
         const { baselineValue, targetValue } = cfg.getScaleDomain(targetMeta, this.targetData)
@@ -448,8 +448,6 @@ export class TargetsVis extends DataVis {
         arcGroup.append('circle')
             .classed(`target-area ${targetClass}`, true)
             .attr('r', outerRadius)
-
-
 
         if (cfg.hasInterim) {
             arcGroup.append('circle')
@@ -567,23 +565,8 @@ export class TargetsVis extends DataVis {
         const labelGroup = this.el.vis.group.append('g')
             .classed('label-group', true)
             .attr('transform', `translate(${cx}, ${cy} )`)
-
-
-
     }
 
-    /**
-    * Renders a minimal sparkline trendline for a given target quadrant.
-    *
-    * @param {string}   targetNum          - '1' | '2' | '3' | '4'
-    * @param {object}   layout             - { x, y, width, height } of the quadrant
-    * @param {object}   options
-    * @param {function} options.getValue   - (d) => number  value accessor
-    * @param {number}   [options.width]    - sparkline width in px  (default: qw * 0.4)
-    * @param {number}   [options.height]   - sparkline height in px (default: qh * 0.12)
-    * @param {number[]} [options.yDomain]  - [min, max] explicit domain; derived from data if omitted
-    * @param {boolean}  [options.invertY]  - true if lower = better (targets 2 & 3)
-    */
     #renderSparkline(targetNum, layout, options = {}) {
         const { getValue, invertY = false, yDomain } = options
 
@@ -628,7 +611,7 @@ export class TargetsVis extends DataVis {
         const line = d3.line()
             .x(d => xScale(d.year))
             .y(d => yScale(getValue(d)))
-            .curve(d3.curveLinear)
+            .curve(d3.curveCardinal)
 
         g.append('path')
             .datum(data)
@@ -644,7 +627,7 @@ export class TargetsVis extends DataVis {
             .classed(`sparkline-dot ${targetClass}`, true)
             .attr('cx', x0)
             .attr('cy', y0)
-            .attr('r',  3)
+            .attr('r',  6)
 
         // ── Direction triangle at latest point ────────────────────────────────────
         // Triangle points in the direction of travel along the line's final tangent
@@ -654,10 +637,15 @@ export class TargetsVis extends DataVis {
         const x2     = xScale(last.year),  y2 = yScale(getValue(last))
 
         const angle  = Math.atan2(y2 - y1, x2 - x1) * (180 / Math.PI)
-        const TR     = 10   // triangle "radius" (half-size)
+        const side = 16
+        const h = Math.sqrt(3) / 2 * side
 
-        // Equilateral triangle pointing right, rotated to match line direction
-        const tri = `M ${TR} 0 L ${-TR} ${-TR * 0.85} L ${-TR} ${TR * 0.85} Z`
+        const tri = `
+            M ${h * 2/3} 0
+            L ${-h / 3} ${-side / 2}
+            L ${-h / 3} ${side / 2}
+            Z
+        `
 
         g.append('path')
             .classed(`sparkline-arrow ${targetClass}`, true)

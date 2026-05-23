@@ -26,7 +26,7 @@ body.data-vis {
     justify-content:    center;
     font-family:        var(--font-family);
     background:         var(--color-screen-bg);
-
+    color:              var(--color-fg);
 
 
     main.content__wrapper {
@@ -75,9 +75,16 @@ body.data-vis {
             .lead-block{
                 margin-top:     var(--sidebar-pad);
                 opacity:        0.65;
+
                 p, ul{
                     font-size: small;
+
+                    &:last-of-type{
+                        margin-block-end:  0;
+                    }
                 }
+
+                
             }
 
         }

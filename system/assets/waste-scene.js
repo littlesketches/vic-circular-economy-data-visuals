@@ -1,5 +1,5 @@
 // waste-scene.svg in text string => availble to DataVis class without async load
-export const svgScene = `
+export const wasteScene = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 284">
     <style>
         .palette-01{fill:#f5f0e8}.palette-02{fill:#f4d35e}.palette-03{fill:#e63946}.palette-04{fill:#1d3557}.palette-05{fill:#2d2d2d}

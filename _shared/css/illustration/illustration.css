@@ -1,0 +1,26 @@
+g.waste-industry-illustration{
+    .palette-01 { fill: var(--color-bg); }
+    .palette-02 { fill: var(--epa-primary-cool-air); }
+    .palette-03 { fill: var(--epa-primary-day-sky); }
+    .palette-04 { fill: var(--epa-primary-deep-ocean);  }
+    .palette-05 { fill: var(--dark); }
+    .palette-06 { fill: var(--epa-primary-lime-life);  }
+
+}
+
+g.nature-illustration{
+       .np-01 { fill: #b4b2a9; display: none; }
+        .np-02 { fill: #808080; display: none;  }
+        .np-03 { fill: var(--epa-primary-lime-life); }
+        .np-04 { fill: var( --epa-citrus-noise);filter: brightness(1.05)}
+        .np-05 { fill: var( --epa-citrus-noise);  filter: brightness(0.75)}
+        .np-06 { fill: var( --epa-citrus-noise);  filter: brightness(0.5)}
+        .np-07 { fill: var(--epa-green-stench); filter: brightness(0.5)}
+        .np-08 { fill: var(--epa-green-stench); }
+        .np-09 { fill: var(--epa-green-stench);filter: brightness(1.25)}
+        .np-10 { fill: #5f5e5a; }
+        .np-11 { fill: var( --epa-citrus-noise); }
+        .np-12 { fill: var(--epa-primary-cool-air); }
+        .np-13 { fill: var(--epa-green-stench); }
+        .np-14 { fill :var(--epa-primary-lime-life); }
+}

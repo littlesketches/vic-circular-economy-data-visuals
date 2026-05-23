@@ -1,6 +1,7 @@
 // Libs and data
-import * as d3      from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
-import { svgScene } from "../assets/scene.js";
+import * as d3          from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+import { wasteScene }   from "../assets/waste-scene.js";
+import { natureScene }  from "../assets/nature-scene.js";
 
 // Classes
 import { DataVis } from "../../_shared/js/DataVis.js";
@@ -199,6 +200,7 @@ export class SystemVis extends DataVis{
         this.el.vis.materialFlow   = rotationGroup.append('g').classed('material-flow', true)
         this.el.vis.treemap        = rotationGroup.append('g').classed('treemap-group', true)
         this.el.vis.wasteIndustry  = rotationGroup.append('g').classed('waste-industry-illustration', true)
+        this.el.vis.nature          = rotationGroup.append('g').classed('nature-illustration', true)
 
 
         // ii. Circular economy metrics: not rotated
@@ -1936,38 +1938,106 @@ export class SystemVis extends DataVis{
         }
     }
 
-    #renderWasteIndustryIllustration(data, layout, options = {}) {
+    #renderIllustration(data, layout, options = {}) {
         const { x, y, w } = layout
         const { width, height, margin } = DataVis.CONFIG.dims
 
-        const canvasWidth   = width - margin.left - margin.right
-        const scale         = w / canvasWidth
+        const canvasWidth    = width - margin.left - margin.right
+        const scale          = w / canvasWidth
         const componentScale = 0.6
 
-        // Clone nodes from the source doc before any are appended
-        const truckCollection = SystemVis.#svgDoc.getElementById('truck-collection')?.cloneNode(true)
-        const truckDisposal   = SystemVis.#svgDoc.getElementById('truck-disposal')?.cloneNode(true)
-        const facility        = SystemVis.#svgDoc.getElementById('waste-facility')?.cloneNode(true)
-        const bins            = SystemVis.#svgDoc.getElementById('collection-bins')?.cloneNode(true)
+        const dur     = DataVis.CONFIG.animation.duration
+        const animate = options.animate ?? false
 
-        const illustrationGroup = this.el.vis.wasteIndustry
+        // Arc animation starts at dur * 0.3 (from #renderRecoveryCircleChart).
+        // At 70% recovery the arc sweeps ~252°. The nature scene sits at ~8-9 o'clock
+        // which is ~50% through that sweep, so: 0.3 + 0.5 * remaining ≈ dur * 0.8
+        const sceneBaseDelay = dur * 0
+        const natureDelay = dur * 1
+        const staggerStep    = dur * 0.25
+
+        ///////////////////////////////
+        /// I. WASTE INDUSTRY SCENE ///
+        ///////////////////////////////
+
+        const truckCollection = SystemVis.#svgWasteDoc.getElementById('truck-collection')?.cloneNode(true)
+        const truckDisposal   = SystemVis.#svgWasteDoc.getElementById('truck-disposal')?.cloneNode(true)
+        const facility        = SystemVis.#svgWasteDoc.getElementById('waste-facility')?.cloneNode(true)
+        const bins            = SystemVis.#svgWasteDoc.getElementById('collection-bins')?.cloneNode(true)
+
+        const wasteGroup = this.el.vis.wasteIndustry
             .append('g').classed('illustration-group-wrapper', true)
             .attr('transform', `translate(${x}, ${y}) scale(${scale})`)
 
-        // Append 
-        illustrationGroup.append(() => bins)
-            .attr('transform', `translate(${w * -0.85  / scale}, 0) scale(${componentScale})`)
+        const wasteItems = [
+            { node: bins,           transform: `translate(${w * -0.85 / scale}, 0) scale(${componentScale})`,                      delay: sceneBaseDelay },
+            { node: truckCollection,transform: `translate(${w * -0.675 / scale}, 0) scale(${-componentScale}, ${componentScale})`, delay: sceneBaseDelay + staggerStep * 0.25 },
 
-        illustrationGroup.append(() => facility)
-            .attr('transform', `translate(${w * 0}, 0) scale(${componentScale})`)
+            { node: facility,       transform: `translate(${w * 0}, 0) scale(${componentScale})`,                                  delay: sceneBaseDelay + staggerStep * 2},
+            { node: truckDisposal,  transform: `translate(${width * 0.595}, 0) scale(${componentScale})`,                          delay: sceneBaseDelay + staggerStep * 3.5, filter: 'grayscale(70%)' },
+        ]
 
-        illustrationGroup.append(() => truckCollection)
-            .attr('transform', `translate(${ w * -0.675 / scale }, 0) scale(${-componentScale}, ${componentScale})`)
+        wasteItems.forEach(({ node, transform, delay, filter }) => {
+            const el = wasteGroup.append(() => node)
+                .attr('transform', transform)
+                .style('opacity', animate ? 0 : 1)
 
-        const disposalPosition = width * 0.595
-        illustrationGroup.append(() => truckDisposal)
-            .attr('transform', `translate(${ disposalPosition }, 0) scale(${componentScale})`)
-            .style('filter', 'grayscale(70%)')
+            if (filter) el.style('filter', filter)
+
+            if (animate) {
+                el.transition()
+                    .duration(dur * 0.7)
+                    .delay(delay)
+                    .style('opacity', 1)
+            }
+        })
+
+        ////////////////////////
+        /// II. NATURE SCENE ///
+        ////////////////////////
+
+        if (this.state.layout === 'd') {
+
+            const natureScene = SystemVis.#svgNatureDoc.getElementById('nature-scene')?.cloneNode(true)
+            if (!natureScene) return
+
+            // Reveal order: back to front. Each group is selected from the cloned
+            // node *before* it is appended, so querySelector works on the live DOM.
+            // Groups are appended individually so D3 can target each one directly.
+            const natureRevealOrder = [
+                { id: 'surface-group',  delay: natureDelay                    },
+                { id: 'crops',          delay: natureDelay + staggerStep * 0.25  },
+                { id: 'native-tree',    delay: natureDelay + staggerStep * 1.25  },
+                { id: 'tree-1',         delay: natureDelay + staggerStep * 1.00  },
+                { id: 'tree-2',         delay: natureDelay + staggerStep * 1.00  },
+                { id: 'wattle',         delay: natureDelay + staggerStep * 0.75  },
+                { id: 'flower',         delay: natureDelay + staggerStep * 0.50  },
+                { id: 'sunflower',      delay: natureDelay + staggerStep * 0.50 },
+            ]
+
+            // Wrapper group carries the scene-level transform
+            const natureWrapper = this.el.vis.nature
+                .append('g')
+                .classed('nature-scene-wrapper', true)
+                .attr('transform', `translate(360, 870) rotate(-120) scale(0.8)`)
+
+            // Append each named group from the cloned SVG individually
+            natureRevealOrder.forEach(({ id, delay }) => {
+                const node = natureScene.querySelector(`#${id}`)
+                if (!node) return
+
+                const el = natureWrapper
+                    .append(() => node)
+                    .style('opacity', animate ? 0 : 1)
+
+                if (animate) {
+                    el.transition()
+                        .duration(dur )
+                        .delay(delay)
+                        .style('opacity', 1)
+                }
+            })
+        }
     }
 
     // Update helpers
@@ -2057,11 +2127,12 @@ export class SystemVis extends DataVis{
             })
 
         if(this.state.render.illustration)
-            this.#renderWasteIndustryIllustration(data, {
+            this.#renderIllustration(data, {
                 x: width * 0.5,
                 y: margin.top + height * 0.28,
                 w: width * 0.5,
-            })
+            },
+            { animate }) 
     }
 
     #clearDynamic() {
@@ -2070,6 +2141,7 @@ export class SystemVis extends DataVis{
         this.el.vis.materialFlow.selectAll('*').remove()
         this.el.annotation.materialFlow.selectAll('*').remove()
         this.el.vis.wasteIndustry.selectAll('*').remove()
+        this.el.vis.nature.selectAll('*').remove()  
         this.el.vis.recoveryBreakdown.selectAll('*').remove()
         this.el.annotation.group.selectAll('.recovery-breakdown-labels').remove()
         this.el.defs.selectAll('path[id*="Arc_"]').remove()
@@ -2192,7 +2264,8 @@ export class SystemVis extends DataVis{
         return [u01x / u01d, u01y / u01d]
     }
 
-    static #svgDoc = new DOMParser().parseFromString(svgScene, 'image/svg+xml');
+    static #svgWasteDoc = new DOMParser().parseFromString(wasteScene, 'image/svg+xml');
+    static #svgNatureDoc = new DOMParser().parseFromString(natureScene, 'image/svg+xml');
 
     //////////////////////////
     ////  PUBLIC METHODS  ////
