@@ -1,6 +1,34 @@
+# FINAL TO DOS
+
+## Documentation
+- Design guide
+
+    - Brand
+        - Illustration (optional/placeholder)
+
+- Menu notes and option links
+
+## SYSTEM VIS
+1. Material sorting + preserve resources labels 
+2. Local economy label
+3. Section title header and divider?
+4. Default illustration off for all
+5. Default turn CE off
+6. Center T-mode
+7. Commentary section: talk about consumption, material footprint and circularity rate.
+
+## JOURNEY VIS
+1. Add commentary
+
+## TARGET VIS
+- Add invert mode
+- Animate fans
+
+
+
 # NOTES FOR "HERO" VISUALISATION
 
-Public focused visualisation telling the story of teh Victorian Circular Economy
+Public focused visualisation telling the story of the Victorian Circular Economy
 
 A "system" view
     - Victoria consumed a 190 million tonnes of raw materials in 2023, the equivalent of 28.1 tonnes per capita.
@@ -108,21 +136,3 @@ SHAPES
 
 - Collection bins?
 
-
-## JOURNEY: TRENDS
-
-1. WASTE MATERIAL RECOVERY: Line
-    - arguably the most 'meaningful' headline metric?
-    [OVERALL] [GEN#MSW] [GEN#C&D] [GENE#C&I]   12.5%
-    [MAT. #1] [MAT. #2] [MAT. #3] [MAT. #4]    6.25%
-    [MAT. #5] [MAT. #6] [MAT. #7] [MAT. #8]    6.25%
-----------------------------------------------------    
-
-2. WASTE VOLUME: RECOVERED VS DISPOSED: Area/trends/streams?
-    [OVERALL] [GEN#MSW] [GEN#C&D] [GENE#C&I]   12.5%
-    [OVE. PC]                                   6.25%
-----------------------------------------------------
-3. WASTE VOLUME: BREAKDOWN ? Tree
-    [-9]   [-8]   [-7]   [ CURRENT YEAR   ]     30%
-    [-6]   [-5]   [-4]   [ TREEMAP        ]
-    [-3]   [-2]   [-1]   [ WITH LABELS    ]

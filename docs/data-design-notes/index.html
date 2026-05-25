@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RV: Data Vis Proof of Concept project</title>
+	<link rel="icon" href = "./_static/assets/img/vic-favicon.png" />
+    <link rel="stylesheet" href="../../_shared/css/brand/vic-gov.css">
+    <link rel="stylesheet" href="../../_shared/css/docs/tufte.css"/>
+</head>
+
+<body class = ''>
+    <main>
+        <div class = 'content__wrapper'>
+            <div class = 'subtitle'>RV Datavis: Proof of Concept</div>
+            <h1>Data + Design notes</h1>
+            <hr>
+            <section>
+                <p>These notes provide RV with a summary of the design rationale for all three PoC Data visualisation's, including all findings from reviewing and exploring the context and data that supports the visuals. This material includes both the design brief (i.e. agreed scope of work) and all in-person discussions with RV, as well as:
+                </p>
+                <ul>
+                    <li>Publicly available data tables used from the release notes for Victoria's Waste Performance and Projection Mode and VLGAS data.</li>
+                    <li>The Circular Economy Market Reports for 2026 (draft, provided by RV) and prior releases available at the DEECA/RV website to understand the evolution of narrative trends and discussion points, and existing data visuals.</li>
+                    <li>The Recycling Victoria Data Hub: to review existing visualisations</li>
+                    <li>Publicly available policy documents and strategies related to the Victorian waste targets.</li>
+                </ul>
+
+                <p>Summary of findings from review that shaped the data design approach:</p>
+                <ul>
+                    <li>Available data is heavily focused on collected waste and management. As (also) indicated by RV, this is the natural area of focus for data visuals. The publicly available data tables are well structured and can be used directly (upon conversion to a text file format that can be loaded to the web app).
+                    </li>
+
+                    <li>There are interesting 'new' circular economy metrics that could be communicated &mdash; namely the material footpint and circularity rate &mdash; however their components (i.e. boundaries) are highly nuanced<label for="sn-001" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-001" class="margin-toggle"/><span class="sidenote">The concern, in the context of a graphic, is that the these metrics require reasonably detailed explanation and are more suited to commentary. </span>, and there is little detail or series history. This makes them difficult to include at the same depth or resolution as as the waste data, however they remain a candidate for inclusion in the <i>system</i> graphic. 
+                    </li>
+
+                    <li>Similarly, the 2026 Circular Economy Report includes more focus on valuation and economic measures (related to the waste recovery industry). This analysis is largely confined to the latest year<label for="sn-002" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-002" class="margin-toggle"/><span class="sidenote">We understand that there may be similar analysis that might be extended to prior years, but as its not publicly available, have assumed (in the context of PoC delivery timeframe) that it is not viable to pursue </span>, which makes it a candidate for the <i>system</i> graphic only, as the <i>journey</i> is time series based. 
+                    </li>
+
+                    <li>Standard charts (bar and line) and Sankey diagrams feature heavily in existing assets, meaning that there may be limited value in 'repeating' those types of representations.
+
+                    </li>
+                </ul>
+                
+
+            </section>
+
+            <h2>1. The "responsively square" template</h2>
+            <section class = 'responsive-template'>
+            <p>All visualisations are designed with a template that includes an HTML sidebar (featuring a header, year selector and annotation/description), and an SVG graphic that has a square aspect ratio. This choice is made to allow the graphic to stack vertically for narrower 'portrait orientated' screens (e.g. mobile phones, tablets, and potentially, if embedded in a narrow content container on a webpage). In the vetical stacking case, the sidebar can be split into an upper section (containing the header, selector and some content, e.g. intro description), and a lower section (e.g. container footer information)
+            </p>
+            <p>The page aspect ratio has been fixed to the same ratio as A4 page, meaning that graphics will not only print to paper well, but wil also be constrained to the center section of widescreen displays..
+            </p>
+
+            <h2>2. Design language</h2>
+            <section class = 'design-language'>
+                <p>The design of all visualisations tries to adopt a consistent approach to the shapes and representations used. The design language leans heavily on the 'circular' vs 'linear' connotation associated with the <i>transition to a circular economy</i>, by encoding all positive 'good' data represents as circular curves, and using straight lines for the 'linear economy'. The choice of these geometric shapes<label for="sn-004" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-004" class="margin-toggle"/><span class="sidenote">Design and art from modernist De Stijl and Bauhaus movements were used as reference material. The use of geometric shapes also complements data visualisation well as they are either familiar marks for charts (e.g. circles and rectangles), and/or are well suited to be visually scaled and compared (i.e. encoded data values). </span> is extended by the use of squares and rectangles (with 'neutral' meaning), and equilateral triangles whose general direction (e.g. up/down) implies meaning. 
+                </p>
+
+                <p>To add as sense of dynamic movement and to guide the audiences eye, layouts were explored that used bold angles and typography that followed curve and angle paths. These design decisions are intended to provide an bolder set of visuals with a strong  silhouette (i.e. potentially sacrificing some legibility for memorability). Naturally, the bolder layouts are better suited to sparser labelling and detail.</p>
+
+                <p>As the designated 'hero' visual, these ideas were explored for the <i>system</i> visualisation, and is then used elsewhere, if appropriate. Detail on how this approach is applied is provide 'by visualisation' below.</p>
+            </section>
+
+
+
+
+            <h2>3. Tone and information density</h2>
+            <section class = 'tone-and-information-density'>
+                <p>While each graphic is designed for a broad(er) public audience, it should be acknowledged that this is an audience that is being engaged in a (fairly dry) public policy and data context. Moreover, there is a need for user friendliness, but in the context of a public sector communication, where some design ideas may be restrained or require compromise<label for="sn-005" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-005" class="margin-toggle"/><span class="sidenote">Layout options are provided for the <i>System</i> visual, which may provide flexibility for RV to use different versions in different context.</span>
+                </p>
+
+                <p>To manage this context, a tone of (draft) copy has been proposed that uses a more casual tone with (slightly more) abstract or curious headings; both intended to encourage a sense of curiosity and avoid the dry/factual tone. This of course, may be completely changed at RV's discretion &mdash; being particularly mindful that Government communications must be approved and consistent<label for="sn-006" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-006" class="margin-toggle"/><span class="sidenote">Note: the final approved copy will be what is featured; so reference to the proposed draft copy will likely be irrelevant to future readers of this note!</span>.
+                </p>
+
+                <p>The information density of each visualisation needs to be quite restrained (vs the available data, particularly the <i>Journey</i> visualisation which takes a curated view of its source data). This tends to encourage a 'less is more' approach that favours white/negative space. In other words, it is generally proposed that content be left out rather than overcrowd the graphic: empty space is deliberate. Data labelling is also 'restrained' and minimalised in favour of letting the visual representation and shape of the data tell the story. 
+                </p>
+            </section>
+
+
+            <h2>4. Brand and accessibility</h2>
+
+            <section>
+                <p>in recognition of RV's transition to EPA Victoria in July 2026, the EPA branding (as provided by DEECA) was applied to the colour palette and typefaces<label for="sn-007" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-007" class="margin-toggle"/><span class="sidenote">These are the same for all Victorian Government</span> used in all visualisation. Styling code (CSS) extracted from the Victorian Government websites has also attempted to be used for the visualisation sidebars, however these required some adapting to 'work'<label for="sn-008" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-008" class="margin-toggle"/><span class="sidenote">Standard styling included paragraph font sizes that were far too large in the context of the visualisation graphics and intended use case of the sidebars, to provide a space for annotation.</span>.
+                </p>
+
+                <p>The primary EPA palette consists of three shades of blue, and a lime green. In order to integrate the flavour of the brand palette without introducing 'meaning', the blues are used primarily as a base colour, and the green reserved for only in or near context of 'recycled' materials (in the <i>System</i> visual) and 'progress' (in the <i>Targets</i> visual). Moreover, the green is used sparingly, and never for highlighting 'negative' elements.</p>
+
+                <p>The use of gradients (as prescribed in the EPA Brand book) and secondary EPA palette are drawn upon where additional colors are required<label for="sn-009" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-009" class="margin-toggle"/><span class="sidenote">A deliberate decision was made to not encode materials with individual colours to avoid a 'rainbow' colour palette that would be difficult to" manage &mdash; particularly as source sectors appear alongside &mdash; and  to maintain brand association..</span>.</p>
+
+                <p>Best attempts are made to follow all visual accessibility guidance (font size and contrast) in all graphics, however as the graphics scale to the available screen space, it is difficult (impossible) ensure that font sizes stay are a large enough size on all screens (e.g. mobile). This is however, a common issue for all graphics in general (not just data visualisation). In keeping with the information density approach above, there is a design preference to keep data labels smaller and less intrusive: the audiences eyes should be drawn to the data representation and not the data labels.
+                </p>
+
+                <p>Other web accessibility concerns (e.g. screen reader) are not addressed in the PoC. Similarly, data accessibility (e.g. providing links to source data) is not included (but could easily be managed by adding a link underneath any embedded visuals).</p>
+
+            </section>
+
+            <h2>5. Visualisation design approach</h2>
+            <section class = 'approach-by-visualisation'>
+                <h3>i. System visualisation</h3>
+                <p>This visualisation is designed to capture a view of the Victorian Circular Economy, as a system. From both the data and context review, it was immediately apparent that waste flows data would need to feature prominently in the composition, and that RV had the appropriate datasets highly textured and visually interesting data representation. Considerable attention was then given to exploring, and then deciding on, where and how to include the Circular Economy metrics and the market value and economic impact metrics (both introduced in the most recent CEMRs). 
+                </p>
+
+                <p>Ultimately, the proposed design (provided in various 'modes'<label for="sn-010" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-010" class="margin-toggle"/><span class="sidenote">A total of four modes are provide to RV which play with the angle of the linear economy portion of the graphic. These are known as "d", "t", "T" and "6" to reflect their shape. The 't' mode &mdash; which is designed ot look like a balancing beam &mdash; is a special case where the recovery rate is used to determine the </span>) chooses to: 
+                </p>
+
+                <ul>
+                    <li>Focus on the 'waste flow' story and highlight the interwoven but contrasting shape of the circular and linear components of the economy:</li>
+                    <li>Reference the circular economy metrics (optionally) in the the sidebar annotation and not a visual representation, as this became too cramped and needed more detail to both explain the circular metrics, and its relationship to the waste story</li>
+                    <li>Include a prominent but (composition-ally) small space for an annotation that references a headline market value/economic impact metric. The rationale here is that there is some uncertainty as to what to include to best tell the story (or if it is reasonable to try and do so); but also to provide some flexibility for how this section might be used<label for="sn-011" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-011" class="margin-toggle"/><span class="sidenote"> Also bearing in mind that these metrics are not available for prior years, so will leave a 'blank space'</span>.</li>
+                </ul>
+
+                
+                <p>The "waste flows" component consists of a "square of source bands" (blue) that split as connectors to parallel lines that represent each of the eight materials that feature in the datasets. These connectors could be considers as a modified version of a sankey connectors, where line thickness does represent the relative volume of each source flow to material type <label for="sn-012" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-012" class="margin-toggle"/><span class="sidenote"> Note: to maintain legibility, a reasonable minimum scale is used for thickness, resulting in a visual scale that is linear between minimum and maximum thickness.</span>. The linear flows used a bump chart that ranks the material volumes (from top as highest volume, to bottom as lowest volume), through the chain of disposal/collection to a re-ranking by recovered volumes (before the center, that feed into the circular arc), and onto a final re-ranking by to disposed to landfill volumes. All connectors and bumps are drawn at a 60&deg; angle to maintain an angular feel that is consistent with the equilateral triangles that are featured.
+                </p>
+
+                <p>Flows that split off the circular are then represented by arc lengths that correspond to each materials recovery rate. To emphasis that these flows are representative of the desired behaviour (the Circular Economy), the are given a coloured gradient fill that traverses the EPA colour palette. Conversely, the linear economy components consist colours that are more grey and monotone; and dark at landfill.  
+                </p>
+
+                <p>The landfill triangle is deliberately designed to point downward. It is sized in proportion to the square of sources, and is visually opposed be an upward pointing triangle that emanates from the center of the recovery circle, indicating that information contained in that triangle is an extension of the recovered materials journey. This includes a breakdown of of recovered materials between local and exported proportions, and a label that can be used to address the economic or market impact of the recovered materials.
+                </p>
+
+                <p>An optional set of Bauhaus-styled illustration components can be shown in the visualisation. This is a suggestion that may 'soften' the harsh feel of a data-only graphic. As noted in the user guidance, the illustrations provided in the PoC are free for RV to use 'as is', but may not meet brand and style guidlines (and are not in scope in the PoC for refinement)<label for="sn-013" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-013" class="margin-toggle"/><span class="sidenote">URLs with the illustrations on and off are provided:/span></p>
+
+
+                <p>Although RV can choose from any of four layout modes, mode "d" is suggested as the most bold and memorable configuration. The rationale here is that this provides the strongest and most memorable silhouette, and was found to have an ideal space to include an additional illustration to represent 'preserved (natural) resources'. </p>
+
+
+                <h3>ii. Journey visualisation</h3>
+                <p>This visualisation is designed to tell a story about where Victoria has come from, to where we are now, in terms of (the waste data component) of the circular economy.
+                </p>
+
+                <p>As this story is dependent on time series data, only the waste data was considered. This still presented a significant challenge as the series data for waste volume is is broken down by source sector (x3), material stream (x8) and fate (x2), with waste recovery (% by source and material) and per capita volumes (by all volumes); all reasonable candidates for telling the story of Victoria's 'circular economy journey'. Two extremes were unsuccessfully explored  as the basis for a visualisation:</p>
+                <ol>
+                    <li>A large scale graphic incorporating all waste streams and fates (a modified area bump chart): however this highlighted: the order of magnitude difference in scale between material volumes (i.e. dominated by volume, by aggregates, masonry and soils), which makes it difficult to visually see trends and change in most materials; and the problem of trying to surface too many data stories from a single view. In short, this high level view revealed little detail and was abandoned.</li>
+
+                    <li>A set of small multiples charts that looked at recovery rates, and then volume broken down by fate (recovered vs disposed to landfill). While there was moderate success in this 'dashboard-style' approach, it was deemed to be (far) too cluttered and confusing for public consumption. Ths exercise did however, highlight the need to curate a focused ser of data to present as a more cohesive story, a the success of a small multiples approach to representing trends and change, at the series level (i.e. change relative to itself, rather than on a common scale with all other materials).</li>
+                </ol>
+
+
+                <p>The final proposed graphic focuses on telling the story of recovered waste, at source and material stream level. It adopts a slightly unconventional variation on a series of sparklines charts, called a ridge line or 'joy' (division) plot that shows series trend data in a compact plot that is designed ot have a small degree of overlap between series. The aesthetic rationale here is create a sense of curiosity in the audience, and evoke a sense of nature through contours that a reminiscent of patterns of waves, mountains or tree rings.</p>
+
+                <p>To add to ths effect, the relative volume of each material is encoded as line thickness.</p>
+
+                <p>To properly contextualise the data for comparison/public consumption (and to present a point of difference to RV Data Hub dashboards), volume data is noramlised per capita, to present trends that are unaffected by population growth. </p>
+
+                <p>The lower section provides small multiple area charts that show the shape of recovery rates over time, for all sectors and materials. All series are on a common y-scale, and so area charts are preferred over simpler 'cleaner' lines here to emphasise the comparison between series. A gradient fille area (on the same,  common scale) is also used to make comparison as easy as possible for audience, and to create added visual interest.</p>
+
+                <p>It should be noted that various colours schemes were explored with the intention to use a wider palette, however choices were constrained (and in the end, dominated) by the EPA brands primary palette (i.e. the set of blues). Moreover, it was difficult to found that the primary EPA lime green was problematic in use (in combination with the primary blues) across the 'recovered' joy plot and set of recovery rate small multiples (noting that those two sets of charts are designed to be linked/associate by colour).</p>
+
+
+
+                <h3>ii. Target visualisation</h3>
+                <p>This visualisation is designed to show Victoria's progress since 2020, towards four waste targets. The idea here was to present a relatively simple 'info-graphic' style visual that incorporated data into the marks used to show progress. Instead of the traditional trope of a line chart with target, a four sector fan chart was selected as teh basis for a 'circular' style visual that honours the circular economy motif, and the design language of geometric shapes.
+                </p>
+
+                <p>Data was sourced from both the VMP&PM and VLGAS datasets, the later found to provide both population data (for calculating per capita targets), and the counts of LGAs with FOGO services (to support one of the targets). </p>
+
+                <p>The end result is a fairly simple data graphic, which mimics the simple goal of showing targets, progress and current position.</p>
+
+
+                <p>The only alternative explored was to use this layout invert the progress to be form outside in (i.e. heading towards the center 'bulls eye'). While elegant in theory however, this resultant graphic proved  to be less intuitive that initially thought. Put another way, it sounded good and 'smart' in theory, but just didn't look right in practice!</p>
+           </section>
+
+
+        </div>
+    </main>
+</body>
+</html>

@@ -6,7 +6,7 @@ import { DataVis } from "../../_shared/js/DataVis.js";
 import { WasteBreakdownTreemap } from "../../_shared/js/WasteBreakdownTreemap.js";
 
 // => Data Visualisation class
-    export class JoyVis extends DataVis {
+    export class JourneyVis extends DataVis {
 
         ///////////////////////////////////
         //// STATIC CONFIG AND METHODS ////
@@ -226,7 +226,7 @@ import { WasteBreakdownTreemap } from "../../_shared/js/WasteBreakdownTreemap.js
         #drawRidgelinePlot(series, config = {}) {
 
             const cfg = {
-                ...JoyVis.CONFIG.ridgeline,
+                ...JourneyVis.CONFIG.ridgeline,
                 showAxis:       false,
                 axisOnTop:      false,
                 title:          null,
@@ -618,17 +618,17 @@ import { WasteBreakdownTreemap } from "../../_shared/js/WasteBreakdownTreemap.js
             const padding = 10
             this.el.vis.volumeChange.append('rect')
                 .classed('ridgeline-bg generated', true)
-                .attr('x', colX.left + JoyVis.CONFIG.ridgeline.marginLeft + padding)
+                .attr('x', colX.left + JourneyVis.CONFIG.ridgeline.marginLeft + padding)
                 .attr('y', rowY.A - 30)
-                .attr('width', colW - JoyVis.CONFIG.ridgeline.marginLeft - JoyVis.CONFIG.ridgeline.marginRight - padding * 2)
+                .attr('width', colW - JourneyVis.CONFIG.ridgeline.marginLeft - JourneyVis.CONFIG.ridgeline.marginRight - padding * 2)
                 .attr('height', rowY.D - rowY.A)
 
 
             this.el.vis.volumeChange.append('rect')
                 .classed('ridgeline-bg recovered', true)
-                .attr('x', colX.right + JoyVis.CONFIG.ridgeline.marginLeft + padding)
+                .attr('x', colX.right + JourneyVis.CONFIG.ridgeline.marginLeft + padding)
                 .attr('y', rowY.A - 30)
-                .attr('width', colW - JoyVis.CONFIG.ridgeline.marginLeft - JoyVis.CONFIG.ridgeline.marginRight - padding * 2)
+                .attr('width', colW - JourneyVis.CONFIG.ridgeline.marginLeft - JourneyVis.CONFIG.ridgeline.marginRight - padding * 2)
                 .attr('height', rowY.D - rowY.A)
 
         }

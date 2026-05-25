@@ -4,7 +4,7 @@ import { util }             from "../../_shared/js/util.js";
 
 // Classes
 import { App }              from "./App.js";
-import { JoyVis }     from "./Visualisation.js";
+import { JourneyVis }     from "./Visualisation.js";
 import { DataModel }        from "../../_shared/js/DataModel.js";
 
 // I. Query params 
@@ -35,7 +35,7 @@ async function initApp() {
     // iv. Init app modules 
     const dataModel     = app.module.dataModel    = new DataModel(data, app)  
     app.initUI()
-    const vis           = app.module.vis          = new JoyVis(app)
+    const vis           = app.module.vis          = new JourneyVis(app)
     app.addHandlers()
 
     // => Return app

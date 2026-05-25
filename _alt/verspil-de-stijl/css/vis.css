@@ -1,31 +1,37 @@
 /**
  *  VERSPIL DE STIJL
  */
+body.data-vis {
+    main.content__wrapper{
+        .sidebar__upper {
+            .title-block{
+                h1, h2, 
+                select,
+                .subtitle{                    
+                    color:      rgb(26, 26, 26)
+                }
+            }
+        }
 
-main.content__wrapper{
-    h1{
-        line-height: 1.5;
-    }
 
-    .option__container{
-        display:            flex;
-        justify-content:    space-between;
-        width:              100%;
-        padding-top:        1rem;
-        /* font-style: italic; */
-        opacity:            0.5;
-        font-size:          smaller;
 
-        input, select{
-            color:      rgb(26, 26, 26);
-            width:          10rem;
-            border:         none;
-            border-bottom: 1px solid rgb(26, 26, 26);
-            text-align: end;
-            padding: 0;
+        .option__container{
+            display:            flex;
+            justify-content:    space-between;
+            width:              100%;
+            padding-top:        1rem;
+            opacity:            0.5;
+            font-size:          smaller;
 
+            input, select{
+                /* color:      rgb(26, 26, 26); */
+                width:          10rem;
+                border:         none;
+                border-bottom:  1px solid rgb(26, 26, 26);
+                text-align:     end;
+                padding:        0;
+
+            }
         }
     }
-
-
 }
