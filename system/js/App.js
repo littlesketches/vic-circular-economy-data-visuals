@@ -30,7 +30,6 @@ export class App{
         // I. Set query config state (non data-dependent, e.g. year select require DataModel and schema to have been initialised)
         if(queryConfig.visOnly) this.state.select.showSidebar = false
         if(queryConfig.minimalist) this.state.select.minimalAnnotation = false
-
     }
 
     //////////////////////////

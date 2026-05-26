@@ -12,13 +12,14 @@
 <body class = ''>
     <main>
         <div class = 'content__wrapper'>
+
             <h1><br>Data Visualisation<br><span class = 'small'>Proof of Concept</span></h1>
             <section>
                 <p>This page provides links to all materials provided in the Data Visualisation Proof of Concept (DataVis PoC) project delivered to Recycling Victoria (RV) when part of the Victorian Department of Energy, Environment and Climate Action (DEECA), in May 2026.</p>
 
-                <p>It includes links to: all completed data visualisation concepts and associated documentation (to <a href = './docs/guide/'>guide RV's use of the visualisations</a> and provide findings and explanation in the form of <a href = './docs/data-design-notes/'>data + design notes</a>); and summary material provided and presented as part of the project engagement.</p>
+                <p>It includes links to: all completed data visualisation concepts and documentation to <a href = './docs/guide/'>guide RV's use of the visualisations</a> and provide findings and explanation in the form of <a href = './docs/data-design-notes/'>data + design notes</a>; as well as links to the delivered code repository and spreadsheet tables versions of the data used (for demonstration).</p>
 
-                <p>In short, this page (and code repository) serves as a comprehensive compilation of all project materials. </p>
+                <p>In short, this page (and code repository) serves as a comprehensive compilation of all of the DataVis PoC deliverables. To assist RV in accessing the delivered application, all materials are <a href = 'https://vic-circular-economy-data-visuals.vercel.app/'>hosted here</a>.</p>
             </section>
 
             <hr>
@@ -28,17 +29,26 @@
                 <p>Links to materials used to develop and deliver of this project:</p>
 
                 <ul>
-                    <li><a href = 'https://github.com/littlesketches/vic-circular-economy-data-visuals' target = "_blank">Project code repository</a>: Github code repository. This repository is set to public to facilitate code sharing (as a deliverable) to RV.</li>
+                    <li>
+                        <p><a href = 'https://github.com/littlesketches/vic-circular-economy-data-visuals' target = "_blank">Project code repository on Github</a>: This repository is set to 'public view' to facilitate code sharing (as a deliverable) to RV. The repository includes this menu page and all documentation, in addition to the visualisation code/application.</p>
+                    </li>
 
-                    <li><a href = './docs/guide/'>User guide</a>: A brief set of guidance notes for exporting the visualisations as static files; and for embedding in websites.</li>
+                    <li>
+                        <p><a href = './docs/guide/'>User guide</a>: A brief set of guidance notes for exporting the visualisations as static files; and for embedding in websites.</p>
+                    </li>
 
-                    <li><a href = './docs/data-design-notes/'>Project data + design notes</a>: Summary of delivered design concepts (i.e. 'recommendations'), including findings and insights from the data and design process. </li>
+                    <li>
+                        <p><a href = './docs/data-design-notes/'>Project data + design notes</a>: Summary of delivered design concepts (i.e. 'recommendations'), including findings and insights from the data and design process.</p>
+                    </li>
 
                     <!-- <li><a href = 'https://docs.google.com/spreadsheets/d/1ccLNrHDEPpmShlTcaKY9pzzUMOkzZr83qNHuE3iUTi4/edit?usp=sharing' target = "_blank">Project plan</a>: Gannt chart outlining scoped tasks and deliverables</li> -->
 
-                    <li><p><a href = 'https://docs.google.com/spreadsheets/d/1tmQH937Mj4WQlUk1FRjkeOogjHevJPC5mBC5y0muvqc/edit?gid=230899616#gid=230899616' target = "_blank">Data tables used</a>: Example spreadsheet with copies of the publicly available datasets from the <a class = 'minor' href = 'https://www.vic.gov.au/victorias-waste-projection-model-dashboard' target='_blank'>Victorian Waste Performance and Projection Model </a> and  <a class = 'minor' href = 'https://www.vic.gov.au/victorian-local-government-waste-data-dashboard target='_blank'>Victorian Local Government Waste Data</a> release notes.</p> 
-                    <p>An additional table is used to record data on Circular Economy metrics extracted manually from the <a class = 'minor' href = 'https://www.vic.gov.au/circular-economy-market-report' target="_blank">Circular Economy Market Report.</a> The usage of this table will only be refined and documented in a production version of these visuals.</p>
-                    <p>All tables are exported to text files (.tsv) and included with the source code (see user guide).</p>
+                    <li>
+                        <p><a href = 'https://docs.google.com/spreadsheets/d/1tmQH937Mj4WQlUk1FRjkeOogjHevJPC5mBC5y0muvqc/edit?gid=230899616#gid=230899616' target = "_blank">Data tables used</a>: Example spreadsheet with copies of the publicly available datasets from the <a class = 'minor' href = 'https://www.vic.gov.au/victorias-waste-projection-model-dashboard' target='_blank'>Victorian Waste Performance and Projection Model </a> and  <a class = 'minor' href = 'https://www.vic.gov.au/victorian-local-government-waste-data-dashboard target='_blank'>Victorian Local Government Waste Data</a> release notes.</p> 
+
+                        <p>An additional table is used to record data on Circular Economy metrics extracted manually from the <a class = 'minor' href = 'https://www.vic.gov.au/circular-economy-market-report' target="_blank">Circular Economy Market Report.</a> The usage of this table will only be refined and documented in a production version of these visuals.</p>
+
+                        <p>All tables are exported to text files (.tsv) and included with the source code (see user guide).</p>
                     </li>
                 </ul>
 
@@ -46,14 +56,14 @@
 
             <hr>
 
-            <h2>Data Visualisation</h2>
+            <h2>The Data Visualisations</h2>
 
             <section class = 'visualisation-menu'>
                 <p>Three visualisation concepts were developed to a fully working, proof of concept stage. Each is delivered as a 'digital first' graphic that supports screen responsiveness and (better) accessibility and more flexible usage. All visuals are rendered as vector graphics and can be exported as such. See <a href = './docs/guide/'> user guide</a> and the <a href = './docs/data-design-notes/'>data + design notes</a> for more information.</p>
 
-                <p>All visualisations can be rendered without the sidebar/header section in situations where RV may want to use the graphics with custom headers and annotation (e.g. in presentation slides). These 'visOnly' links are provided for each visualisation below.</p>
-                <p>All visualistions default to the latest year of available data. This can be overridden for a given year of 20XX using a url query parameter of "year=20XX". This may be useful if visualisations are embedded in a website that should show a specific year (e.g. as part of a page that reports on a specific year). Examples are provide below (as observation of the url will better explain how to use the year query parameter).</p>
+                <p>All visualisations can be rendered without the sidebar/header section in situations where RV may want to use the graphics with custom headers and annotation (e.g. in presentation slides). These versions can be viewed by using the query parameter of "visOnly" and links of these versions provided alongside each visualisation below.</p>
 
+                <p>Although the PoC is scoped for 'static' visulisations (i.e. latest year), all visualistions are tested for use with historically available data and include a date selector: they <i>should</i>> theoretically work if data is updated with newer data and will default to the latest year of available data. This behaviour can be overridden/fixed for a given year of 20XX using a url query parameter of "year=20XX". This may be useful if visualisations are embedded in a website that should show a specific year (e.g. as part of a page that reports on a specific year). Examples are provide below as observation of the url format (note: examples should be used understand all available query parameters applied).</p>
 
                 <div class = 'visualisation-concept-container system'>
                     <div class = 'header__container'>
@@ -63,7 +73,10 @@
                             <div></div>
                         </div>
                     </div>
-                    <p>A representation of the "Shape of the Circular Economy" that focuses on the waste management flows (i.e. where most detailed data is available). This visualisation is available in four layout modes that RV are free to choose from and use for different use cases. Illustration components for this visual were created for the PoC for RV to use at their discretion: these are provided in separate links.</p>
+
+                    <p>A representation of the "Shape of the Circular Economy" that focuses on the waste management flows (i.e. where most detailed data is available). This visualisation concept is available in three layout modes that RV are free to use for different use cases. Illustration components for this visual were created for the PoC for RV to use at their discretion: these are provided below in separate links.
+                    </p>
+
                     <ul>
                         <li><a href = './system/?mode=d'>Mode d</a>: The most stylised and dramatically angled version of the graphic that resembles a "d" shape. Available <a href = './system/?mode=d&illustration'>with illustration</a> that includes an extra section for preserved (natural) resources. Examples with <a href = './system/?mode=d&illustration&visOnly'>with visOnly</a> and  with year fixed to <a href = './system/?mode=d&illustration&year=2024'>2024</a>.
                         </li>
@@ -72,11 +85,10 @@
 
                         <li><a href = './system/?mode=b'>Mode b</a>: A version of the graphic where the linear section is "b"(alanced) on an angle that is determined by the recovery vs landfill rates. Available <a href = './system/?mode=b&illustration'>with illustration</a>. Examples with <a href = './system/?mode=b&illustration&visOnly'>with visOnly</a> and with year fixed to <a href = './system/?mode=b&illustration&year=2022'>2022</a> .
                         </li>
-
-                        <li><a href = './system/?mode=6'>Mode 6</a>: An version of the graphic with the extreme angle and reversal of linear flows to imply that linear economy is 'going backward' while the 'circular economy' moves forward. Available <a href = './system/?mode=6&illustration'>with illustration</a> (without preserved resources). Examples with <a href = './system/?mode=6&illustration&visOnly'>with visOnly</a> and with year fixed to <a href = './system/?mode=6&illustration&year=2021'>2021</a>. Note: This is not suggested as there are legibility/text direction issues that were considered to detract too much from the design intent.
-                        </li>
-
                     </ul>
+
+                    <p>All modes are accompanied by a (suggested) commentary section in the sidebar that is a static template (of explanatory text) that includes some circular economy data metrics that are drawn from data tables (i.e. this text is programmatic).
+                    </p>
                 </div>
 
                 <div class = 'visualisation-concept-container journey'>
@@ -87,15 +99,18 @@
                             <div></div>
                         </div>
                     </div>
+
                     <p>A representation of where Victoria has come from and where we are now, with regard to the Circular Economy. This data used in this graphic has been curated to focus heavily on the shapes of changes and trends in recovered waste.</p>
+
                     <ul>
                         <li>
-                            <p>
-                                <a href = './journey/'>Trends & Change:</a> The proposed graphic composed of two sections that: 1) uses Joy Plots (aka ridgeline plots) to show and compare the percentage change of waste generated and recovered, for all waste source sectors and material streams; 2) uses a sereis of small multiple area sparkline plots to compare the trends in recovery rates for all waste source sectors and material streams.
+                            <p> <a href = './journey/'>Trends & Change:</a> The proposed graphic composed of two sections that: 1) uses Joy Plots (aka ridgeline plots) to show and compare the percentage change of waste generated and recovered, for all waste source sectors and material streams; 2) uses a sereis of small multiple area sparkline plots to compare the trends in recovery rates for all waste source sectors and material streams.
                             </p>
-                            <p>Accompanying this graphic (in the sidebar) are a set of commentary/annotation notes to help the audience connect the patterns they observe, with events and initiatives.</p>
-                        </li>
 
+                            <p>An alternate version where percentage change in volume is annualised over the period is also available <a href = './journey/?annualised'>here</a>. 
+
+                            <p>Accompanying this graphic (in the sidebar) are a set of commentary/annotation notes to help the audience connect the patterns they observe, with events and initiatives. This commentary is fixed/static for the PoC and would most likely require a basic content management solution if used in production. This sidebar is hidden in the <a href = './journey/?visOnly'>visOnly</a> version.</p>
+                        </li>
                     </ul>
                 </div>
 
@@ -107,10 +122,14 @@
                             <div></div>
                         </div>
                     </div>
+
                     <p>A data graphic that captures Victoria's progress (since 2020) in achieving the four waste targets.</p>
                     <ul>
                         <li>
-                            <a href = './targets/'>Target fans:</a> Proposed data graphic featuring a variant on a sunburst chart to represent progress towards the 2030 targets. In this version, the progress tracks outward from the center.
+                            <p><a href = './targets/'>Target fans:</a> Proposed data graphic featuring a variant on a sunburst chart to represent progress towards the 2030 targets. In this version, the progress tracks outward from the center. Available in a <a href = './targets/?visOnly'>visOnly</a> version.
+                            </p>
+                            <p>Note: the commentary section is unused in this concept but is available for use.</p>
+
                         </li>
                     </ul>
                 </div>
@@ -118,7 +137,7 @@
 
                 <div class = 'visualisation-concept-container other'>
                     <div class = 'header__container'>
-                        <h3>X. Other stuff</h3>
+                        <h3>Other pieces</h3>
                         <div class = 'header__outline'>
                             <div class = 'underline'></div>
                             <div></div>
@@ -126,15 +145,19 @@
                     </div>
                     <p>Anything else worth sharing is put here:</p>
                     <ul>
+
                         <li><a href = './_alt/verspil-de-stijl/'>Verspil De Stijl</a>: A bonus 'for fun' graphic of waste breakdown by stream and source, in the style of Piet Mondrian. Default colours are adapted to use the EPA secondary colour pallette. A <a href = './_alt/verspil-de-stijl/?primary'>primary EPS blues</a> palette is also available. </li>
+
+                        <li><a href = './system/?mode=6'><i>The System</i> - Mode 6</a>: An version of the graphic with the extreme angle and reversal of linear flows to imply that linear economy is 'going backward' while the 'circular economy' moves forward. Available <a href = './system/?mode=6&illustration'>with illustration</a> (without preserved resources). Examples with <a href = './system/?mode=6&illustration&visOnly'>with visOnly</a> and with year fixed to <a href = './system/?mode=6&illustration&year=2021'>2021</a>. Note: This is not suggested as there are legibility/text direction issues that were considered to detract too much from the design intent.
+                        </li>
 
                         <li>
                             <p>
-                                <a href = './_alt/smaill-pieces-loosely-joined/'>Journey drafting pieces:</a> An earlier version of the Journey plot that considered the possible data (timeline series) that might tell parts of the data story. A conclusion from this exploration was the need to curate and distill the data.
+                                <a href = './_alt/smaill-pieces-loosely-joined/'><i>The Journey</i> -  drafting pieces:</a> An earlier version of the Journey plot that considered the possible data (timeline series) that might tell parts of the data story. A conclusion from this exploration was the need to curate and distill the data.
                             </p>
                         </li>
                         <li>
-                            <a href = './targets/?invert'>Towards to target:</a> An alternative version of the Target fans graphic was explored where progress was shown to move toward the center 'bullseye' of the graphic. While elegant in theory, it was concluded that this inversion was not as intuitive as first thought, and caused some typographic issues that were not worth pursuing a solution for. 
+                            <a href = './targets/?invert'><i>The Targets</i> - inverted:</a> An alternative version of the Target fans graphic was explored where progress was shown to move toward the center 'bullseye' of the graphic. While elegant in theory, it was concluded that this inversion was not as intuitive as first thought, and caused some typographic issues that were not worth pursuing a solution for. 
                         </li>
 
                     </ul>

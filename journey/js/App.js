@@ -16,7 +16,7 @@ export class App{
 
     constructor(queryConfig){
         this._queryConfig = queryConfig
-
+        this.#initSettings(queryConfig)
     }
 
 
@@ -25,6 +25,13 @@ export class App{
     ///////////////////////////
 
 
+
+    #initSettings(queryConfig){
+        // I. Set query config state (non data-dependent, e.g. year select require DataModel and schema to have been initialised)
+        if(queryConfig.visOnly) this.state.select.showSidebar = false
+
+    }
+
     //////////////////////////
     ////  PUBLIC METHODS  ////
     //////////////////////////
@@ -32,9 +39,9 @@ export class App{
 
     initUI(){
 
-        //////////////////////////////
-        /// DATA DRIVEN SELECTORS  ///
-        //////////////////////////////
+        /////////////////////////////////
+        /// I. DATA DRIVEN SELECTORS  ///
+        /////////////////////////////////
 
         const { vis, dataModel } = this.module
 
@@ -55,6 +62,13 @@ export class App{
         yearSelect.value = this.state.select.year 
                          = this.state.select.year ?? latestYear.year
 
+
+        //////////////////////////////
+        /// II. APPLY LAYOUT STATE ///
+        //////////////////////////////
+
+        const main = document.querySelector('main.content__wrapper')
+        if(!this.state.select.showSidebar ) main.classList.add('hide-sidebar')
     }
 
 
@@ -63,7 +77,6 @@ export class App{
         // Module references
         const { vis, dataModel } = this.module
 
-console.log(vis)
         /////////////////////////////////
         /// I. EVENT HANDLERS METHODS ///
         /////////////////////////////////
