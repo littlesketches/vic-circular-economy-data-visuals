@@ -222,7 +222,8 @@ svg {
         text{
             &.recovery-base-label{
                 font-weight:              600;
-                opacity: 0.5;
+                opacity:                    1;
+                dominant-baseline:      central;
             }
         }
 
@@ -235,8 +236,8 @@ svg {
 
         path{
             &.recovery-segment {
-                fill:           var(--recovered-breakdown);    
-                stroke:         rgb(239, 239, 239);  
+                fill:           rgba(255, 255, 255, 0.15);  
+                stroke:        var(--color-bg);  
                 stroke-width:   3px;
                 mix-blend-mode: overlay;
             }

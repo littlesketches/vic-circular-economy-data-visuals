@@ -20,6 +20,7 @@ async function initApp() {
         visOnly:        params.get('visOnly') === null ? false : true,     
         year:           params.get('year'),    
         view:           params.get('view'),    
+        annualised:     params.get('annualised') === null ? false : true,     
     }
 
     // ii. Init app object

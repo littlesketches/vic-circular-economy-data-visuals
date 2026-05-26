@@ -1,28 +1,7 @@
 # FINAL TO DOS
 
 ## Documentation
-- Design guide
-
-    - Brand
-        - Illustration (optional/placeholder)
-
 - Menu notes and option links
-
-## SYSTEM VIS
-1. Material sorting + preserve resources labels 
-2. Local economy label
-3. Section title header and divider?
-4. Default illustration off for all
-5. Default turn CE off
-6. Center T-mode
-7. Commentary section: talk about consumption, material footprint and circularity rate.
-
-## JOURNEY VIS
-1. Add commentary
-
-## TARGET VIS
-- Add invert mode
-- Animate fans
 
 
 

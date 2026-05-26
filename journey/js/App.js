@@ -15,7 +15,8 @@ export class App{
     /////////////////////
 
     constructor(queryConfig){
-        this.#initSettings(queryConfig)
+        this._queryConfig = queryConfig
+
     }
 
 
@@ -23,9 +24,6 @@ export class App{
     ////  PRIVATE METHODS  ////
     ///////////////////////////
 
-    #initSettings(queryConfig){
-        // I. Set query config state
-    }
 
     //////////////////////////
     ////  PUBLIC METHODS  ////

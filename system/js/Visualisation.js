@@ -1,5 +1,6 @@
 // Libs and data
 import * as d3          from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+import { util }     from "../../_shared/js/util.js";
 import { wasteScene }   from "../assets/waste-scene.js";
 import { natureScene }  from "../assets/nature-scene.js";
 
@@ -16,25 +17,27 @@ export class SystemVis extends DataVis{
     /////////////////
 
     state = {
-        layout:                     'd',      // 'T' or 't' | 'd' | 'six' | 'snail'
+        layout:                     'd',           // 't'|  'b' | 'd' | 'six' | 'snail'
         flowConfig: {
             yPosition:              0.4 ,          // User setting to set the vertical position of the top of the circular flow component
             circularFlowMultiple:   5.25,              // User setting to set the relative size of the circular flow component
             flowHeightMultiple:     1/8,            // User setting to set width of linear system flows 
             rotateByRecoveryRate:   true,           // User setting to apply rotation to horizontal (T and snail) layouts
             circleDirection:        'clockwise',    // 'clockwise' | 'anticlockwise' : set by layout in "applyLayoutComponents"
-            reverseFlow:            false,          // Boolean for reversins the flow direction so that disposal is on the left and generation is on the right
+            reverseFlow:            false,          // Boolean for reversing the flow direction so that disposal is on the left and generation is on the right
             reverseSort:            false,          // Boolean for sort order of source and stream flows: set by layout in "applyLayoutComponents"
-            rotateDisposal:         false,          // Boolean for setting direction of the disposal triangle (and adjoining disposal streams): set by layout in "applyLayoutComponents"
+            rotateDisposal:         false,          // Boolean for setting direction of the disposal triangle (and adjoining disposal streams): set by layout in "applyLayoutComponents"                
             invertCircularFlow:     false,          // Boolean for inverting circular flow (rotate 180deg)
+            recoveryLabelCentered:  false
         },
 
         render: {
             ceMetrics:              true,
             flows:                  true,
             flowsCircular:          true,
-            recoveryBreakdown:      true,       
-            illustration:           true,
+            recoveryBreakdown:      true, 
+            flowsTitle:             false,      
+            illustration:           false,
         }
     }
 
@@ -87,13 +90,14 @@ export class SystemVis extends DataVis{
 
         switch(this.state.layout){
             case 't':
-            case 'T':
+            case 'b':
+                this.state.flowConfig.yPosition = 0.3
                 // Components
-                this.state.render.ceMetrics = true
+                this.state.render.ceMetrics = false
                 this.state.render.flows = true
                 this.state.render.flowsCircular = true
                 this.state.render.recoveryBreakdown = true
-                this.state.render.illustration = true
+
                 // Circular flow direction and sort order
                 this.state.flowConfig.circleDirection = 'clockwise'
                 this.state.flowConfig.invertCircularFlow = false
@@ -108,13 +112,14 @@ export class SystemVis extends DataVis{
                 this.state.render.flows = true
                 this.state.render.flowsCircular = true
                 this.state.render.recoveryBreakdown = true
-                this.state.render.illustration = false
+
                 // Circular flow direction and sort order
                 this.state.flowConfig.circleDirection = 'clockwise'
                 this.state.flowConfig.invertCircularFlow = false
                 this.state.flowConfig.reverseSort = false
                 this.state.flowConfig.reverseFlow = false
                 this.state.flowConfig.rotateDisposal = true
+                this.state.flowConfig.recoveryLabelCentered = true
                 break
 
             case 'six':  case '6': case 6:
@@ -123,29 +128,23 @@ export class SystemVis extends DataVis{
                 this.state.render.flows = true
                 this.state.render.flowsCircular = true
                 this.state.render.recoveryBreakdown = true
-                this.state.render.illustration = false
+
                 // Circular flow direction and sort order
                 this.state.flowConfig.circleDirection = 'anticlockwise'
                 this.state.flowConfig.invertCircularFlow = false
                 this.state.flowConfig.reverseSort = false
                 this.state.flowConfig.reverseFlow = true
                 this.state.flowConfig.rotateDisposal = true
+                this.state.flowConfig.recoveryLabelCentered = true
                 break
 
-            case 'snail':
-                // Components
-                this.state.render.ceMetrics = false
-                this.state.render.flows = true
-                this.state.render.flowsCircular = true
-                this.state.render.recoveryBreakdown = false
-                this.state.render.illustration = true
-                // Circular flow direction and sort order
-                this.state.flowConfig.circleDirection = 'anticlockwise'
-                this.state.flowConfig.invertCircularFlow = true
-                this.state.flowConfig.reverseSort = false
-                this.state.flowConfig.reverseFlow = false
-                this.state.flowConfig.rotateDisposal = false
+        }
+
+        switch(this.state.layout){
+            case 't':
+                this.state.flowConfig.rotateByRecoveryRate = false
                 break
+
         }
 
         // Other settings
@@ -156,7 +155,7 @@ export class SystemVis extends DataVis{
             if(isValidYear) this.app.state.select.year = +app.queryParams.year
         }
 
-        if(app.queryParams.flat) this.state.flowConfig.rotateByRecoveryRate = false
+        // if(app.queryParams.flat) this.state.flowConfig.rotateByRecoveryRate = false
         
         if(app.queryParams.flow){ this.state.render.ceMetrics = false}
 
@@ -200,6 +199,8 @@ export class SystemVis extends DataVis{
         this.el.vis.materialFlow   = rotationGroup.append('g').classed('material-flow', true)
         this.el.vis.treemap        = rotationGroup.append('g').classed('treemap-group', true)
         this.el.vis.wasteIndustry  = rotationGroup.append('g').classed('waste-industry-illustration', true)
+                                        .style('transform-origin', '50% 50%')
+                                        .style('transform', this.state.flowConfig.reverseFlow ? 'scaleX(-1)':  null)
         this.el.vis.nature          = rotationGroup.append('g').classed('nature-illustration', true)
 
 
@@ -557,9 +558,10 @@ export class SystemVis extends DataVis{
         /// IV. RENDER COMPONENTS  ///
         //////////////////////////////
 
-        this.#materialFlow.renderFlowTitle(annotation, sharedGeom, data.year)
+        if(this.state.render.flowsTitle)
+            this.#materialFlow.renderFlowTitle(annotation, sharedGeom, data.year)
 
-        
+    
         const genResult = this.#materialFlow.renderFlowGeneration(
             vis, annotation, data, sharedGeom,
             { 
@@ -579,7 +581,6 @@ export class SystemVis extends DataVis{
             bumpByDisposal,
             kinkPositionGen,
             kinkPositionDis,
-
         })
 
         if(this.state.render.recoveryBreakdown)
@@ -616,6 +617,7 @@ export class SystemVis extends DataVis{
         this.#materialFlow.renderWasteFateLabels(annotation, sharedGeom, data, {
             animate,
             delay: dur * 1.2,
+            recoveryLabelCentered: this.state.flowConfig.recoveryLabelCentered
         })
 
         this.#materialFlow.renderWasteManagementLabels(annotation, sharedGeom, data, {
@@ -628,7 +630,7 @@ export class SystemVis extends DataVis{
     #materialFlow = {   
         renderFlowTitle: (annotation, g, year) => {
             const titleGroup = annotation.append('g').classed('waste-title-group', true)
-                .attr('transform', `translate(${DataVis.CONFIG.dims.margin.left}, ${g.groupTop - g.slotH * 0.8 * g.n})`)
+                .attr('transform', `translate(${DataVis.CONFIG.dims.margin.left}, ${g.groupTop - g.slotH * 1.25 * g.n})`)
 
             const titleFs = DataVis.CONFIG.dims.height * 0.0225
 
@@ -1340,9 +1342,10 @@ export class SystemVis extends DataVis{
                 rotationAngle:  g.rotationAngle,     
                 apexX:          g.arcCentX,
                 apexY:          g.arcCentY,
-                arcOuterR:      g.radii[0] + this.scale.materialFlow(g.streams[0].recovered) / 2,
+                arcOuterR:      g.radii[0] + this.scale.materialFlow(g.streams[0].recovered) * 4,
                 recoveryLabelR: g.radii[0] + g.slotH * 1.0,   
                 largestArcCy:   (g.lineYs[0] + this.scale.materialFlow(g.streams[0].generated) / 2) - this.scale.materialFlow(g.streams[0].recovered) / 2 + g.radii[0],  
+                labelFontSize:   g.slotH * 0.85,
                 segments: [
                     { 
                         label: 'processed locally', 
@@ -1362,7 +1365,7 @@ export class SystemVis extends DataVis{
 
         renderWasteFateLabels: (annotation, g, data, options = {}) => {
 
-            const { animate = false, delay = 0 } = options
+            const { recoveryLabelCentered = false, animate = false, delay = 0 } = options
             const dur = DataVis.CONFIG.animation.duration
 
             const labelFs = g.slotH * 0.85
@@ -1376,77 +1379,126 @@ export class SystemVis extends DataVis{
             disposalG.append('g')
                 .attr('transform', `translate(${g.slopeStartX}, ${g.groupTop})`)
                 .append('text').classed('disposal-label', true)
-                    .attr('x', labelFs * 0.5)
+                    .attr('x', -labelFs * 0)
                     .attr('y', -labelFs * 0.75)
                     .style('font-size', labelFs)
                     .style('text-anchor', g.reverseFlow ? 'start' : null)
                     .html(`<tspan class = 'lowercase'>${d3.format("0.1f")(data.metrics.Aggregated.disposed.total /1000000)} Mt</tspan> disposed`)
 
             // ii. Recovery label arc: this also belongs to renderRecoveryBreakdown
-            if(!this.state.render.recoveryBreakdown){
-                const tGenTop      = this.scale.materialFlow(g.streams[0].generated),
-                    tRecTop        = this.scale.materialFlow(g.streams[0].recovered),
-                    botEdgeTop     = g.lineYs[0] + tGenTop / 2,
-                    recCyTop       = botEdgeTop - tRecTop / 2,
-                    largestArcCy   = recCyTop + g.radii[0],
-                    recoveryLabelR = g.radii[0] + g.slotH * 1.0,
-                    arcId          = `recoveryLabelArc_${data.year}`
+            const tGenTop      = this.scale.materialFlow(g.streams[0].generated),
+                tRecTop        = this.scale.materialFlow(g.streams[0].recovered),
+                botEdgeTop     = g.lineYs[0] + tGenTop / 2,
+                recCyTop       = botEdgeTop - tRecTop / 2,
+                largestArcCy   = recCyTop + g.radii[0],
+                recoveryLabelR = g.radii[0] + g.slotH * (recoveryLabelCentered ? 1.50 : 1.35),
+                arcId          = `recoveryLabelArc_${data.year}`,
+                path           = recoveryLabelCentered 
+                                ? `M ${g.arcCentX},${largestArcCy - recoveryLabelR} A ${recoveryLabelR},${recoveryLabelR} 0 1,0 ${g.arcCentX},${largestArcCy + recoveryLabelR}`
+                                : `M ${g.arcCentX},${largestArcCy - recoveryLabelR} A ${recoveryLabelR},${recoveryLabelR} 0 1,1 ${g.arcCentX},${largestArcCy + recoveryLabelR}`,
+                rotation       = recoveryLabelCentered ? -g.rotationAngle -90 : -g.rotationAngle
+
+            this.el.defs.append('path')
+                .attr('id', arcId)
+                .attr('d', path)
+                .attr('transform', `rotate(${rotation}, ${g.arcCentX}, ${largestArcCy})`)
+
+            const recLabel = annotation.append('text').classed('recovery-label', true)
+                .style('font-size', labelFs)
+                .style('opacity', animate ? 0 : 1)
+                .append('textPath')
+                    .attr('href', `#${arcId}`)
+                    .attr('startOffset', '50%')
+                    .html(`<tspan class = 'lowercase'>${d3.format("0.1f")(data.metrics.Aggregated.recovered.total /1000000)} Mt</tspan> recovered `)
+
+            if(animate) recLabel.select(function() { return this.parentNode })
+                .transition().duration(dur).delay(delay + 100).style('opacity', 1)
+
+
+            // iii. Resources protected label arc: this also belongs to renderRecoveryBreakdown
+            if(this.state.render.illustration && this.state.layout=== 'd'){
+                const resourcesLabelR = g.radii[0] + g.slotH * 1.35,
+                    arcId          = `resourcesLabelArc_${data.year}`
 
                 this.el.defs.append('path')
                     .attr('id', arcId)
-                    .attr('d', `M ${g.arcCentX},${largestArcCy - recoveryLabelR} A ${recoveryLabelR},${recoveryLabelR} 0 1,1 ${g.arcCentX},${largestArcCy + recoveryLabelR}`)
-                    .attr('transform', `rotate(${-g.rotationAngle}, ${g.arcCentX}, ${largestArcCy})`)
+                    .attr('d', `M ${g.arcCentX},${largestArcCy + resourcesLabelR} A ${resourcesLabelR},${resourcesLabelR} 0 1,1 ${g.arcCentX},${largestArcCy - resourcesLabelR}`)
+                    .attr('transform', `rotate(${-g.rotationAngle + 29}, ${g.arcCentX}, ${largestArcCy})`)
 
-                const recLabel = annotation.append('text').classed('recovery-label', true)
+                const recLabel = annotation.append('text').classed('resources-label', true)
                     .style('font-size', labelFs)
                     .style('opacity', animate ? 0 : 1)
                     .append('textPath')
                         .attr('href', `#${arcId}`)
                         .attr('startOffset', '50%')
-                        .html(`<tspan class = 'lowercase'>${d3.format("0.1f")(data.metrics.Aggregated.recovered.total /1000000)} Mt</tspan> recovered `)
+                        .html(`Resources preserved `)
 
                 if(animate) recLabel.select(function() { return this.parentNode })
                     .transition().duration(dur).delay(delay + 100).style('opacity', 1)
+
             }
         },
 
-        renderWasteManagementLabels: (annotation, sharedGeom, data, options = {}) => {
+        renderWasteManagementLabels: (annotation, g, data, options = {}) => {
 
             const { animate = false, delay = 0 } = options
             const dur = DataVis.CONFIG.animation.duration
-
-            const fs = sharedGeom.slotH * 0.85
+            const fs = g.slotH * 0.85
 
             const group = annotation.append('g').classed('waste-management-label-group', true)
-                .attr('transform', `translate(${sharedGeom.x - sharedGeom.slotH * 0.15}, ${sharedGeom.y - sharedGeom.slotH * 0.25})`)
-                .style('opacity', animate ? 0 : 1)
+                .attr('transform', `translate(${g.x - g.slotH * 0.15}, ${g.y - g.slotH * 0.25})`)
 
-            if(animate) group.transition().duration(dur).delay(delay).style('opacity', 1)
+            const generatedGroup = group.append('g').style('opacity', animate ? 0 : 1)
 
-            if(sharedGeom.reverseFlow){
-                group.append('text').classed('waste-management-label generation-label total', true)
-                    .attr('transform', ` translate(${sharedGeom.width + fs}, ${sharedGeom.genSquareSize * 0.05}) rotate(90)`)
+
+            const sortedGroup = group.append('g').classed('materials-sorted-group', true)
+                .attr('transform', ` translate(${g.width * 0.5}, 0)`)
+                        .style('opacity', animate ? 0 : 1)
+
+            if(animate){
+                generatedGroup.transition().duration(dur).delay(delay).style('opacity', 1)
+                sortedGroup.transition().duration(dur).delay(delay + dur* 0.5).style('opacity', 1)
+            }
+            // i. Materials generated and collected
+            if(g.reverseFlow){
+                generatedGroup.append('text').classed('waste-management-label generation-label total', true)
+                    .attr('transform', ` translate(${g.width + fs}, ${g.genSquareSize * 0.05}) rotate(90)`)
                     .html(`<tspan class = 'lowercase'>${d3.format("0.1f")(data.metrics.Aggregated.generated.total /1000000)} Mt</tspan> of waste`)
                     .style('font-size', fs * 1)
 
-                group.append('text').classed('waste-management-label generation-label', true)
-                    .attr('transform', ` translate(${sharedGeom.width - 0}, ${sharedGeom.genSquareSize * 0})`)
+                generatedGroup.append('text').classed('waste-management-label generation-label', true)
+                    .attr('transform', ` translate(${g.width - 0}, ${g.genSquareSize * 0})`)
                     .attr('dy', -fs * 0.375)
-                    .text(`generated & collected`)
                     .style('font-size', fs)
                     .style('text-anchor', 'end')
+                    .text(`generated & collected`)
 
             } else {
-                group.append('text').classed('waste-management-label generation-label total', true)
-                    .attr('transform', ` translate(${-fs * 0.75}, ${sharedGeom.genSquareSize * 1}) rotate(-90)`)
+                generatedGroup.append('text').classed('waste-management-label generation-label total', true)
+                    .attr('transform', ` translate(${-fs * 0.75}, ${g.genSquareSize * 1}) rotate(-90)`)
                     .html(`<tspan class = 'lowercase'>${d3.format("0.1f")(data.metrics.Aggregated.generated.total /1000000)} Mt</tspan> of waste`)
                     .style('font-size', fs * 1)
 
-                group.append('text').classed('waste-management-label generation-label', true)
+                generatedGroup.append('text').classed('waste-management-label generation-label', true)
                     .attr('dy', -fs * 0.375)
-                    .text(`generated & collected`)
                     .style('font-size', fs)
+                    .text(`generated & collected`)
+
             }
+
+            // ii. Materials sorted and processed 
+            sortedGroup.append('text').classed('waste-management-label generation-label', true)
+                .attr('dy', -fs * 0.375)
+                .style('font-size', fs)
+                .style('text-anchor', 'end')
+                .text(`materials`)
+
+            sortedGroup.append('text').classed('waste-management-label generation-label', true)
+                .attr('dy', -fs * 0.375)
+                .attr('dx', fs * 0.5 )
+                .style('font-size', fs)
+                .text(`sorted`)
+
         }
     }
 
@@ -1767,9 +1819,9 @@ export class SystemVis extends DataVis{
             apexX:          geomApexX,
             apexY:          geomApexY,
             segments:       directSegments = null,
-            labelFontSize   = height * 0.03,
+            labelFontSize   = 12,
             arcOuterR       = null,
-            segmentPadding  = height * 0.15,
+            segmentPadding  = height * 0.1,
             segmentThick    = height * 0.05,
             outerLabelPad   = 20,
             innerLabelPad   = 0,
@@ -1782,7 +1834,7 @@ export class SystemVis extends DataVis{
 
         const dur = DataVis.CONFIG.animation.duration
 
-        const maxTriH   = arcOuterR != null ? arcOuterR * 2 : height,
+        const maxTriH   = arcOuterR !== null ? arcOuterR * 1.75 : height,
             triHeight   = Math.min(height, maxTriH)
 
         const labelRotation = 180 - rotationAngle 
@@ -1870,47 +1922,25 @@ export class SystemVis extends DataVis{
         if (showLabels) {
             const arcId = `recoverySegmentLabelArc_${data.year}`
 
-            const outerLabelR  = innerR + labelFontSize * 1.25 + segmentThick
+            const outerLabelR  = innerR - labelFontSize * 0.5 + segmentThick
 
             this.el.defs.append('path')
                 .attr('id', arcId)
                 .attr('d', `M ${apexX + outerLabelR},${largestArcCy} A ${outerLabelR},${outerLabelR} 0 1,0 ${apexX - outerLabelR},${largestArcCy}`)
                 .attr('transform', `rotate(${labelRotation}, ${apexX}, ${largestArcCy})`)
 
+            // const segmentLabel = `${volLabel(segDefs[1].volValue)} ${segDefs[1].label} vs ${volLabel(segDefs[0].volValue)} ${segDefs[0].label}`
+            const segmentLabel = `${d3.format(".0%")(segDefs[1].volValue / (segDefs[1].volValue + segDefs[0].volValue))} of materials are reprocessed locally`
+
             const segLabel = annotGroup.append('text').classed('recovery-breakdown-label', true)
-                .style('font-size', labelFontSize * 1)
+                .style('font-size', labelFontSize * 0.8)
                 .style('opacity', animate ? 0 : 1)
                 .append('textPath')
                     .attr('href', `#${arcId}`)
                     .attr('startOffset', '50%')
-                    .text(`${volLabel(segDefs[1].volValue)} ${segDefs[1].label} vs ${volLabel(segDefs[0].volValue)} ${segDefs[0].label} `)
+                    .text(segmentLabel)
 
             if(animate) segLabel.select(function() { return this.parentNode })
-                .transition().duration(dur).delay(delay + 300).style('opacity', 1)
-        }
-
-        //////////////////////////
-        /// V. RECOVERY LABEL ///
-        //////////////////////////
-
-        if (showLabels && recoveryLabelR && largestArcCy) {
-            const arcId = `recoveryLabelArc_${data.year}`
-            const padding = labelFontSize
-
-            this.el.defs.append('path')
-                .attr('id', arcId)
-                .attr('d', `M ${apexX + recoveryLabelR + padding},${largestArcCy} A ${recoveryLabelR + padding},${recoveryLabelR + padding} 0 1,0 ${apexX - recoveryLabelR - padding},${largestArcCy}`)
-                .attr('transform', `rotate(${labelRotation}, ${apexX}, ${largestArcCy})`)
-
-            const recLabel = annotGroup.append('text').classed('recovery-label', true)
-                .style('font-size', labelFontSize * 1.25)
-                .style('opacity', animate ? 0 : 1)
-                .append('textPath')
-                    .attr('href', `#${arcId}`)
-                    .attr('startOffset', '50%')
-                    .html(`<tspan class='lowercase'>${d3.format("0.1f")(data.metrics.Aggregated.recovered.total / 1000000)} Mt</tspan> recovered `)
-
-            if(animate) recLabel.select(function() { return this.parentNode })
                 .transition().duration(dur).delay(delay + 300).style('opacity', 1)
         }
 
@@ -1920,7 +1950,8 @@ export class SystemVis extends DataVis{
 
         if (showLabels) {
             const recoveredMarketValue = data.metrics.Aggregated.recovered?.marketValue,
-                label = recoveredMarketValue ? `$${d3.format(".1f")(recoveredMarketValue /1000)} billion in market value` : ''
+                label1 = recoveredMarketValue ? `$${d3.format(".1f")(recoveredMarketValue /1000)} billion in material` : '',
+                label2 = recoveredMarketValue ? `are recovered and reused` : ''
 
             const baseLabel = svgGroup.append('g')
                 .classed('recovery-breakdown-labels', true)
@@ -1929,10 +1960,20 @@ export class SystemVis extends DataVis{
             baseLabel.append('text')
                 .classed('recovery-base-label', true)
                 .attr('x', (leftX + rightX) / 2)
+                .attr('y', baseY - labelFontSize * 2.5)
+                .attr('text-anchor', 'middle')
+                .style('font-size', labelFontSize * 1)
+                .text(label1)
+
+
+            baseLabel.append('text')
+                .classed('recovery-base-label', true)
+                .attr('x', (leftX + rightX) / 2)
                 .attr('y', baseY - labelFontSize * 1.2)
                 .attr('text-anchor', 'middle')
-                .style('font-size', labelFontSize * 1.5)
-                .text(label)
+                .style('font-size', labelFontSize * 1)
+                .text(label2)
+
 
             if(animate) baseLabel.transition().duration(dur).delay(delay + 400).style('opacity', 1)
         }
@@ -1949,9 +1990,7 @@ export class SystemVis extends DataVis{
         const dur     = DataVis.CONFIG.animation.duration
         const animate = options.animate ?? false
 
-        // Arc animation starts at dur * 0.3 (from #renderRecoveryCircleChart).
-        // At 70% recovery the arc sweeps ~252°. The nature scene sits at ~8-9 o'clock
-        // which is ~50% through that sweep, so: 0.3 + 0.5 * remaining ≈ dur * 0.8
+        // Arc animation starts 
         const sceneBaseDelay = dur * 0
         const natureDelay = dur * 1
         const staggerStep    = dur * 0.25
@@ -1965,16 +2004,17 @@ export class SystemVis extends DataVis{
         const facility        = SystemVis.#svgWasteDoc.getElementById('waste-facility')?.cloneNode(true)
         const bins            = SystemVis.#svgWasteDoc.getElementById('collection-bins')?.cloneNode(true)
 
+        const disposalTruckOffset = (this.state.layout === '6' || this.state.layout === 'd') ? 0.025 : -0.025
         const wasteGroup = this.el.vis.wasteIndustry
             .append('g').classed('illustration-group-wrapper', true)
             .attr('transform', `translate(${x}, ${y}) scale(${scale})`)
 
+
         const wasteItems = [
             { node: bins,           transform: `translate(${w * -0.85 / scale}, 0) scale(${componentScale})`,                      delay: sceneBaseDelay },
             { node: truckCollection,transform: `translate(${w * -0.675 / scale}, 0) scale(${-componentScale}, ${componentScale})`, delay: sceneBaseDelay + staggerStep * 0.25 },
-
             { node: facility,       transform: `translate(${w * 0}, 0) scale(${componentScale})`,                                  delay: sceneBaseDelay + staggerStep * 2},
-            { node: truckDisposal,  transform: `translate(${width * 0.595}, 0) scale(${componentScale})`,                          delay: sceneBaseDelay + staggerStep * 3.5, filter: 'grayscale(70%)' },
+            { node: truckDisposal,  transform: `translate(${width * (0.595 + disposalTruckOffset)}, 0) scale(${componentScale})`,                          delay: sceneBaseDelay + staggerStep * 3.5, filter: 'grayscale(70%)' },
         ]
 
         wasteItems.forEach(({ node, transform, delay, filter }) => {
@@ -2076,15 +2116,13 @@ export class SystemVis extends DataVis{
             rotationAngle  = - (recoveryRate - 0.5) * 2 * maxAngle * 1     // +/- maxAngle° 
 
         switch(this.state.layout){
-            case 't': case 'T':
+            case 't': case 'b':
                 return this.state.flowConfig.rotateByRecoveryRate ? rotationAngle : 0
             case 'd': case 'D':
                 // return 0
                 return 60
             case 'six': case '6':  case 6: 
                 return -60
-            case 'snail':
-                return this.state.flowConfig.rotateByRecoveryRate ? rotationAngle : 0
 
         }
 
@@ -2116,7 +2154,7 @@ export class SystemVis extends DataVis{
                 y:     flowY,
                 width: canvasWidth * 1,
             }, {
-                slopeAngleDeg:     this.state.layout === 't' || this.state.layout === 'T' ? 60 : 120,
+                slopeAngleDeg:     this.state.layout === 't' || this.state.layout === 'b' ? 60 : 120,
                 streamHeight,
                 rMinFactor:      this.state.flowConfig.circularFlowMultiple,   
                 slopePad:        width * 0.01,    // Disposal slope to triangle padding
@@ -2129,10 +2167,29 @@ export class SystemVis extends DataVis{
         if(this.state.render.illustration)
             this.#renderIllustration(data, {
                 x: width * 0.5,
-                y: margin.top + height * 0.28,
+                y: margin.top + height * (this.state.flowConfig.yPosition - 0.12),
                 w: width * 0.5,
             },
             { animate }) 
+    }
+
+    #addCommentary(data){
+
+        const commentaryEl = document.getElementById('commentary'),
+            hasCE = data.metrics['Material footprint'],
+            materialFootprint = data.metrics['Material footprint'],
+            circularityRate = data.metrics['Circularity rate']
+
+        const text = hasCE ?
+            `<p>Victorian's consume an estimated ${materialFootprint} tonnes of materials each year, per person. This <i>materials footprint</i> includes everything that goes into everyday products, services and infrastructure we use, including energy and resource in the supply chains. It includes everything. An estimated ${d3.format(".1%")(circularityRate)} of these resources, a measure known as our <i>circularity rate</i>, come from recycled and reused materials.
+            </p>
+
+            <p>How Victoria manages waste materials is a key driver for reducing our materials footprint and improving our circularity rate. It is a system that keeps resources in use in our economy as long as possible through processing like reuse, repair and recycling. This reduces environmental impact while increasing economic activity in Victoria.</p>`
+        : `
+            <p>How Victoria manages waste materials is a key driver for reducing our materials footprint and improving our circularity rate. It is a system that keeps resources in use in our economy as long as possible through processing like reuse, repair and recycling. This reduces environmental impact while increasing economic activity in Victoria.</p>
+        `
+
+        commentaryEl.innerHTML = text
     }
 
     #clearDynamic() {
@@ -2267,6 +2324,7 @@ export class SystemVis extends DataVis{
     static #svgWasteDoc = new DOMParser().parseFromString(wasteScene, 'image/svg+xml');
     static #svgNatureDoc = new DOMParser().parseFromString(natureScene, 'image/svg+xml');
 
+
     //////////////////////////
     ////  PUBLIC METHODS  ////
     //////////////////////////
@@ -2280,6 +2338,8 @@ export class SystemVis extends DataVis{
         this.el.annotation.rotationGroup.attr('transform', `rotate(${layout.rotationAngle}, ${layout.rotateCx}, ${layout.rotateCy})`)
 
         this.#draw(data, layout, { animate: true })
+        this.#addCommentary(data)
+
     }
 
     update() {
@@ -2298,5 +2358,6 @@ export class SystemVis extends DataVis{
 
         this.#clearDynamic()
         this.#draw(data, layout, { animate: true })
+        this.#addCommentary(data)
     }
 }

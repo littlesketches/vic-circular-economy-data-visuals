@@ -19,7 +19,7 @@ async function initApp() {
     const queryConfig = {
         visOnly:        params.get('visOnly') === null ? false : true,      
         invert:         params.get('invert') === null ? false : true,      
-        year:           params.get('year'),    
+        year:           +params.get('year'),    
         view:           params.get('view'),    
     }
 

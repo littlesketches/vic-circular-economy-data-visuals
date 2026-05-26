@@ -25,7 +25,7 @@ body.data-vis {
     align-items:        center;
     justify-content:    center;
     font-family:        var(--font-family);
-    background:         var(--color-screen-bg);
+    /* background:         var(--color-screen-bg); */
     color:              var(--color-fg);
 
     main.content__wrapper {
@@ -52,6 +52,7 @@ body.data-vis {
                     font-family:        'VIC Display';
                     line-height:        1.5;
                     color:              var(--epa-primary-deep-ocean);
+                    margin-block-end:   0.5rem;
                 }
                 .subtitle{                    
                     padding-bottom:     1rem;
@@ -64,21 +65,29 @@ body.data-vis {
                     padding:            none;
                     border-bottom:      1px solid var(--epa-primary-deep-ocean);
                     font-family:        var(--font-family);
-
                     font-size:          2rem;
-                    color: var(--epa-primary-deep-ocean);
+                    color:              var(--epa-primary-deep-ocean);
                 }
 
             }
 
             .lead-block{
-                margin-top:     var(--sidebar-pad);
-                opacity:        0.65;
+                margin-top:             var(--sidebar-pad);
+                opacity:                0.8;
 
-                p, ul{
-                    font-size: small;
+                p{
+                    font-size:          smaller;
+                    margin-block-end:   1rem;
+
                     &:last-of-type{
                         margin-block-end:  0;
+                    }
+                }
+                ul{
+                    font-size:               smaller;
+                    padding-inline-start: 1.5rem;
+                    li{
+                        margin-block-start:  1rem;
                     }
                 }
                 
@@ -96,10 +105,14 @@ body.data-vis {
                 opacity:         0.7;
 
                 p, ul{
-                    font-size:          x-small;
-                    line-height: 1.25;
-                    margin-block-start: 0;
-                    margin-block-end:   0;
+                    font-size:              x-small;
+                    line-height:            1.25;
+                    margin-block-start:     0;
+                    margin-block-end:       1rem;
+
+                    &:last-of-type{
+                        margin-block-end:  0;
+                    }
                 }
             }
         }

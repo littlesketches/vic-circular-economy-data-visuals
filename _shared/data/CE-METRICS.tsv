@@ -1,21 +1,21 @@
 Financial Year	Jurisdiction	Source Sector	Material Type	Material Name	Metric	Value	Unit
 2022-2023	Australia	All	All	All	Circularity rate	4.4	%
-2022-2023	Australia	All	All	All	Material footprint	31	tonnes per capita
+2022-2023	Australia	All	All	All	Material footprint	31.0	tonnes per capita
 2022-2023	Australia	All	All	All	Material productivity	2.04	$ per kg
-2022-2023	Victoria	All	All	All	Material productivity	0.00	$ per kg
+2022-2023	Victoria	All	All	All	Material productivity	3.49	$ per kg
 2022-2023	Victoria	All	All	All	Domestic Material Consumption (DMC)	156,796,400	tonnes
 2022-2023	Victoria	All	All	All	Secondary Material Consumption (SMC)	11,786,000	tonnes
 2022-2023	Victoria	All	All	All	Total Material Footprint (TMF)	189,744,700	tonnes
-2022-2023	Victoria	All	All	All	Population	6,745,700	persons
+2022-2023	Victoria	All	All	All	Material footprint	28.1	tonnes per capita
 2022-2023	Victoria	All	All	All	Gross State Product (GSP)	547.40	$bn
 2023-2024	Australia	All	All	All	Circularity rate	4.4	%
-2023-2024	Australia	All	All	All	Material footprint	31	tonnes per capita
+2023-2024	Australia	All	All	All	Material footprint	31.0	tonnes per capita
 2023-2024	Australia	All	All	All	Material productivity	2.04	$ per kg
-2023-2024	Victoria	All	All	All	Material productivity	0.00	$ per kg
+2023-2024	Victoria	All	All	All	Material productivity	3.49	$ per kg
 2023-2024	Victoria	All	All	All	Domestic Material Consumption (DMC)	156,796,400	tonnes
 2023-2024	Victoria	All	All	All	Secondary Material Consumption (SMC)	11,786,000	tonnes
 2023-2024	Victoria	All	All	All	Total Material Footprint (TMF)	189,744,700	tonnes
-2023-2024	Victoria	All	All	All	Population	6,745,700	persons
+2023-2024	Victoria	All	All	All	Material footprint	28.1	persons
 2023-2024	Victoria	All	All	All	Gross State Product (GSP)	547.40	$bn
 2023-2024	Victoria	All	Plastic	All	Realised market value	187.96	$m
 2023-2024	Victoria	All	Plastic	All	Potential market value	534.18	$m
@@ -41,15 +41,6 @@ Financial Year	Jurisdiction	Source Sector	Material Type	Material Name	Metric	Val
 2023-2024	Victoria	All	Tyres and rubber	All	Realised market value	9.86	$m
 2023-2024	Victoria	All	Tyres and rubber	All	Potential market value	2.32	$m
 2023-2024	Victoria	All	Tyres and rubber	All	Commodity value	166.00	$ per tonne
-2015-2016	Victoria	All	All	All	Population	6,100,000	persons
-2016-2017	Victoria	All	All	All	Population	6,250,000	persons
-2017-2018	Victoria	All	All	All	Population	6,400,000	persons
-2018-2019	Victoria	All	All	All	Population	6,500,000	persons
-2019-2020	Victoria	All	All	All	Population	6,600,000	persons
-2020-2021	Victoria	All	All	All	Population	6,580,000	persons
-2021-2022	Victoria	All	All	All	Population	6,580,000	persons
-2022-2023	Victoria	All	All	All	Population	6,700,000	persons
-2023-2024	Victoria	All	All	All	Population	6,900,000	persons
 2015-2016	Victoria	All	All	All	Gross State Product (GSP)	390.00	$bn
 2016-2017	Victoria	All	All	All	Gross State Product (GSP)	420.00	$bn
 2017-2018	Victoria	All	All	All	Gross State Product (GSP)	450.00	$bn

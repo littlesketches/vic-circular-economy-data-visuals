@@ -343,24 +343,34 @@ export class TargetsVis extends DataVis {
     //// CONSTRUCTOR ////
     /////////////////////
 
-    constructor(app, queryConfig) {
+    constructor(app) {
         super(app)
 
         // Init and render vis
+        this.#initSettings()         // Setup of queryConfig
         this.#initVis()         // Setup of visualisation components
 
-        // Build target data
-        this.targetData =  TargetsVis.buildTrendSeries(app.module.dataModel.data,  TargetsVis.CONFIG.year.baseline)
-
         this.render()           
-
-        console.log(this)
     }
 
 
     ///////////////////////////
     ////  PRIVATE METHODS  ////
     ///////////////////////////
+
+    #initSettings(){
+        const queryConfig = this.app._queryConfig
+  
+        if(queryConfig.invert === true)  this.state.mode = 'outer'
+
+        // Build target data
+        const latestYear = this.app.module.dataModel.schema.years[this.app.module.dataModel.schema.years.length -1].year
+        this.app.state.select.year = this.app.state.select.year ?? latestYear
+        this.targetData =  TargetsVis.buildTrendSeries(this.app.module.dataModel.data,  TargetsVis.CONFIG.year.baseline)
+            .filter(d => d.year <=  this.app.state.select.year )
+        
+
+    }
 
     #initVis() {
         // I. SVG CANVAS
@@ -664,9 +674,6 @@ export class TargetsVis extends DataVis {
     //////////////////////////
 
     render() {
-        const { dataModel } = this.app.module,
-            data   = Object.values(dataModel.data)
-
         const { width, height, margin} = DataVis.CONFIG.dims,
             canvasWidth = width - margin.left - margin.right,
             canvasHeight = height - margin.top - margin.bottom
@@ -692,6 +699,7 @@ export class TargetsVis extends DataVis {
     }
 
     update(){
+
         const { dataModel } = this.app.module
         const data = dataModel.data[this.app.state.select.year]
         if (!data) return console.warn(`No data for year ${data}`)

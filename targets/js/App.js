@@ -3,9 +3,9 @@ export class App{
 
     module = {}
     state  = {
-        select: {   // 
-            year:         undefined,
-            showSidebar:  true
+        select: {   
+            showSidebar:  true,
+            year:         2024
         }
     }
 
@@ -15,6 +15,7 @@ export class App{
     /////////////////////
 
     constructor(queryConfig){
+        this._queryConfig = queryConfig 
         this.#initSettings(queryConfig)
     }
 
@@ -26,6 +27,7 @@ export class App{
     #initSettings(queryConfig){
         // I. Set query config state
         if(queryConfig.visOnly) this.state.select.showSidebar = false
+        if(queryConfig.year) this.state.select.year = +queryConfig.year
     }
 
     //////////////////////////

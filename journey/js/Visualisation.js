@@ -29,6 +29,7 @@ import { WasteBreakdownTreemap } from "../../_shared/js/WasteBreakdownTreemap.js
         /////////////////
 
         state = {
+            annualisedChange:   false,
             animation: {
                 duration: 800
             }
@@ -52,15 +53,23 @@ import { WasteBreakdownTreemap } from "../../_shared/js/WasteBreakdownTreemap.js
         //// CONSTRUCTOR ////
         /////////////////////
 
-        constructor(app, queryConfig) {
+        constructor(app) {
             super(app)
+            this.#initSettings()
             this.#initVis()
+
             this.render()
         }
 
         ///////////////////////////
         ////  PRIVATE METHODS  ////
         ///////////////////////////
+
+        #initSettings(){
+            const queryConfig = this.app._queryConfig
+
+            this.state.annualisedChange = queryConfig.annualised
+        }
 
         #initVis() {
             const { width, height, margin } = DataVis.CONFIG.dims
@@ -83,6 +92,7 @@ import { WasteBreakdownTreemap } from "../../_shared/js/WasteBreakdownTreemap.js
             this.el.vis.volumeChange =  this.el.vis.group.append('g').classed('volume-change-group', true)
             this.el.vis.recoveryRate =  this.el.vis.group.append('g').classed('recovery-rate-group', true)
         }
+        
 
         #clearDynamic() {
             this.el.vis.volumeChange.selectAll('.ridgeline-group').remove()
@@ -230,7 +240,7 @@ import { WasteBreakdownTreemap } from "../../_shared/js/WasteBreakdownTreemap.js
                 showAxis:       false,
                 axisOnTop:      false,
                 title:          null,
-                annualised:     true,
+                annualised:     this.state.annualisedChange,
                 strokeSeries:   null,       
                 strokeDomain:   null,    
                 strokeWidth:    1.5,   

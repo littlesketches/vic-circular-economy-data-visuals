@@ -32,7 +32,10 @@ export class App {
     ///////////////////////////
 
     #initSettings(queryConfig) {
+
         // I. Set query config state
+        if(queryConfig.isPrimary)  document.getElementById('data-vis').classList.remove('mondrian')
+
     }
 
     //////////////////////////

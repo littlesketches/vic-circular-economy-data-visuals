@@ -72,9 +72,9 @@ body{
 
         p, ul{
             line-height:                1.5;
-
+                margin-bottom:          1rem;
             li{
-                margin-bottom:          0.5rem;
+                margin-bottom:          1rem;
             }
         }
 
