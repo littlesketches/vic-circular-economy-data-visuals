@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RV: Data Vis Proof of Concept project</title>
-	<link rel="icon" href = "./_static/assets/img/vic-favicon.png" />
+	<link rel="icon" href = "../../_shared/assets/img/little-favicon.png" />
     <link rel="stylesheet" href="../../_shared/css/brand/vic-gov.css">
     <link rel="stylesheet" href="../../_shared/css/docs/tufte.css"/>
 </head>
@@ -16,66 +16,74 @@
             <h1>Guidance notes</h1>
             <hr>
             <section>
-                <p>These notes provide RV with guidance to use the Proof of Concept (PoC) data visualisations.
+                <p>These notes provide RV with guidance to for the Proof of Concept (PoC) data visualisations as a static and native web (embedded) visual.
                 </p>
+
+                <h2>Technical implementation</h2>
                 <p>All three visualisations delivered in as a web page/application. Data (in .tsv text files<label for="sn-001" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-001" class="margin-toggle"/><span class="sidenote">Data used are raw data tables taken from the Victorian Waste Performance and Waste Projection Model and VLGAS release notes. An additional table of data (by year) for any miscellaneous metrics (if/where used) in the graphics is also ingested.</span>) is ingested into and then rendered directly in the web browser, using the native web technology stack/languages (i.e. HTML/CSS/JS and SVG).</p> 
-                <p>A web application is ideally suited to either connecting to a live database, or manually updating the application with new/latest data to update the visualisation (e.g. annually). To demonstrate this flexibility, all three visualisations have been programmed wth a 'year' selection input that will update the visualisation with historical data that is included in the ingested data tables. 
+
+                <p>A web application is ideally suited to either connecting to a live database, or manually updating the application with new/latest data to update the visualisation (e.g. annually). To demonstrate this flexibility, all three visualisations have been programmed wth a 'year' selection input that will update the visualisation with historical data that is included in the ingested data tables (which include historic data, and essentially function as an in-browser database). 
                 </p>
                 <p><strong>It should be noted that the scope of the PoC was to provide static visualisations, accordingly:</strong></p> 
 
                 <ul>
                     <li>Limited documentation/guidance is provided for updating the data sources: this is not onerous, but may require some training and instruction documentation, in conjunction with an assessment of existing RV tools and capabilities.</li>
-                    <li>Limited interactivity, illustration<label for="sn-002" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-002" class="margin-toggle"/><span class="sidenote">It should be noted that there may be brand considerations with the style of illustration (note: EPA use a 'line drawing' style in their brand book, for infographics). Accordingly, as illustration is not in scope for the PoC, those provided can be freely used 'as is', but will not undergo refinement until a further production stage. </span> and animation/transitions has been included where suitable. These are not technically 'in scope' been included 'free' to give each visualisation a more polished feel. 
-                    </li>
+
+                    <li>Limited interactivity: a date selector and some illustration<label for="sn-002" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-002" class="margin-toggle"/><span class="sidenote">It should be noted that there may be brand considerations with the style of illustration (note: EPA use a 'line drawing' style in their brand book, for infographics). Accordingly, as illustration is not in scope for the PoC, those provided can be freely used 'as is', but will not undergo refinement until a further production stage. </span> and animation/transitions have however, been included. These are not technically in scope of PoC but been provided 'free' to give each visualisation a more polished feel and provide some idea as to how they might be extended with meaningful interactivity.</li>
+
                     <li>As the visualisations are made in browser, they can be natively embedded in websites. The only requirement for this is that the application is hosted 'somewhere'<label for="sn-003" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-003" class="margin-toggle"/><span class="sidenote">Like all web applications, the files <u>must be hosted on a server</u> to run in a web browser.</span>. To assist RV and to ensure that graphics are easily shareable and socialised, the <a href = 'https://github.com/littlesketches/vic-circular-economy-data-visuals' target = "_blank">project code repository</a> has been connected to a <a href = 'https://vic-circular-economy-data-visuals.vercel.app/' target = "_blank">development server</a>.  
                     </li>
                 </ul>
 
-                   </p>
+
 
             </section>
 
             <h2>1. Static export of visualisations</h2>
 
             <section class = 'static-export'>
-                <p>The core use case for the PoC graphics is for use as static graphics. To provide RV wit some flexibility, each graphic can be viewed (and therefore exported) with or without its header/sidebar section, i.e. as a 'visOnly' option. This may be preferred for use cases such as inclusion in slides, where different headers and annotation may be adapted.
+                <p>The core use case for the PoC DataVis project is for static graphics. To provide RV with reasonable flexibility, each graphic can be viewed (and therefore exported) with or without its header/sidebar section, i.e. as a 'visOnly' option. This may be preferred for use cases such as inclusion in slides, where different headers and annotation may be adapted.
                 </p>
 
                 <h3>i. Vector image (pdf or svg)</h3>
 
-                <p>Each visualisation is rendered in SVG (the data graphic) and HTML/CSS (for adorning text/headers and components like buttons). These are 'publication quality' vector graphic formats (as opposed to bitmap images) that are: infinitely scalable/do not blur on zoom; much smaller in file size; are fully editable in graphic design software. The most natural export format for web vector graphics is as a PDF, which can be achieved by simply using the web browsers Print > to PDF functionality.  </p>
+                <p>Each visualisation is rendered in SVG (the data graphic) and HTML/CSS (for adorning text/headers and components like the date selector). These are 'publication quality' vector graphic formats (as opposed to bitmap images) that are: infinitely scalable/do not blur on zoom; much smaller in file size; and are fully editable in graphic design software. The most natural export format for web vector graphics the PDF format, which can be achieved by simply using the web browsers Print > to PDF functionality (tested in Chrome).</p>
+
                 <p>By default, each graphic is set to print (in A4) to as either:</p>
                 <ul>
                     <li>a landscape page, with adorning text/components located on the left: this can be considered as a 'presentation' layout, or;</li>
-                    <li>a portrait page, with adorning text/components located top and bottom: this may be more useful for print publication. </li>
+                    <li>a portrait page, with adorning text/components located top and bottom: this may be more useful for print publication </li>
                 </ul> 
 
-                <p>The outputted PDF files Are with graphic design software (i.e. editable if being added/tweaked for a publication) and can be dropped into software like MS Word/Powerpoint.</p>
+                <p>The outputted PDF files can be opened and edited with graphic design software (e.g. for tweaking in a publication) and can be dropped directly into software like MS Word/Powerpoint.</p>
 
                 <h3>ii. Conversion to bitmap formats</h3>
-                <p>In cases where a bitmap image (e.g. .png, .jpg etc.) is the only option, the PDF can be converted<label for="sn-004" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-004" class="margin-toggle"/><span class="sidenote">An application is required for conversion from PDF to bitmap formats. While these are freely available, RV will need to install appropriate conversion software.</span> or a screenshot taken.
+                <p>In cases where a bitmap image (e.g. .png, .jpg etc.) is the only option, the PDF can be converted<label for="sn-004" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-004" class="margin-toggle"/><span class="sidenote">An application is required for conversion from PDF to bitmap formats. While these are freely available, RV will need to install appropriate conversion software.</span> or a screenshot taken. Importing to Powerpoint and exporting from there may also be an option (not tested).
                 </p>
             </section>
 
             <h2>2. Website embedding</h2>
 
             <section class = 'website-embedding'>
-                <p>The most logical way for graphics to be embedded on a Vic Gov website using an <a href = 'https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe' target = "_blank"> "iframe"</a>. This is the same approach taken by software such as PowerBI. Configuration of the iframe simply involves setting attributes of height and width, and are expected to be done by RV (i.e. internal digital services). 
+                <p>The most logical way for graphics to be embedded on a Victorian Government website is to use an <a href = 'https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe' target = "_blank"> "iframe"</a>. This is the same approach taken by software such as PowerBI. Configuration of the iframe simply involves setting attributes of height and width, and are expected to be done by RV (i.e. internal digital services). 
                 </p>
 
                 <p>In general, only a 'link' to the web graphic should need to be required (e.g. one of those provided to in the development server). However, as it is unknown 'where' or in what context each graphic might be embedded, or whether/what server would be used, no further guidance can be provided as part of the PoC.
                 </p>
             </div>
 
+            <hr>
             <h2>Updating data </h2>
 
             <section class = 'data-updates'>
-                <p>As alluded to above, all data visualisattions are powered by data tables that are included as text files (.tsv format) that can be found in the <strong>./_shared/data/</strong> folder in the code repository. For convenience, each graphic load all files<label for="sn-005" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-005" class="margin-toggle"/><span class="sidenote">Theoretically, optimisation could be performed, however this is non-trivial work for minimal gain, and a single DataModel is considered far more robust for a PoC.</span>, and then transforms them using a shared DataModel class that makes all data series and aggregations accessible for use with each individual graphics visualisation code (which is encapsulated in its own DataVis class).  
+                <p>As alluded to above, all data visualisations are powered by data tables that are included as text files (.tsv format) that can be found in the <strong>./_shared/data/</strong> folder in the code repository. For convenience, each graphic load all files<label for="sn-005" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-005" class="margin-toggle"/><span class="sidenote">Theoretically, optimisation could be performed, however this is non-trivial work for minimal gain, and a single DataModel is considered far more robust for a PoC.</span>, and then transforms them using a shared DataModel class that makes all data series and aggregations accessible for use with each individual graphics visualisation code (which is encapsulated in its own DataVis class).  
                 </p>
+
                 <p>The two primary tables used in the graphics are directly taken from the latest release notes for the Waste Performance and Projection Model, and the VLGAS data. These are simply exported from their Microsoft Excel spreadsheet format, into a text file (in tab separated values format<label for="sn-006" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-006" class="margin-toggle"/><span class="sidenote">In production this may be tested and/or changed to .csv if preferred. Tab separated is used as its generally 'safer' and more robust, as it can handle numbers formatted with commas, and/or text comment fields that might include commas</span>). The update simply requires these files to be updated and replaced on the server.
                 </p>
 
-                <p>The third table is a 'custom' table that features any metres &mdash; such as the circularity metrics or economic/valuation metrics &mdash; that might be included in any visualisation (e.g. the 'system' data graphic). These metrics have been manually transposed from the Circular Economy Market Report. As its unclear if there is a structured and publicly available data source for these metrics, and/or whether these metrics will be included in the 'final' graphics, the update process for this table is left undocumented and would be considered in 'production' (i.e. beyond the PoC)<label for="sn-007" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-006" class="margin-toggle"/><span class="sidenote">Note: this is not considered onerous, but would be 'manual'. It is also likely that any 'year-specific' annotation, if used, may be merged into this table and process.</span> </p>
+                <p>The third table is a 'custom' table that features any metres &mdash; such as the circularity metrics or economic/valuation metrics &mdash; that might be included in any visualisation (e.g. the 'system' data graphic). These metrics have been manually transposed from the Circular Economy Market Report. As its unclear if there is a structured and publicly available data source for these metrics, and/or whether these metrics will be included in the 'final' graphics, the update process for this table is left undocumented and would be considered in 'production' (i.e. beyond the PoC)<label for="sn-007" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-007" class="margin-toggle"/><span class="sidenote">Note: this is not considered onerous, but would be 'manual'. It is also likely that any 'year-specific' annotation, if used, may be merged into this table and process.</span>
+                </p>
             </section>
 
 
@@ -83,16 +91,23 @@
             <h2>Expansion to interactive data stories</h2>
 
             <section class = 'future-work'>
-                <p>The use of web-based data graphics provides an ideal basis for creating more in-depth, interactive data visualisations and 'stories'. While these are all far beyond the PoC scope, a (very) brief list of possibilities is included below, for documentation completeness: 
+                <p>The use of web-based data graphics provides an ideal basis for creating more in-depth, interactive data visualisations and 'stories'. While these are all far beyond the PoC scope, a (very) brief list of possibilities (drawn from the design and exploration process of the PoC DataVis concepts) is included below, for documentation completeness: 
                 </p>
 
                 <ul>
                     <li><strong>Tooltips (details on hover)</strong>: providing details of (unlabelled) data values when hovering/touching data representations.</li>
-                    <li><strong>Highlighting (on hover/click)</strong>: highlighting parts of the graphic that related to what is being interactive with. For example, in the system graphic, tapping on a material to see only the flows/values related to that material. ANd in the 'journey' graphic, this may be used to show data that couldn't be included/fitted into the graphic.</li>
-                    <li><strong>Toggled views:</strong>: a user interface toggle to select or filter a view, e.g. switching all volumes from absolute to per capita values.</li>
-                    <li><strong>Staged annotation (and highlighting)</strong>: this has the most potential in 'system' visualisation, where an interface may be created to step users through different parts of the system. The great benefit here is that more detail can be provided as separate layers of annotation, without over-crowding the graphic itself. For the 'journey' visualissation, this approach could be adapted to mark areas of interest (i.e. spikes/trends in the small charts) that could be expanded upon in a callout box etc.</li>
-                    <li><strong>Animation</strong>: this can be coupled with any of the ideas above, and can also include animation of the illustrative components.
+
+                    <li><strong>Highlighting (on hover/click)</strong>: highlighting parts of the graphic that related to what is being interactive with.<label for="sn-008" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-008" class="margin-toggle"/><span class="sidenote">For example, in the system graphic, tapping on a material to see only the flows/values related to that material. And in the 'journey' graphic, this may be used to show data that couldn't be included/fitted into the graphic.</span>
                     </li>
+
+                    <li><strong>Toggled views:</strong> a user interface toggle to select or filter a view, e.g. switching all volumes from absolute to per capita values.</li>
+
+                    <li><strong>Staged annotation (and highlighting)</strong>: this allows the graphic to be broken down into parts where more detail can be presented as a used is either guided through, or can explore areas of the visualisation, uncovering more detail (either in commentary or in visuals, or both)<label for="sn-008" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-008" class="margin-toggle"/><span class="sidenote">This is a fairly advanced technique that is suited to more complex and textured data stories. It is has the most potential in 'system' visualisation, where an interface may be created to step users through different parts of the system. The great benefit here is that more detail can be provided as separate layers of annotation, without over-crowding the graphic itself. For the 'journey' visualisation, this approach could be adapted to mark areas of interest (i.e. spikes/trends in the small charts) that could be expanded upon in a callout box etc.</span> .
+                        
+                    </li>
+                    <li><strong>Animation</strong>: this is usually be coupled with any of the ideas above to support transitions between views. It may also include animation of the illustration components to add 'delight' to a user experience.</li>
+
+                    <li><strong>User guidance</strong>: it should be noted that as more complexity and user interface elements are introduces, the need for user guidance is likely to increase.</li>
                 </ul>
 
             </section>
