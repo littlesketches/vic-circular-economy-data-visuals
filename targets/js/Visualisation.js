@@ -236,7 +236,8 @@ export class TargetsVis extends DataVis {
                 return { baselineValue, targetValue: targetMeta.detail.final.target }
             },
             hasInterim:     false,
-            getDataCircleR: (d, targetScale) => targetScale(d.noKerbsideOrganics / d.noCouncils * 100),
+            // getDataCircleR: (d, targetScale) => targetScale(d.noKerbsideOrganics / d.noCouncils * 100),
+            getDataCircleR: (d, targetScale) => targetScale(d.kerbsideOrganicsPopulation / d.population * 100),
             getArcConfigs:  (targetMeta, targetScale, targetRadius, baselineRadius, latest, w, fmt, baselineValue, targetValue, data) => [
                 {
                     id:        'target',
@@ -249,10 +250,12 @@ export class TargetsVis extends DataVis {
                 },
                 {
                     id:        'data',
-                    r:         targetScale(latest.noKerbsideOrganics / latest.noCouncils * 100),
+                    // r:         targetScale(latest.noKerbsideOrganics / latest.noCouncils * 100),
+                    r:         targetScale(latest.kerbsideOrganicsPopulation / latest.population * 100),
                     fs:        w * 0.03,
                     dy:        w * 0.0075,
-                    label:     `${fmt(latest.noKerbsideOrganics / latest.noCouncils * 100)}% in ${latest.year}`,
+                    // label:     `${fmt(latest.noKerbsideOrganics / latest.noCouncils * 100)}% in ${latest.year}`,
+                    label:     `${fmt(latest.kerbsideOrganicsPopulation / latest.population * 100)}% in ${latest.year}`,
                     className: `arc-label data reverse target-4`,
                     offset:    '50%'
                 },
@@ -274,13 +277,14 @@ export class TargetsVis extends DataVis {
             .filter(d => d.year >= baselineYear)
             .sort((a, b) => a.year - b.year)
             .map(d => ({
-                year:               d.year,
-                recoveryRate:       d.metrics.Aggregated.recoveryRate,
-                noCouncils:         d.metrics.count.councils,
-                noKerbsideOrganics: d.metrics.count.kerbside_organics_fogo?.Yes ?? 0,
-                totalGeneration:    d.metrics.Aggregated.generated.total,
-                population:         d.metrics.lga.Population,
-                landfillOrganics:   d.metrics.Aggregated.disposed.byStream?.['Organics'] ?? 0,
+                year:                       d.year,
+                recoveryRate:               d.metrics.Aggregated.recoveryRate,
+                noCouncils:                 d.metrics.count.councils,
+                noKerbsideOrganics:         d.metrics.count.kerbside_organics_fogo?.Yes ?? 0,
+                kerbsideOrganicsPopulation: d3.sum(Object.values(d.byLGA).map( d => d.kerbside_organics_fogo_included  === "Yes" ? d.Population : 0)) ,
+                totalGeneration:            d.metrics.Aggregated.generated.total,
+                population:                 d.metrics.lga.Population,
+                landfillOrganics:           d.metrics.Aggregated.disposed.byStream?.['Organics'] ?? 0,  
             }))
     }
 
@@ -368,8 +372,7 @@ export class TargetsVis extends DataVis {
         this.app.state.select.year = this.app.state.select.year ?? latestYear
         this.targetData =  TargetsVis.buildTrendSeries(this.app.module.dataModel.data,  TargetsVis.CONFIG.year.baseline)
             .filter(d => d.year <=  this.app.state.select.year )
-        
-
+    
     }
 
     #initVis() {
