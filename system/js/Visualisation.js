@@ -1950,8 +1950,8 @@ export class SystemVis extends DataVis{
 
         if (showLabels) {
             const recoveredMarketValue = data.metrics.Aggregated.recovered?.marketValue,
-                label1 = recoveredMarketValue ? `$${d3.format(".1f")(recoveredMarketValue /1000)} billion in material` : '',
-                label2 = recoveredMarketValue ? `are recovered and reused` : ''
+                label1 = recoveredMarketValue ? `$${d3.format(".1f")(recoveredMarketValue /1000)} billion in material value` : '',
+                label2 = recoveredMarketValue ? `is recovered and reused` : ''
 
             const baseLabel = svgGroup.append('g')
                 .classed('recovery-breakdown-labels', true)
