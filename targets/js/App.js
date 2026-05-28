@@ -4,8 +4,9 @@ export class App{
     module = {}
     state  = {
         select: {   
-            showSidebar:  true,
-            year:         2024
+            year:               2024,
+            showSidebar:        true,
+            showCommentary:     true,
         }
     }
 
@@ -28,6 +29,7 @@ export class App{
         // I. Set query config state
         if(queryConfig.visOnly) this.state.select.showSidebar = false
         if(queryConfig.year) this.state.select.year = +queryConfig.year
+        if(queryConfig.noCommentary) this.state.select.showCommentary = false
     }
 
     //////////////////////////
@@ -65,6 +67,7 @@ export class App{
 
         const main = document.querySelector('main.content__wrapper')
         if(!this.state.select.showSidebar ) main.classList.add('hide-sidebar')
+        if(!this.state.select.showCommentary ) main.classList.add('hide-commentary')
     }
 
 

@@ -49,9 +49,9 @@
 
 @font-face {
     font-family: 'VIC';
-    src: url('../../assets/fonts/VIC/Italic/VIC-Italic.woff2') format('woff2'),
-         url('../../assets/fonts/VIC/Italic/VIC-Italic.woff') format('woff'),
-         url('../../assets/fonts/VIC/Italic/VIC-Italic.ttf') format('truetype');
+    src: url('../../assets/fonts/VIC/Regular Italic/VIC-Italic.woff2') format('woff2'),
+         url('../../assets/fonts/VIC/Regular Italic/VIC-Italic.woff') format('woff'),
+         url('../../assets/fonts/VIC/Regular Italic/VIC-Italic.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
     font-display: swap;

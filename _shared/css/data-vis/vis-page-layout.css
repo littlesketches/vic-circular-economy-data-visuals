@@ -152,6 +152,19 @@ body.data-vis {
         }
     
         /* --------------------------------------------------------
+        hide-commentary modifier 
+        -------------------------------------------------------- */
+
+        &.hide-commentary {
+            .sidebar__upper {
+                .lead-block{
+                    display:        none;
+                }
+            }
+
+        }
+
+        /* --------------------------------------------------------
         Portrait — mobile + portrait iframe
         -------------------------------------------------------- */
         @media (orientation: portrait) {

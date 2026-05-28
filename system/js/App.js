@@ -7,7 +7,7 @@ export class App{
         select: {   
             year:                   2024,
             showSidebar:            true,
-            minimalAnnotation:      true
+            showCommentary:         true,
         }
     }
 
@@ -29,7 +29,7 @@ export class App{
     #initSettings(queryConfig){
         // I. Set query config state (non data-dependent, e.g. year select require DataModel and schema to have been initialised)
         if(queryConfig.visOnly) this.state.select.showSidebar = false
-        if(queryConfig.minimalist) this.state.select.minimalAnnotation = false
+        if(queryConfig.noCommentary) this.state.select.showCommentary = false
     }
 
     //////////////////////////
@@ -61,9 +61,7 @@ export class App{
 
         const main = document.querySelector('main.content__wrapper')
         if(!this.state.select.showSidebar ) main.classList.add('hide-sidebar')
-
-        if(!this.state.select.minimalAnnotation ) main.classList.add('minimalist')
-
+        if(!this.state.select.showCommentary ) main.classList.add('hide-commentary')
     }
 
     addHandlers(){

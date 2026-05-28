@@ -17,6 +17,9 @@ svg {
             font-weight:        700;
             opacity:            0.65;
         }
+        &.waste-management-label{
+            opacity:            0.75;
+        }
     }
 
     .title-bar{
@@ -243,6 +246,7 @@ svg {
             }
         }
     }
+
 
 }
 

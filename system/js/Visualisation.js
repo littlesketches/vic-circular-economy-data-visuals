@@ -1378,7 +1378,7 @@ export class SystemVis extends DataVis{
 
             disposalG.append('g')
                 .attr('transform', `translate(${g.slopeStartX}, ${g.groupTop})`)
-                .append('text').classed('disposal-label', true)
+                .append('text').classed('disposal-label waste-management-label', true)
                     .attr('x', -labelFs * 0)
                     .attr('y', -labelFs * 0.75)
                     .style('font-size', labelFs)
@@ -1408,7 +1408,7 @@ export class SystemVis extends DataVis{
                 .style('opacity', animate ? 0 : 1)
                 .append('textPath')
                     .attr('href', `#${arcId}`)
-                    .attr('startOffset', '50%')
+                    .attr('startOffset', `${this.state.layout === 'b' ? '42.5%' : '50%'}`)
                     .html(`<tspan class = 'lowercase'>${d3.format("0.1f")(data.metrics.Aggregated.recovered.total /1000000)} Mt</tspan> recovered `)
 
             if(animate) recLabel.select(function() { return this.parentNode })
@@ -1425,7 +1425,7 @@ export class SystemVis extends DataVis{
                     .attr('d', `M ${g.arcCentX},${largestArcCy + resourcesLabelR} A ${resourcesLabelR},${resourcesLabelR} 0 1,1 ${g.arcCentX},${largestArcCy - resourcesLabelR}`)
                     .attr('transform', `rotate(${-g.rotationAngle + 29}, ${g.arcCentX}, ${largestArcCy})`)
 
-                const recLabel = annotation.append('text').classed('resources-label', true)
+                const recLabel = annotation.append('text').classed('resources-label waste-management-label', true)
                     .style('font-size', labelFs)
                     .style('opacity', animate ? 0 : 1)
                     .append('textPath')
@@ -1471,7 +1471,7 @@ export class SystemVis extends DataVis{
                     .attr('dy', -fs * 0.375)
                     .style('font-size', fs)
                     .style('text-anchor', 'end')
-                    .text(`generated & collected`)
+                    .text(`generated & collected`) // ►
 
             } else {
                 generatedGroup.append('text').classed('waste-management-label generation-label total', true)
@@ -1482,22 +1482,23 @@ export class SystemVis extends DataVis{
                 generatedGroup.append('text').classed('waste-management-label generation-label', true)
                     .attr('dy', -fs * 0.375)
                     .style('font-size', fs)
-                    .text(`generated & collected`)
+                    .text(`generated & collected`) // ►
 
             }
 
             // ii. Materials sorted and processed 
             sortedGroup.append('text').classed('waste-management-label generation-label', true)
                 .attr('dy', -fs * 0.375)
+                .attr('dx', fs * 0.3 )
                 .style('font-size', fs)
                 .style('text-anchor', 'end')
-                .text(`materials`)
+                .text(`Materials`)
 
             sortedGroup.append('text').classed('waste-management-label generation-label', true)
                 .attr('dy', -fs * 0.375)
-                .attr('dx', fs * 0.5 )
+                .attr('dx', fs * 0.75 )
                 .style('font-size', fs)
-                .text(`sorted`)
+                .text(`sorted`) // ►
 
         }
     }
@@ -1929,7 +1930,6 @@ export class SystemVis extends DataVis{
                 .attr('d', `M ${apexX + outerLabelR},${largestArcCy} A ${outerLabelR},${outerLabelR} 0 1,0 ${apexX - outerLabelR},${largestArcCy}`)
                 .attr('transform', `rotate(${labelRotation}, ${apexX}, ${largestArcCy})`)
 
-            // const segmentLabel = `${volLabel(segDefs[1].volValue)} ${segDefs[1].label} vs ${volLabel(segDefs[0].volValue)} ${segDefs[0].label}`
             const segmentLabel = `${d3.format(".0%")(segDefs[1].volValue / (segDefs[1].volValue + segDefs[0].volValue))} of materials are reprocessed locally`
 
             const segLabel = annotGroup.append('text').classed('recovery-breakdown-label', true)
@@ -2181,12 +2181,12 @@ export class SystemVis extends DataVis{
             circularityRate = data.metrics['Circularity rate']
 
         const text = hasCE ?
-            `<p>Victorian's consume an estimated ${materialFootprint} tonnes of materials each year, per person. This <i>materials footprint</i> includes everything that goes into everyday products, services and infrastructure we use, including energy and resource in the supply chains. It includes everything. An estimated ${d3.format(".1%")(circularityRate)} of these resources, a measure known as our <i>circularity rate</i>, come from recycled and reused materials.
+            `<p>Victorian's consume an estimated ${materialFootprint} tonnes of materials each year, per person. This <i>materials footprint</i> includes everything that goes into everyday products, services and infrastructure we use, including energy and resource in the supply chains. It includes everything. Around ${d3.format(".1%")(circularityRate)} of these resources, a measure known as our <i>circularity rate</i>, come from recycled and reused materials.
             </p>
 
             <p>How Victoria manages waste materials is a key driver for reducing our materials footprint and improving our circularity rate. It is a system that keeps resources in use in our economy as long as possible through processing like reuse, repair and recycling. This reduces environmental impact while increasing economic activity in Victoria.</p>`
         : `
-            <p>How Victoria manages waste materials is a key driver for reducing our materials footprint and improving our circularity rate. It is a system that keeps resources in use in our economy as long as possible through processing like reuse, repair and recycling. This reduces environmental impact while increasing economic activity in Victoria.</p>
+            <p>How Victoria manages waste materials is a key driver for reducing our materials footprint and improving our circularity economy. It is a system that keeps resources in use in our economy as long as possible through processing like reuse, repair and recycling. This reduces environmental impact while increasing economic activity in Victoria.</p>
         `
 
         commentaryEl.innerHTML = text
