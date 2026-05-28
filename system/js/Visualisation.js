@@ -38,7 +38,12 @@ export class SystemVis extends DataVis{
             recoveryBreakdown:      true, 
             flowsTitle:             false,      
             illustration:           false,
-        }
+        },
+        tagline:  {
+            line1:                     '',   
+            line2:                     '',   
+        }                
+       
     }
 
     // SVG ELEMENTS
@@ -154,10 +159,9 @@ export class SystemVis extends DataVis{
             const isValidYear = this.app.module.dataModel.schema.years.map( d=> d.year).includes(+app.queryParams.year)
             if(isValidYear) this.app.state.select.year = +app.queryParams.year
         }
-
-        // if(app.queryParams.flat) this.state.flowConfig.rotateByRecoveryRate = false
-        
-        if(app.queryParams.flow){ this.state.render.ceMetrics = false}
+    
+        if(app.queryParams.tagline1)     this.state.tagline.line1 = app.queryParams.tagline1
+        if(app.queryParams.tagline2 )    this.state.tagline.line2 = app.queryParams.tagline2
 
     }
 
@@ -1944,14 +1948,12 @@ export class SystemVis extends DataVis{
                 .transition().duration(dur).delay(delay + 300).style('opacity', 1)
         }
 
-        //////////////////////////
-        /// IV. BASE LABEL    ///
-        //////////////////////////
+        /////////////////////////////////
+        /// IV. BASE LABEL "TAGLINE"  ///
+        /////////////////////////////////
 
         if (showLabels) {
-            const recoveredMarketValue = data.metrics.Aggregated.recovered?.marketValue,
-                label1 = recoveredMarketValue ? `$${d3.format(".1f")(recoveredMarketValue /1000)} billion in material value` : '',
-                label2 = recoveredMarketValue ? `is recovered and reused` : ''
+
 
             const baseLabel = svgGroup.append('g')
                 .classed('recovery-breakdown-labels', true)
@@ -1960,20 +1962,18 @@ export class SystemVis extends DataVis{
             baseLabel.append('text')
                 .classed('recovery-base-label', true)
                 .attr('x', (leftX + rightX) / 2)
-                .attr('y', baseY - labelFontSize * 2.5)
+                .attr('y', baseY - labelFontSize * (this.state.tagline.line2 === '' ? 2 : 2.5))
                 .attr('text-anchor', 'middle')
                 .style('font-size', labelFontSize * 1)
-                .text(label1)
-
+                .text(this.state.tagline.line1)
 
             baseLabel.append('text')
                 .classed('recovery-base-label', true)
                 .attr('x', (leftX + rightX) / 2)
-                .attr('y', baseY - labelFontSize * 1.2)
+                .attr('y', baseY - labelFontSize * (1.2))
                 .attr('text-anchor', 'middle')
                 .style('font-size', labelFontSize * 1)
-                .text(label2)
-
+                .text(this.state.tagline.line2)
 
             if(animate) baseLabel.transition().duration(dur).delay(delay + 400).style('opacity', 1)
         }

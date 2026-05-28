@@ -24,8 +24,8 @@ async function initApp() {
         view:           params.get('view'),    
         layout:         params.get('mode'),    
         illustration:   params.get('illustration') === null ? false : true,    
-        flat:           params.get('flat') === null ? false : true,    
-        flow:           params.get('flow') === null ? false : true,    
+        tagline1:        params.get('tagline1'),
+        tagline2:        params.get('tagline2')
     }
 
     // ii. Init app object

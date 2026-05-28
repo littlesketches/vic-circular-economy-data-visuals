@@ -61,7 +61,7 @@
 
                 <p>All visualisations can be rendered without the sidebar/header section in situations where RV may want to use the graphics with custom headers and annotation (e.g. in presentation slides). These versions can be viewed by using the query parameter of "visOnly" and links of these versions provided alongside each visualisation below. For added flexibility, the sidebar (with header) can be shown but without any commentary with the 'noCommentary' parameter. </p>
 
-                <p>Although the PoC is scoped for 'static' visulisations (i.e. latest year), all visualisations are tested for use with historically available data and include a date selector: they <i>should</i>> theoretically work if data is updated with newer data and will default to the latest year of available data. This behaviour can be overridden/fixed for a given year of 20XX using a url query parameter of "year=20XX". This may be useful if visualisations are embedded in a website that should show a specific year (e.g. as part of a page that reports on a specific year). Examples are provide below as observation of the url format (note: examples should be used understand all available query parameters applied).</p>
+                <p>Although the PoC is scoped for 'static' visualisations (i.e. latest year), all visualisations are tested for use with historically available data and include a date selector: they <i>should</i>> theoretically work if data is updated with newer data and will default to the latest year of available data. This behaviour can be overridden/fixed for a given year of 20XX using a url query parameter of "year=20XX". This may be useful if visualisations are embedded in a website that should show a specific year (e.g. as part of a page that reports on a specific year). Examples are provide below as observation of the url format (note: examples should be used understand all available query parameters applied).</p>
 
                 <div class = 'visualisation-concept-container system'>
                     <div class = 'header__container'>
@@ -87,6 +87,10 @@
 
                     <p>All modes are accompanied by a (suggested) commentary section in the sidebar that is a static template (of explanatory text) that includes some circular economy data metrics that are drawn from data tables (i.e. this text is programmatic).
                     </p>
+
+                    <h4>Customised tagline</h4>
+                    <p>All version of the <i>System</i> visualisation hav a customisable 'tagline' that will appear centered, at the base of the lower triangle. This can be up to two lines long and can be added to the url query parameter as something like "line1=Hello world here" and line2="words for a second line" (note: simple leave line2 out if it is not required). <a href = './system/?mode=b&illustration&tagline1=A one line tagline'>Here is a one line tagline</a> and  <a href = './system/?mode=b&illustration&tagline1=A one line tagline&tagline2=followed by another line.'>Here is a two line tagline</a>. It should be noted that you can and should compose text 'normally'. The web browser will automatically add special character strings into the url, like "%20" which is simple a 'space'.</p>
+
                 </div>
 
                 <div class = 'visualisation-concept-container journey'>
@@ -102,7 +106,7 @@
 
                     <ul>
                         <li>
-                            <p> <a href = './journey/'>Trends & Change:</a> The proposed graphic composed of two sections that: 1) uses Joy Plots (aka ridgeline plots) to show and compare the percentage change of waste generated and recovered, for all waste source sectors and material streams; 2) uses a sereis of small multiple area sparkline plots to compare the trends in recovery rates for all waste source sectors and material streams.
+                            <p> <a href = './journey/'>Trends & Change:</a> The proposed graphic composed of two sections that: 1) uses Joy Plots (aka ridgeline plots) to show and compare the percentage change of waste generated and recovered, for all waste source sectors and material streams; 2) uses a series of small multiple area sparkline plots to compare the trends in recovery rates for all waste source sectors and material streams.
                             </p>
 
                             <p>An alternate version where percentage change in volume is annualised over the period is also available <a href = './journey/?annualised'>here</a>. 
