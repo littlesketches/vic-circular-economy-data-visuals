@@ -22,6 +22,7 @@ async function initApp() {
         invert:         params.get('invert') === null ? false : true,      
         year:           +params.get('year'),    
         view:           params.get('view'),    
+        edit:           params.get('edit') === null ? false : true
     }
 
     // ii. Init app object

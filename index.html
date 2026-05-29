@@ -59,7 +59,7 @@
             <section class = 'visualisation-menu'>
                 <p>Three visualisation concepts were developed to a fully working, proof of concept stage. Each is delivered as a 'digital first' graphic that supports screen responsiveness and (better) accessibility and more flexible usage. All visuals are rendered as vector graphics and can be exported as such. See <a href = './docs/guide/'> user guide</a> and the <a href = './docs/data-design-notes/'>data + design notes</a> for more information.</p>
 
-                <p>All visualisations can be rendered without the sidebar/header section in situations where RV may want to use the graphics with custom headers and annotation (e.g. in presentation slides). These versions can be viewed by using the query parameter of "visOnly" and links of these versions provided alongside each visualisation below. For added flexibility, the sidebar (with header) can be shown but without any commentary with the 'noCommentary' parameter. </p>
+                <p>All visualisations can be rendered without the sidebar/header section in situations where RV may want to use the graphics with custom headers and annotation (e.g. in presentation slides). These versions can be viewed by using the query parameter of "visOnly" and links of these versions provided alongside each visualisation below. For added flexibility, the sidebar (with header) can be shown but without any commentary with the 'noCommentary' parameter. As final flexibility add-on, the sidebar content can also made editable (in browser) by adding the 'edit' parameter. </p>
 
                 <p>Although the PoC is scoped for 'static' visualisations (i.e. latest year), all visualisations are tested for use with historically available data and include a date selector: they <i>should</i>> theoretically work if data is updated with newer data and will default to the latest year of available data. This behaviour can be overridden/fixed for a given year of 20XX using a url query parameter of "year=20XX". This may be useful if visualisations are embedded in a website that should show a specific year (e.g. as part of a page that reports on a specific year). Examples are provide below as observation of the url format (note: examples should be used understand all available query parameters applied).</p>
 
@@ -112,6 +112,8 @@
                             <p>An alternate version where percentage change in volume is annualised over the period is also available <a href = './journey/?annualised'>here</a>. 
 
                             <p>Accompanying this graphic (in the sidebar) are a set of commentary/annotation notes to help the audience connect the patterns they observe, with events and initiatives. This commentary is fixed/static for the PoC and would most likely require a basic content management solution if used in production. This sidebar is hidden in the <a href = './journey/?visOnly'>visOnly</a> version and a <a href = './journey/?noCommentary'>no commentary</a> version available.</p>
+
+                            <p>An example of this visualisation with <a href = './journey/?edit'>editable sidebar content</a> may also be useful for a   "custom edit > export" workflow.</p>
                         </li>
                     </ul>
                 </div>
@@ -131,7 +133,7 @@
                         <li>
                             <p><a href = './targets/'>Target fans:</a> Proposed data graphic featuring a variant on a sunburst chart to represent progress towards the 2030 targets. In this version, the progress tracks outward from the center. Available in a <a href = './targets/?visOnly'>visOnly</a> version.
                             </p>
-                            <p>Note: the commentary section is unused in this concept but is available for use.</p>
+                            <p>Note: the commentary section is unused in this concept but may be added to by RV before handover. Like the <i>Journey</i> concept, this commentary is fixed/static for the PoC. An example of this visualisation with <a href = './targets/?edit'>editable sidebar content</a> may also be useful for a  "custom edit > export" workflow.</p>
                         </li>
                     </ul>
                 </div>

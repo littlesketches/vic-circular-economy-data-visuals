@@ -21,7 +21,8 @@ async function initApp() {
         noCommentary:   params.get('noCommentary') === null ? false : true,    
         year:           params.get('year'),    
         view:           params.get('view'),    
-        annualised:     params.get('annualised') === null ? false : true,     
+        annualised:     params.get('annualised') === null ? false : true,    
+        edit:           params.get('edit') === null ? false : true 
     }
 
     // ii. Init app object

@@ -7,7 +7,10 @@ export class App{
             year:               undefined,
             showSidebar:        true,
             showCommentary:     true,
-        }
+        },
+        showSidebar:            true,
+        showCommentary:         true,
+        sidebarEditable:        false,
     }
 
 
@@ -29,8 +32,9 @@ export class App{
 
     #initSettings(queryConfig){
         // I. Set query config state (non data-dependent, e.g. year select require DataModel and schema to have been initialised)
-        if(queryConfig.visOnly) this.state.select.showSidebar = false
-        if(queryConfig.noCommentary) this.state.select.showCommentary = false
+        if(queryConfig.visOnly)         this.state.select.showSidebar = false
+        if(queryConfig.noCommentary)    this.state.select.showCommentary = false
+        if(queryConfig.edit)            this.state.sidebarEditable = true
     }
 
     //////////////////////////
@@ -69,9 +73,12 @@ export class App{
         //////////////////////////////
 
         const main = document.querySelector('main.content__wrapper')
-        if(!this.state.select.showSidebar ) main.classList.add('hide-sidebar')
-        if(!this.state.select.showCommentary ) main.classList.add('hide-commentary')
-console.log(this.state.select)
+        if(!this.state.showSidebar )    main.classList.add('hide-sidebar')
+        if(!this.state.showCommentary ) main.classList.add('hide-commentary')
+        if(this.state.sidebarEditable){
+            document.querySelector('header').setAttribute('contenteditable', true) 
+            document.querySelector('footer').setAttribute('contenteditable', true) 
+        }
     }
 
 

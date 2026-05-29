@@ -5,9 +5,11 @@ export class App{
     state  = {
         select: {   
             year:               2024,
-            showSidebar:        true,
-            showCommentary:     true,
-        }
+        },
+        showSidebar:            true,
+        showCommentary:         true,
+        sidebarEditable:        false,
+    
     }
 
 
@@ -27,9 +29,10 @@ export class App{
 
     #initSettings(queryConfig){
         // I. Set query config state
-        if(queryConfig.visOnly) this.state.select.showSidebar = false
-        if(queryConfig.year) this.state.select.year = +queryConfig.year
-        if(queryConfig.noCommentary) this.state.select.showCommentary = false
+        if(queryConfig.year)            this.state.select.year = +queryConfig.year
+        if(queryConfig.visOnly)         this.state.showSidebar = false
+        if(queryConfig.noCommentary)    this.state.showCommentary = false
+        if(queryConfig.edit)            this.state.sidebarEditable = true
     }
 
     //////////////////////////
@@ -54,20 +57,23 @@ export class App{
 
         vis.targetData.forEach( (d, i) => {   
             if(i === 0) return 
-
             const option = new Option(`${vis.constructor.CONFIG.year.baseline} - ${d.year}`, d.year)
             yearSelect.append(option)
         })
 
-        yearSelect.value = this.state.select.year = this.state.select.year ?? latestYear.year
+        this.state.select.year = this.state.select.year ?? latestYear.year
 
         //////////////////////////////
         /// II. APPLY LAYOUT STATE ///
         //////////////////////////////
 
         const main = document.querySelector('main.content__wrapper')
-        if(!this.state.select.showSidebar ) main.classList.add('hide-sidebar')
-        if(!this.state.select.showCommentary ) main.classList.add('hide-commentary')
+        if(!this.state.showSidebar ) main.classList.add('hide-sidebar')
+        if(!this.state.showCommentary ) main.classList.add('hide-commentary')
+        if(this.state.sidebarEditable){
+            document.querySelector('header').setAttribute('contenteditable', true) 
+            document.querySelector('footer').setAttribute('contenteditable', true) 
+        }
     }
 
 

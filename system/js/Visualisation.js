@@ -82,6 +82,7 @@ export class SystemVis extends DataVis{
         // Init and render vis
         this.#applyLayoutComponents(app)
         this.#initVis()         // Setup of visualisation components
+
         this.render()           // Renders selected data (reusable to be called on update)
     }
 
@@ -1437,9 +1438,11 @@ export class SystemVis extends DataVis{
                         .attr('startOffset', '50%')
                         .html(`Resources preserved `)
 
-                if(animate) recLabel.select(function() { return this.parentNode })
-                    .transition().duration(dur).delay(delay + 100).style('opacity', 1)
-
+                if(animate) {
+                    recLabel.select(function() { return this.parentNode })
+                        .transition().duration(dur).delay(delay + 100)
+                        .style('opacity', null)
+                }
             }
         },
 
@@ -2339,7 +2342,6 @@ export class SystemVis extends DataVis{
 
         this.#draw(data, layout, { animate: true })
         this.#addCommentary(data)
-
     }
 
     update() {
