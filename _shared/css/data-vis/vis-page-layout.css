@@ -55,7 +55,7 @@ body.data-vis {
                 .subtitle{                    
                     padding-bottom:     0.5rem;
                     color:              var(--epa-primary-deep-ocean);
-                    font-size:          2rem;
+                    font-size:          1.8rem;
                 }
 
                 select{
@@ -64,7 +64,7 @@ body.data-vis {
                     padding:            none;
                     border-bottom:      1px solid var(--epa-primary-deep-ocean);
                     font-family:        var(--font-family);
-                    font-size:          2rem;
+                    font-size:          1.8rem;
                     color:              var(--epa-primary-deep-ocean);
                 }
 
@@ -222,13 +222,13 @@ body.data-vis {
                         font-size:               2.5rem;
                     }
                     .subtitle, select{                    
-                        font-size:              1.25rem;
+                        font-size:               1.25rem;
                     }
                 }
 
                 .lead-block{
                     p, ul, ol{
-                        font-size:               1.15rem;
+                        font-size:               1.05rem;
                         line-height:             1.75;
                     }
                 }
@@ -238,6 +238,7 @@ body.data-vis {
                 .footnote-block{
                     p, ul, ol{
                         font-size:               0.75rem;
+                        margin-block-end:       0.25rem'
                     }
                 }
             }
