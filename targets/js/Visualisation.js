@@ -467,7 +467,6 @@ export class TargetsVis extends DataVis {
                 .classed(`target-interim-arc ${targetClass}`, true)
                 .attr('r', cfg.getInterimR(targetMeta, targetScale, baselineValue))
         }
-   
 
         this.targetData.forEach((d, i) => {
             const isLatest = i === this.targetData.length - 1
@@ -498,7 +497,6 @@ export class TargetsVis extends DataVis {
         arcGroup.append('circle')
             .classed(`baseline-arc-bg ${targetClass}`, true)
             .attr('r', innerRadius)
-
 
         arcGroup.append('circle')
             .classed(`inner-target-bg ${targetClass}`, true)
@@ -545,7 +543,52 @@ export class TargetsVis extends DataVis {
                     .text(label)
         })
 
-        // VI. SPARKLINE
+
+        // VI. TOWARDS TARGET ARROWS 
+        const ARROW_SIZE    = w * 0.015   // leg length of the half-square triangle
+        const ARROW_PADDING = w * 0.008   // gap between label arc and triangle
+        const MID_ANGLES = {
+            forward: {
+                'bottom-right': 225,
+                'bottom-left':  315,
+                'top-right':    135,
+                'top-left':      45,
+            },
+            reverse: {
+                'bottom-right': 315,
+                'bottom-left':  225,
+                'top-left':      45,
+                'top-right':    135,
+            }
+        }
+
+
+        arcConfigs
+            .filter(({ id }) => id === 'data')
+            .forEach(({ r, dy, offset }) => {
+
+                const s = ARROW_SIZE
+                const arrowR = (r - dy) + ARROW_PADDING + ARROW_SIZE
+
+                const midDeg   = cfg.reverseArc ? MID_ANGLES.reverse[cfg.corner] : MID_ANGLES.forward[cfg.corner]
+                const angleRad = midDeg * Math.PI / 180
+
+                const px = ox + arrowR * Math.cos(angleRad)
+                const py = oy + arrowR * Math.sin(angleRad)
+
+                const tangentDeg = midDeg + 90
+
+                const triPath = `M 0 0 L ${s} ${s} L 0 ${s * 2} Z`
+
+                labelGroup.append('path')
+                    .classed(`arc-arrow data target-${targetNum}`, true)
+                    .attr('d', triPath)
+                    .attr('transform',
+                        `translate(${px}, ${py}) rotate(${tangentDeg - 90}) translate(${-s / 2}, 0)`
+                    )
+            })
+
+        // VII. SPARKLINE
         this.#renderSparkline(targetNum, { x, y, width: w, height: h }, {
             ...(targetNum === '1' && {
                 getValue: d => d.recoveryRate,

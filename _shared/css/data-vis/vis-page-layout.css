@@ -25,7 +25,6 @@ body.data-vis {
     align-items:        center;
     justify-content:    center;
     font-family:        var(--font-family);
-    /* background:         var(--color-screen-bg); */
     color:              var(--color-fg);
 
     main.content__wrapper {
@@ -47,7 +46,6 @@ body.data-vis {
             max-width:          60rem;
 
             .title-block{
-
                 h1, h2{
                     font-family:        'VIC Display';
                     line-height:        1.5;
@@ -55,8 +53,9 @@ body.data-vis {
                     margin-block-end:   0.5rem;
                 }
                 .subtitle{                    
-                    padding-bottom:     1rem;
-                    color:          var(--epa-primary-deep-ocean);
+                    padding-bottom:     0.5rem;
+                    color:              var(--epa-primary-deep-ocean);
+                    font-size:          2rem;
                 }
 
                 select{
@@ -83,14 +82,13 @@ body.data-vis {
                         margin-block-end:  0;
                     }
                 }
-                ul{
+                ul, ol{
                     font-size:               smaller;
-                    padding-inline-start: 1.5rem;
+                    padding-inline-start:   1.5rem;
                     li{
                         margin-block-start:  1rem;
                     }
                 }
-                
             }
         }
     
@@ -209,11 +207,42 @@ body.data-vis {
 		size:               A4 landscape;
 		margin:             0mm;
 	}
- 
+
+
 	body.data-vis {
 		min-height:         unset;
 		display:            block;
-    background: transparent !important;
+        background: transparent !important;
+
+        main.content__wrapper {
+
+            .sidebar__upper {
+                .title-block{
+                    h2{
+                        font-size:               2.5rem;
+                    }
+                    .subtitle, select{                    
+                        font-size:              1.25rem;
+                    }
+                }
+
+                .lead-block{
+                    p, ul, ol{
+                        font-size:               1.15rem;
+                        line-height:             1.75;
+                    }
+                }
+            }
+
+            .sidebar__lower {
+                .footnote-block{
+                    p, ul, ol{
+                        font-size:               0.75rem;
+                    }
+                }
+            }
+
+        }
 	}
  
 	/* Centre hide-sidebar layout on the printed page */
@@ -227,5 +256,8 @@ body.data-vis {
 	button, [role="button"], .controls, .tooltip {
 		display:            none !important;
 	}
+
+
+
 }
  

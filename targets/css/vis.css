@@ -28,7 +28,7 @@ svg {
                 }
                 &.interim-target{
                     fill:               var(--color-fg);
-                    opacity:            0.5;                  
+                    opacity:            0.75;                  
                 }   
 
                 &.data{
@@ -59,7 +59,7 @@ svg {
                 }
 
                 &.target-header{
-                    dominant-baseline: middle;
+                    dominant-baseline:  middle;
                     font-weight:        700;
                     fill:               var(--color-bg);
 
@@ -85,10 +85,13 @@ svg {
                     &.target-4{ fill: url(#blue-gradient-4) }
                 }
             }
-            path.data-arc{
-                fill:           var(--data);
-                fill-opacity:   0.4;
-                mix-blend-mode: multiply;
+
+            path{
+                &.data-arc{
+                    fill:           var(--data);
+                    fill-opacity:   0.4;
+                    mix-blend-mode: multiply;
+                }
             }
 
             circle{
@@ -118,8 +121,6 @@ svg {
                     fill:             #fff
                 }
 
-                
-
                 &.data-circle{
                     fill:           var(--data);
                     fill-opacity:   0.4;
@@ -133,9 +134,6 @@ svg {
                     text-anchor: middle;
                 }
             }
-
-
-
         }
 
         g.sparkline-group{
@@ -150,13 +148,14 @@ svg {
             } 
         }
 
-        g.label-group{
+        g.arc-label-group{
             text{
                 &.center-label{
                     dominant-baseline:  central;
                     text-anchor:        middle;
                     fill:               var(--color-bg);
-                      font-weight: 700;
+                    font-weight:        700;
+
                     &.year{
                         font-weight: 700;
                     }
@@ -171,6 +170,13 @@ svg {
                 &.inner{
                     fill: var(--epa-primary-deep-ocean);
                     fill: none;
+                }
+            }
+
+            path{
+                &.arc-arrow{
+                    fill:               var(--label-color);
+                    opacity:            0.8;
                 }
             }
         }

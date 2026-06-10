@@ -150,7 +150,6 @@ export class SystemVis extends DataVis{
             case 't':
                 this.state.flowConfig.rotateByRecoveryRate = false
                 break
-
         }
 
         // Other settings
@@ -161,8 +160,11 @@ export class SystemVis extends DataVis{
             if(isValidYear) this.app.state.select.year = +app.queryParams.year
         }
     
+
+
         if(app.queryParams.tagline1)     this.state.tagline.line1 = app.queryParams.tagline1
         if(app.queryParams.tagline2 )    this.state.tagline.line2 = app.queryParams.tagline2
+        if(app.queryParams.noRecTriangle )    this.state.render.recoveryBreakdown = false
 
     }
 
@@ -1827,7 +1829,7 @@ export class SystemVis extends DataVis{
             apexX:          geomApexX,
             apexY:          geomApexY,
             segments:       directSegments = null,
-            labelFontSize   = 12,
+            labelFontSize   = 10,
             arcOuterR       = null,
             segmentPadding  = height * 0.1,
             segmentThick    = height * 0.05,
@@ -1937,10 +1939,10 @@ export class SystemVis extends DataVis{
                 .attr('d', `M ${apexX + outerLabelR},${largestArcCy} A ${outerLabelR},${outerLabelR} 0 1,0 ${apexX - outerLabelR},${largestArcCy}`)
                 .attr('transform', `rotate(${labelRotation}, ${apexX}, ${largestArcCy})`)
 
-            const segmentLabel = `${d3.format(".0%")(segDefs[1].volValue / (segDefs[1].volValue + segDefs[0].volValue))} of materials are reprocessed locally`
+            const segmentLabel = `${d3.format(".0%")(segDefs[1].volValue / (segDefs[1].volValue + segDefs[0].volValue))} of materials are reprocessed locally vs ${d3.format(".0%")(segDefs[0].volValue / (segDefs[1].volValue + segDefs[0].volValue))} exported`
 
             const segLabel = annotGroup.append('text').classed('recovery-breakdown-label', true)
-                .style('font-size', labelFontSize * 0.8)
+                .style('font-size', labelFontSize * 0.7)
                 .style('opacity', animate ? 0 : 1)
                 .append('textPath')
                     .attr('href', `#${arcId}`)
@@ -2178,14 +2180,20 @@ export class SystemVis extends DataVis{
 
     #addCommentary(data){
 
-        const commentaryEl = document.getElementById('commentary'),
-            hasCE = data.metrics['Material footprint'],
-            materialFootprint = data.metrics['Material footprint'],
-            circularityRate = data.metrics['Circularity rate']
+        const commentaryEl       = document.getElementById('commentary'),
+            hasCE                = data.metrics['Material footprint'],
+            materialFootprint    = data.metrics['Material footprint'],
+            circularityRate      = data.metrics['Circularity rate'],
+            materialProductivity = data.metrics['Material productivity']
+
+
+            // <p>Material productivity quantifies the economic output or value added per unit of materials consumed. Higher material productivity helps to mitigate environmental impacts associated with virgin material consumption. The material productivity for Victoria is $${materialProductivity}  per kilogram of materials consumed</p>
 
         const text = hasCE ?
-            `<p>Victorian's consume an estimated ${materialFootprint} tonnes of materials each year, per person. This <i>materials footprint</i> includes everything that goes into everyday products, services and infrastructure we use, including energy and resource in the supply chains. It includes everything. Around ${d3.format(".1%")(circularityRate)} of these resources, a measure known as our <i>circularity rate</i>, come from recycled and reused materials.
+            `<p>Victorian's consume an estimated ${materialFootprint} tonnes of materials each year, per person. This <i>materials footprint</i> includes everything that goes into everyday products, services and infrastructure we use, including energy and resource in the supply chains. It includes everything. Around ${d3.format(".1%")(circularityRate)} of these resources, a measure known as our <i>circularity rate</i>, come from recycled and reused materials. 
             </p>
+
+            <p>The aim of a circular economy is to keep these materials in use for longer, which will lift our circularity rate.</p>
 
             <p>How Victoria manages waste materials is a key driver for reducing our materials footprint and improving our circularity rate. It is a system that keeps resources in use in our economy as long as possible through processing like reuse, repair and recycling. This reduces environmental impact while increasing economic activity in Victoria.</p>`
         : `

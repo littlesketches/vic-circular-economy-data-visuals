@@ -26,7 +26,8 @@ async function initApp() {
         illustration:   params.get('illustration') === null ? false : true,    
         tagline1:       params.get('tagline1'),
         tagline2:       params.get('tagline2'),
-        edit:           params.get('edit') === null ? false : true
+        edit:           params.get('edit') === null ? false : true,
+        noRecTriangle:  params.get('noRecTriangle') === null ? false : true,
     }
 
     // ii. Init app object
