@@ -92,10 +92,7 @@ svg {
 
         polygon{
             &.disposal{
-                /* stroke:           var(--disposal);  */
-                fill:             var(--disposal); 
                 fill:             url(#disposal-gradient); 
-                /* fill-opacity:     0.125; */
             }
         }
 
@@ -232,7 +229,8 @@ svg {
 
         polygon{
             &.recovery-triangle-bg{
-                fill:        url(#recovery-gradient);
+                /* fill:        url(#recovery-gradient); */
+                /* fill:        none; */
             }
         }
 
@@ -246,8 +244,6 @@ svg {
             }
         }
     }
-
-
 }
 
 

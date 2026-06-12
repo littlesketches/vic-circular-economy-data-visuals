@@ -17,7 +17,7 @@ export class SystemVis extends DataVis{
     /////////////////
 
     state = {
-        layout:                     'd',           // 't'|  'b' | 'd' | 'six' | 'snail'
+        layout:                     't',           // 't'|  'b' | 'd' | 'six' | 'snail'
         flowConfig: {
             yPosition:              0.4 ,          // User setting to set the vertical position of the top of the circular flow component
             circularFlowMultiple:   5.25,              // User setting to set the relative size of the circular flow component
@@ -35,7 +35,7 @@ export class SystemVis extends DataVis{
             ceMetrics:              true,
             flows:                  true,
             flowsCircular:          true,
-            recoveryBreakdown:      true, 
+            recoveryTriangle:       true, 
             flowsTitle:             false,      
             illustration:           false,
         },
@@ -102,7 +102,6 @@ export class SystemVis extends DataVis{
                 this.state.render.ceMetrics = false
                 this.state.render.flows = true
                 this.state.render.flowsCircular = true
-                this.state.render.recoveryBreakdown = true
 
                 // Circular flow direction and sort order
                 this.state.flowConfig.circleDirection = 'clockwise'
@@ -110,6 +109,8 @@ export class SystemVis extends DataVis{
                 this.state.flowConfig.reverseSort = false
                 this.state.flowConfig.reverseFlow = false
                 this.state.flowConfig.rotateDisposal = false
+                this.state.flowConfig.recoveryLabelCentered =  this.state.render.recoveryTriangle 
+
                 break
 
             case 'd':
@@ -117,7 +118,6 @@ export class SystemVis extends DataVis{
                 this.state.render.ceMetrics = false
                 this.state.render.flows = true
                 this.state.render.flowsCircular = true
-                this.state.render.recoveryBreakdown = true
 
                 // Circular flow direction and sort order
                 this.state.flowConfig.circleDirection = 'clockwise'
@@ -133,7 +133,6 @@ export class SystemVis extends DataVis{
                 this.state.render.ceMetrics = false
                 this.state.render.flows = true
                 this.state.render.flowsCircular = true
-                this.state.render.recoveryBreakdown = true
 
                 // Circular flow direction and sort order
                 this.state.flowConfig.circleDirection = 'anticlockwise'
@@ -164,7 +163,7 @@ export class SystemVis extends DataVis{
 
         if(app.queryParams.tagline1)     this.state.tagline.line1 = app.queryParams.tagline1
         if(app.queryParams.tagline2 )    this.state.tagline.line2 = app.queryParams.tagline2
-        if(app.queryParams.noRecTriangle )    this.state.render.recoveryBreakdown = false
+        if(app.queryParams.noRecTriangle ) this.state.render.recoveryTriangle = false
 
     }
 
@@ -198,7 +197,7 @@ export class SystemVis extends DataVis{
         // III. VIS COMPONENT GROUPS 
         const visGroup = this.el.vis.group = svg.append('g').classed('vis-group', true)
 
-         this.el.vis.recoveryBreakdown = visGroup.append('g').classed('recovery-breakdown', true)
+         this.el.vis.recoveryTriangle = visGroup.append('g').classed('recovery-breakdown', true)
 
         // i. Rotation group: all component that rotate with recovery rate 
         const rotationGroup = this.el.vis.rotationGroup = visGroup.append('g').classed('rotation-group', true)
@@ -590,11 +589,10 @@ export class SystemVis extends DataVis{
             kinkPositionDis,
         })
 
-        if(this.state.render.recoveryBreakdown)
-            this.#materialFlow.renderRecoveryBreakdown(vis, annotation, data, sharedGeom, {
-                animate,
-                delay: dur * 0.5,
-            })
+        this.#materialFlow.renderRecoveryBreakdown(vis, annotation, data, sharedGeom, {
+            animate,
+            delay: dur * 0.5,
+        })
 
         if(this.state.render.flowsCircular)
             this.#renderRecoveryCircleChart(
@@ -1344,7 +1342,7 @@ export class SystemVis extends DataVis{
                 y:      g.arcCentY,
                 height: DataVis.CONFIG.dims.height - DataVis.CONFIG.dims.margin.bottom - g.arcCentY,
             }, {
-                svgGroup:       this.el.vis.recoveryBreakdown,
+                svgGroup:       this.el.vis.recoveryTriangle,
                 annotGroup:     recoveryAnnotationGroup,  
                 rotationAngle:  g.rotationAngle,     
                 apexX:          g.arcCentX,
@@ -1353,6 +1351,7 @@ export class SystemVis extends DataVis{
                 recoveryLabelR: g.radii[0] + g.slotH * 1.0,   
                 largestArcCy:   (g.lineYs[0] + this.scale.materialFlow(g.streams[0].generated) / 2) - this.scale.materialFlow(g.streams[0].recovered) / 2 + g.radii[0],  
                 labelFontSize:   g.slotH * 0.85,
+                fillTriangle:   this.state.render.recoveryTriangle,
                 segments: [
                     { 
                         label: 'processed locally', 
@@ -1398,7 +1397,7 @@ export class SystemVis extends DataVis{
                 botEdgeTop     = g.lineYs[0] + tGenTop / 2,
                 recCyTop       = botEdgeTop - tRecTop / 2,
                 largestArcCy   = recCyTop + g.radii[0],
-                recoveryLabelR = g.radii[0] + g.slotH * (recoveryLabelCentered ? 1.50 : 1.35),
+                recoveryLabelR = g.radii[0] + g.slotH * (recoveryLabelCentered ? 1.75 : 1.35),
                 arcId          = `recoveryLabelArc_${data.year}`,
                 path           = recoveryLabelCentered 
                                 ? `M ${g.arcCentX},${largestArcCy - recoveryLabelR} A ${recoveryLabelR},${recoveryLabelR} 0 1,0 ${g.arcCentX},${largestArcCy + recoveryLabelR}`
@@ -1825,6 +1824,7 @@ export class SystemVis extends DataVis{
         const {
             svgGroup,
             annotGroup,
+            fillTriangle   =  false,
             showLabels      = true,
             apexX:          geomApexX,
             apexY:          geomApexY,
@@ -1869,6 +1869,7 @@ export class SystemVis extends DataVis{
         const triPoly = svgGroup.append('polygon')
             .classed('recovery-triangle-bg', true)
             .attr('points', `${apexX},${apexY} ${leftX},${baseY} ${rightX},${baseY}`)
+            .style('fill', fillTriangle ? 'url(#recovery-gradient)' : 'none')
             .style('opacity', animate ? 0 : 1)
 
         if(animate) triPoly.transition().duration(dur).delay(delay).style('opacity', 1)
@@ -1932,7 +1933,7 @@ export class SystemVis extends DataVis{
         if (showLabels) {
             const arcId = `recoverySegmentLabelArc_${data.year}`
 
-            const outerLabelR  = innerR - labelFontSize * 0.5 + segmentThick
+            const outerLabelR  = innerR - labelFontSize * 0.5 + segmentThick * (fillTriangle ? 1 : 0)
 
             this.el.defs.append('path')
                 .attr('id', arcId)
@@ -1942,7 +1943,7 @@ export class SystemVis extends DataVis{
             const segmentLabel = `${d3.format(".0%")(segDefs[1].volValue / (segDefs[1].volValue + segDefs[0].volValue))} of materials are reprocessed locally vs ${d3.format(".0%")(segDefs[0].volValue / (segDefs[1].volValue + segDefs[0].volValue))} exported`
 
             const segLabel = annotGroup.append('text').classed('recovery-breakdown-label', true)
-                .style('font-size', labelFontSize * 0.7)
+                .style('font-size', labelFontSize * (fillTriangle ? 0.7 : 0.75) )
                 .style('opacity', animate ? 0 : 1)
                 .append('textPath')
                     .attr('href', `#${arcId}`)
@@ -2210,7 +2211,7 @@ export class SystemVis extends DataVis{
         this.el.annotation.materialFlow.selectAll('*').remove()
         this.el.vis.wasteIndustry.selectAll('*').remove()
         this.el.vis.nature.selectAll('*').remove()  
-        this.el.vis.recoveryBreakdown.selectAll('*').remove()
+        this.el.vis.recoveryTriangle.selectAll('*').remove()
         this.el.annotation.group.selectAll('.recovery-breakdown-labels').remove()
         this.el.defs.selectAll('path[id*="Arc_"]').remove()
         this.el.defs.selectAll('path[id*="textPath_"]').remove()
