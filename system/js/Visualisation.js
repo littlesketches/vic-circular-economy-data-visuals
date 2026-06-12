@@ -1414,7 +1414,7 @@ export class SystemVis extends DataVis{
                 .style('opacity', animate ? 0 : 1)
                 .append('textPath')
                     .attr('href', `#${arcId}`)
-                    .attr('startOffset', `${this.state.layout === 'b' ? '42.5%' : '50%'}`)
+                    .attr('startOffset', `${this.state.layout === 'b' && !recoveryLabelCentered ? '42.5%' : '50%'}`)
                     .html(`<tspan class = 'lowercase'>${d3.format("0.1f")(data.metrics.Aggregated.recovered.total /1000000)} Mt</tspan> recovered `)
 
             if(animate) recLabel.select(function() { return this.parentNode })
