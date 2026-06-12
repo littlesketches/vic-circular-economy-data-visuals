@@ -372,7 +372,6 @@ export class TargetsVis extends DataVis {
         this.app.state.select.year = this.app.state.select.year ?? latestYear
         this.targetData =  TargetsVis.buildTrendSeries(this.app.module.dataModel.data,  TargetsVis.CONFIG.year.baseline)
             .filter(d => d.year <=  this.app.state.select.year )
-    
     }
 
     #initVis() {
@@ -592,7 +591,7 @@ export class TargetsVis extends DataVis {
         this.#renderSparkline(targetNum, { x, y, width: w, height: h }, {
             ...(targetNum === '1' && {
                 getValue: d => d.recoveryRate,
-                width:    w * 0.25,  height:    w * 0.05,  
+                width:    w * 0.25,  height:    w * 0.025,  
                 position: { ax: w * 0.175,   ay: (1 - 0.575) * h}
             }),
             ...(targetNum === '2' && {
