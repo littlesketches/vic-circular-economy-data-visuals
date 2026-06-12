@@ -98,7 +98,10 @@ export class App{
         ////////////////////////////
 
         const yearSelect = document.getElementById('year-select')
+        yearSelect.value = this.state.select.year
         yearSelect.addEventListener('change', this.handle.update)
+
+
 
     }
 }
