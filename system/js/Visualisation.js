@@ -1940,7 +1940,7 @@ export class SystemVis extends DataVis{
                 .attr('d', `M ${apexX + outerLabelR},${largestArcCy} A ${outerLabelR},${outerLabelR} 0 1,0 ${apexX - outerLabelR},${largestArcCy}`)
                 .attr('transform', `rotate(${labelRotation}, ${apexX}, ${largestArcCy})`)
 
-            const segmentLabel = `${d3.format(".0%")(segDefs[1].volValue / (segDefs[1].volValue + segDefs[0].volValue))} reprocessed locally vs ${d3.format(".0%")(segDefs[0].volValue / (segDefs[1].volValue + segDefs[0].volValue))} exported`
+            const segmentLabel = `${d3.format(".0%")(segDefs[1].volValue / (segDefs[1].volValue + segDefs[0].volValue))} ${fillTriangle ? 'of materials are ' : ''} reprocessed locally vs ${d3.format(".0%")(segDefs[0].volValue / (segDefs[1].volValue + segDefs[0].volValue))} exported`
 
             const segLabel = annotGroup.append('text').classed('recovery-breakdown-label', true)
                 .style('font-size', labelFontSize * (fillTriangle ? 0.7 : 0.725) )
@@ -1951,7 +1951,7 @@ export class SystemVis extends DataVis{
                     .text(segmentLabel)
 
             if(animate) segLabel.select(function() { return this.parentNode })
-                .transition().duration(dur).delay(delay + 300).style('opacity', 1)
+                .transition().duration(dur).delay(delay + 1400).style('opacity', 1)
         }
 
         /////////////////////////////////
