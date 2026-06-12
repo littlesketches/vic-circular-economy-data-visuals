@@ -1933,17 +1933,17 @@ export class SystemVis extends DataVis{
         if (showLabels) {
             const arcId = `recoverySegmentLabelArc_${data.year}`
 
-            const outerLabelR  = innerR - labelFontSize * 0.5 + segmentThick * (fillTriangle ? 1 : 0)
+            const outerLabelR  = innerR - labelFontSize * 0.5 + segmentThick * (fillTriangle ? 1 : -0.5)
 
             this.el.defs.append('path')
                 .attr('id', arcId)
                 .attr('d', `M ${apexX + outerLabelR},${largestArcCy} A ${outerLabelR},${outerLabelR} 0 1,0 ${apexX - outerLabelR},${largestArcCy}`)
                 .attr('transform', `rotate(${labelRotation}, ${apexX}, ${largestArcCy})`)
 
-            const segmentLabel = `${d3.format(".0%")(segDefs[1].volValue / (segDefs[1].volValue + segDefs[0].volValue))} of materials are reprocessed locally vs ${d3.format(".0%")(segDefs[0].volValue / (segDefs[1].volValue + segDefs[0].volValue))} exported`
+            const segmentLabel = `${d3.format(".0%")(segDefs[1].volValue / (segDefs[1].volValue + segDefs[0].volValue))} reprocessed locally vs ${d3.format(".0%")(segDefs[0].volValue / (segDefs[1].volValue + segDefs[0].volValue))} exported`
 
             const segLabel = annotGroup.append('text').classed('recovery-breakdown-label', true)
-                .style('font-size', labelFontSize * (fillTriangle ? 0.7 : 0.75) )
+                .style('font-size', labelFontSize * (fillTriangle ? 0.7 : 0.725) )
                 .style('opacity', animate ? 0 : 1)
                 .append('textPath')
                     .attr('href', `#${arcId}`)
